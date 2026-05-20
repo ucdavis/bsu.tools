@@ -1,0 +1,32 @@
+# bsu.tools
+
+The goal of bsu.tools is to help UC Davis Biostatistics Support Unit
+conduct reproducible research. The bsu.tools package contains Rmd
+templates to standardize documentation and presentation of analyses,
+wrappers and helper functions for use during analyses, and Shiny apps
+for various purposes.
+
+## Installation
+
+You can install the development version of bsu.tools from
+[GitHub](https://github.com/) with:
+
+``` r
+
+# install.packages("pak")
+pak::pak("ucdavis/bsu.tools")
+```
+
+# Package index
+
+## All functions
+
+- [`new_quarto()`](https://silver-adventure-qjvmn6j.pages.github.io/reference/new_quarto.md)
+  : Create a new Quarto Document from Template
+
+# Articles
+
+### All vignettes
+
+- [How to create a qmd from
+  gists](https://silver-adventure-qjvmn6j.pages.github.io/articles/new-quarto.md):
