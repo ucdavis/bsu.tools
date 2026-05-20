@@ -9,3 +9,10 @@ License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
+Suggests: 
+    knitr,
+    pkgdown,
+    rmarkdown
+URL: https://ucdavis.github.io/bsu.tools/, https://silver-adventure-qjvmn6j.pages.github.io/
+BugReports: https://github.com/ucdavis/bsu.tools/issues
+VignetteBuilder: knitr
