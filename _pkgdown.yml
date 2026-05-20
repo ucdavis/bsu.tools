@@ -1,16 +1,4 @@
+url: https://silver-adventure-qjvmn6j.pages.github.io/
 template:
   bootstrap: 5
 
-home:
-  title: bsu.tools
-
-navbar:
-  structure:
-    left: [home, reference, articles, news]
-    right: [search, github]
-
-articles:
-- title: Articles
-  navbar: Articles
-  contents:
-  - new-quarto
