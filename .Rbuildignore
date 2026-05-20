@@ -1,3 +1,5 @@
 ^bsu\.tools\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^_pkgdown\.yml$
+^\.github$

@@ -1,0 +1,16 @@
+template:
+  bootstrap: 5
+
+home:
+  title: bsu.tools
+
+navbar:
+  structure:
+    left: [home, reference, articles, news]
+    right: [search, github]
+
+articles:
+- title: Articles
+  navbar: Articles
+  contents:
+  - new-quarto
