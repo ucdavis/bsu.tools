@@ -1,9 +1,10 @@
 Package: bsu.tools
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Internal Tools for the UC Davis Biostatistics Support Unit (BSU)
+Version: 0.0.0.9001
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Matthew", "Ponzini", , "mdponzini@health.ucdavis.edu", role = c("aut", "cre"))
+Description: Contains internal tools for the UC Davis BSU, including RMarkdown
+    templates and Quarto markdown gists
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
