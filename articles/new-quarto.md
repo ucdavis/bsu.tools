@@ -13,11 +13,12 @@ our built in templates.
 The function has three arguments:  
 - filename: the name of your new file. If you forget the `.qmd` ending
 the function will automatically add it for you.  
-- path: where should the file be created. Uses `here::here()` by
+- path: where should the file be created. Uses
+[`here::here()`](https://here.r-lib.org/reference/here.html) by
 default.  
 - gist: the template you want to use (see below).
 
-As of 2026-05-20 there are currently 3 qmd gists available:  
+As of 2026-07-06 there are currently 3 qmd gists available:  
 - “no_logo_quarto”,  
 - “ctsc_quarto”,  
 - and “hac_quarto”.
