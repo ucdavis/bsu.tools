@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 # bsu.tools
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/ucdavis/bsu.tools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ucdavis/bsu.tools/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/ucdavis/bsu.tools/graph/badge.svg)](https://app.codecov.io/gh/ucdavis/bsu.tools)
 <!-- badges: end -->
 
 The goal of bsu.tools is to help UC Davis Biostatistics Support Unit conduct 
