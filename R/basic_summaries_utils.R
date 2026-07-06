@@ -8,7 +8,11 @@ basic_summary_table <- function(data, vars = colnames(data), by_var = NULL) {
   tbl_summary <- data |>
     gtsummary::tbl_summary(
       by = dplyr::all_of(by_var),
-      include = dplyr::all_of(vars)
+      include = dplyr::all_of(vars),
+      type = dplyr::where(is.numeric) ~ "continuous",
+      statistic = gtsummary::all_continuous() ~ c(
+        "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
+      )
     )
 
   # add overall if by_var is not NULL

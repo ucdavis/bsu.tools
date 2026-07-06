@@ -22,7 +22,8 @@ basic_summaries <- function(data, vars = colnames(data), by_var = NULL) {
       fn = function(x) {
         figs |> gt::ggplot_image()
       }
-    )
+    ) |>
+    gt::fmt_markdown(columns = dplyr::starts_with("stat_"))
 
   return(tbl_gt)
 }
