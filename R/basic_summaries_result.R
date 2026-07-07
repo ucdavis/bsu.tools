@@ -24,6 +24,10 @@ new_basic_summaries_result <- function(tbl_gt, raw_table, figures) {
   )
 }
 
+#' @title Print basic_summaries Result
+#' @param x A `basic_summaries_result` object.
+#' @param ... Additional arguments passed to `print()`.
+#' @noRd
 print.basic_summaries_result <- function(x, ...) {
   print(S7::prop(x, "tbl_gt"), ...)
   invisible(x)
