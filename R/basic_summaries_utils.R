@@ -47,35 +47,33 @@ basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
     function(x) {
       # if the variable is numeric, create a boxplot
       if (var_class[x] %in% c("numeric", "integer")) {
-        if (is.null(by_var)) {
+        plot_obj <- if (is.null(by_var)) {
           data |>
             ggplot2::ggplot() +
             ggplot2::aes(x = .data[[x]]) +
-            ggplot2::geom_histogram(bins = 30) +
-            ggplot2::theme_classic()
+            ggplot2::geom_histogram(bins = 30)
         } else {
           data |>
             ggplot2::ggplot() +
             ggplot2::aes(x = .data[[by_var]], y = .data[[x]]) +
-            ggplot2::geom_boxplot() +
-            ggplot2::theme_classic()
+            ggplot2::geom_boxplot()
         }
       } else {
         # if the variable is categorical, create a bar plot
-        if (is.null(by_var)) {
+        plot_obj <- if (is.null(by_var)) {
           data |>
             ggplot2::ggplot() +
             ggplot2::aes(x = .data[[x]]) +
-            ggplot2::geom_bar() +
-            ggplot2::theme_classic()
+            ggplot2::geom_bar()
         } else {
           data |>
             ggplot2::ggplot() +
             ggplot2::aes(x = .data[[x]], fill = .data[[by_var]]) +
-            ggplot2::geom_bar(position = "dodge") +
-            ggplot2::theme_classic()
+            ggplot2::geom_bar(position = "dodge")
         }
       }
+
+      plot_obj + ggplot2::theme_classic()
     }
   )
   # add names to list
