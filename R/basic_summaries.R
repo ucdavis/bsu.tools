@@ -13,14 +13,28 @@ basic_summaries <- function(data, vars = colnames(data), by_var = NULL) {
   )
   # convert tbl to gt object and add figures
   tbl_gt <- tbl |>
-    gtsummary::as_gt() |>
-    gt::cols_add(
-      Figures = NA
+    # add Figure Column
+    gtsummary::modify_table_body(
+      ~ .x |>
+        dplyr::mutate(
+          Figures = dplyr::if_else(row_type == "label", variable, NA_character_)
+        )
     ) |>
+    gtsummary::modify_column_unhide(Figures) |>
+    gtsummary::modify_header(Figures = "**Figure**") |>
+    # convert to gt
+    gtsummary::as_gt() |>
+    # add figures to Figure column
     gt::text_transform(
       locations = gt::cells_body(columns = "Figures"),
       fn = function(x) {
-        figs |> gt::ggplot_image()
+        purrr::map(x, \(v) {
+          if (is.na(v) || !v %in% names(figs)) {
+            ""
+          } else {
+            gt::ggplot_image(figs[[v]])
+          }
+        })
       }
     ) |>
     gt::fmt_markdown(columns = dplyr::starts_with("stat_"))
