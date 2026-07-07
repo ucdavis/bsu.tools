@@ -10,7 +10,7 @@ test_that("basic_summaries returns S7 result with expected properties", {
     by_var = "Species"
   )
 
-  expect_s7_class(result, basic_summaries_result)
+  expect_s7_class(result, bsu.tools:::basic_summaries_result)
   expect_s3_class(S7::prop(result, "tbl_gt"), "gt_tbl")
   expect_true(inherits(S7::prop(result, "raw_table"), "tbl_summary"))
 
