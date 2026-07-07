@@ -16,7 +16,7 @@ basic_summaries_result <- S7::new_class(
     } else if (is.null(names(self@figures))) {
       "@figures must be a named list"
     }
-  )
+  }
 )
 
 #' @title Constructor for basic_summaries Result
@@ -42,6 +42,6 @@ print.basic_summaries_result <- function(x, ...) {
   invisible(x)
 }
 
-S7::method(base::print, basic_summaries_result) <- function(x, ...) {
+S7::method(print, basic_summaries_result) <- function(x, ...) {
   print.basic_summaries_result(x, ...)
 }
