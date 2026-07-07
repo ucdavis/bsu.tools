@@ -17,7 +17,12 @@ Suggests:
 Imports:
     S7,
     bookdown,
+    dplyr,
+    ggplot2,
+    gt,
+    gtsummary,
     here,
+    purrr,
     stringr,
     usethis
 URL: https://ucdavis.github.io/bsu.tools/, https://silver-adventure-qjvmn6j.pages.github.io/
