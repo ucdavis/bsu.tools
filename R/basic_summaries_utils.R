@@ -7,7 +7,7 @@ basic_summary_table <- function(data, vars = colnames(data), by_var = NULL) {
   # create initial summary table
   tbl_summary <- data |>
     gtsummary::tbl_summary(
-      by = dplyr::all_of(by_var),
+      by = if (is.null(by_var)) NULL else dplyr::all_of(by_var),
       include = dplyr::all_of(vars),
       type = dplyr::where(is.numeric) ~ "continuous",
       statistic = gtsummary::all_continuous() ~ c(
@@ -21,7 +21,7 @@ basic_summary_table <- function(data, vars = colnames(data), by_var = NULL) {
       gtsummary::add_overall()
   }
 
-  return(tbl_summary)
+  tbl_summary
 }
 
 basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
@@ -34,7 +34,7 @@ basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
   # if by_var is not NULL and is continuous, convert to factor
   if (
     !is.null(by_var) &&
-    class(data[[by_var]]) %in% c("numeric", "integer", "double")
+      class(data[[by_var]]) %in% c("numeric", "integer", "double")
   ) {
     data <- data |>
       dplyr::mutate(
@@ -47,23 +47,39 @@ basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
     function(x) {
       # if the variable is numeric, create a boxplot
       if (var_class[x] %in% c("numeric", "integer")) {
-        data |>
-          ggplot2::ggplot() +
-          ggplot2::aes(x = .data[[by_var]], y = .data[[x]]) +
-          ggplot2::geom_boxplot() +
-          ggplot2::theme_classic()
+        plot_obj <- if (is.null(by_var)) {
+          min_hist_bins <- 10
+          hist_bins <- max(min_hist_bins, ceiling(sqrt(nrow(data))))
+          data |>
+            ggplot2::ggplot() +
+            ggplot2::aes(x = .data[[x]]) +
+            ggplot2::geom_histogram(bins = hist_bins)
+        } else {
+          data |>
+            ggplot2::ggplot() +
+            ggplot2::aes(x = .data[[by_var]], y = .data[[x]]) +
+            ggplot2::geom_boxplot()
+        }
       } else {
         # if the variable is categorical, create a bar plot
-        data |>
-          ggplot2::ggplot() +
-          ggplot2::aes(x = .data[[x]], fill = .data[[by_var]]) +
-          ggplot2::geom_bar(position = "dodge") +
-          ggplot2::theme_classic()
+        plot_obj <- if (is.null(by_var)) {
+          data |>
+            ggplot2::ggplot() +
+            ggplot2::aes(x = .data[[x]]) +
+            ggplot2::geom_bar()
+        } else {
+          data |>
+            ggplot2::ggplot() +
+            ggplot2::aes(x = .data[[x]], fill = .data[[by_var]]) +
+            ggplot2::geom_bar(position = "dodge")
+        }
       }
+
+      plot_obj + ggplot2::theme_classic()
     }
   )
   # add names to list
   names(figs) <- vars
 
-  return(figs)
+  figs
 }
