@@ -2,13 +2,17 @@
 % Please edit documentation in R/html_bsu.R
 \name{html_bsu}
 \alias{html_bsu}
-\title{HTML output format using BSU CSS}
+\title{BSU HTML R Markdown Output Format}
 \usage{
 html_bsu(...)
 }
 \arguments{
-\item{...}{Additional arguments passed to \code{bookdown::html_document2()}.}
+\item{...}{Additional arguments passed to \code{\link[bookdown:html_document2]{bookdown::html_document2()}}.}
+}
+\value{
+An R Markdown output format object.
 }
 \description{
-HTML output format using BSU CSS
+Creates an R Markdown HTML output format that applies the BSU CSS template.
+Wraps \code{\link[bookdown:html_document2]{bookdown::html_document2()}} with the package's default stylesheet.
 }
