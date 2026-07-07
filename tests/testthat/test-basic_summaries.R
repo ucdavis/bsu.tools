@@ -12,7 +12,7 @@ test_that("basic_summaries returns S7 result with expected properties", {
 
   expect_s3_class(result, "basic_summaries_result")
   expect_s3_class(S7::prop(result, "tbl_gt"), "gt_tbl")
-  expect_s3_class(S7::prop(result, "raw_table"), "gtsummary")
+  expect_true(inherits(S7::prop(result, "raw_table"), "tbl_summary"))
 
   figures <- S7::prop(result, "figures")
   expect_type(figures, "list")
