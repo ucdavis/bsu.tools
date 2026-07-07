@@ -35,3 +35,22 @@ test_that("basic_summaries works without by_var", {
   expect_setequal(names(figures), c("Sepal.Length", "Species"))
   expect_true(all(vapply(figures, inherits, logical(1), what = "ggplot")))
 })
+
+test_that("printing basic_summaries_result defaults to tbl_gt", {
+  skip_if_not_installed("S7")
+  skip_if_not_installed("gt")
+  skip_if_not_installed("gtsummary")
+  skip_if_not_installed("ggplot2")
+
+  result <- basic_summaries(
+    data = iris,
+    vars = c("Sepal.Length", "Petal.Length"),
+    by_var = "Species"
+  )
+
+  result_output <- capture.output(print(result))
+  tbl_output <- capture.output(print(S7::prop(result, "tbl_gt")))
+
+  expect_identical(result_output, tbl_output)
+  expect_invisible(print(result))
+})

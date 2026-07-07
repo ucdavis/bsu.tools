@@ -41,3 +41,7 @@ print.basic_summaries_result <- function(x, ...) {
   print(S7::prop(x, "tbl_gt"), ...)
   invisible(x)
 }
+
+S7::method(base::print, basic_summaries_result) <- function(x, ...) {
+  print.basic_summaries_result(x, ...)
+}
