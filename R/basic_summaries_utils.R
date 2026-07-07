@@ -30,15 +30,17 @@ basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
     vars <- base::setdiff(vars, by_var)
   }
   # store class to plot appropriate figure type
-  var_class <- vapply(data[, vars, drop = FALSE], function(col) class(col)[1], character(1))
+  var_class <- vapply(
+    data[, vars, drop = FALSE],
+    function(col) class(col)[1], character(1)
+  )
   # if by_var is not NULL and is continuous, convert to factor
   if (
-    !is.null(by_var) &&
-      class(data[[by_var]]) %in% c("numeric", "integer", "double")
+    !is.null(by_var) && is.numeric(data[[by_var]])
   ) {
     data <- data |>
       dplyr::mutate(
-        !!{{ by_var }} := .data[[by_var]] |> as.factor()
+        !!by_var := .data[[by_var]] |> as.factor()
       )
   }
 
