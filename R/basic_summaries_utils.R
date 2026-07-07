@@ -21,7 +21,7 @@ basic_summary_table <- function(data, vars = colnames(data), by_var = NULL) {
       gtsummary::add_overall()
   }
 
-  return(tbl_summary)
+  tbl_summary
 }
 
 basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
@@ -34,7 +34,7 @@ basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
   # if by_var is not NULL and is continuous, convert to factor
   if (
     !is.null(by_var) &&
-    class(data[[by_var]]) %in% c("numeric", "integer", "double")
+      class(data[[by_var]]) %in% c("numeric", "integer", "double")
   ) {
     data <- data |>
       dplyr::mutate(
@@ -81,5 +81,5 @@ basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
   # add names to list
   names(figs) <- vars
 
-  return(figs)
+  figs
 }

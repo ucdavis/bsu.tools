@@ -36,8 +36,8 @@ basic_summaries <- function(data, vars = colnames(data), by_var = NULL) {
           Figures = dplyr::if_else(row_type == "label", variable, NA_character_)
         )
     ) |>
-    gtsummary::modify_column_unhide(Figures) |>
-    gtsummary::modify_header(Figures = "**Figure**") |>
+    gtsummary::modify_column_unhide("Figures") |>
+    gtsummary::modify_header(Figures = "**Figures**") |>
     # convert to gt (set id for testing)
     gtsummary::as_gt(id = "gt_tbl") |>
     # add figures to Figure column
