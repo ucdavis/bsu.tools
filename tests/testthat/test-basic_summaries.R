@@ -49,8 +49,9 @@ test_that("printing basic_summaries_result defaults to tbl_gt", {
   )
 
   result_output <- capture_output(result@tbl_gt$`_data`)
-  tbl_output <- capture_output(result@raw_table |> gtsummary::as_gt() |> _$`_data`)
+  tbl_output <- capture_output(result@raw_table |>
+                                 gtsummary::as_gt() |>
+                                 _$`_data`)
 
   expect_identical(result_output, tbl_output)
-  # expect_invisible(print(result))
 })
