@@ -6,7 +6,7 @@ test_that("basic_summaries returns S7 result with expected properties", {
 
   result <- basic_summaries(
     data = iris,
-    vars = c("Sepal.Length", "Species"),
+    vars = c("Sepal.Length", "Petal.Length"),
     by_var = "Species"
   )
 
@@ -16,7 +16,7 @@ test_that("basic_summaries returns S7 result with expected properties", {
 
   figures <- S7::prop(result, "figures")
   expect_type(figures, "list")
-  expect_setequal(names(figures), "Sepal.Length")
+  expect_setequal(names(figures), c("Sepal.Length", "Petal.Length"))
   expect_true(all(vapply(figures, inherits, logical(1), what = "ggplot")))
 })
 
