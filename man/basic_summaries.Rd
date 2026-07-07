@@ -2,9 +2,12 @@
 % Please edit documentation in R/basic_summaries.R
 \name{basic_summaries}
 \alias{basic_summaries}
+\alias{print.basic_summaries_result}
 \title{Create Basic Summary Tables and Figures}
 \usage{
 basic_summaries(data, vars = colnames(data), by_var = NULL)
+
+\method{print}{basic_summaries_result}(x, ...)
 }
 \arguments{
 \item{data}{A data frame.}
@@ -13,6 +16,10 @@ basic_summaries(data, vars = colnames(data), by_var = NULL)
 columns in \code{data}.}
 
 \item{by_var}{Optional grouping variable name.}
+
+\item{x}{A \code{basic_summaries_result} object.}
+
+\item{...}{Additional arguments passed to \code{print()}.}
 }
 \value{
 A \code{basic_summaries_result} object with properties:
