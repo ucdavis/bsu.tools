@@ -38,8 +38,8 @@ basic_summaries <- function(data, vars = colnames(data), by_var = NULL) {
     ) |>
     gtsummary::modify_column_unhide(Figures) |>
     gtsummary::modify_header(Figures = "**Figure**") |>
-    # convert to gt
-    gtsummary::as_gt() |>
+    # convert to gt (set id for testing)
+    gtsummary::as_gt(id = "gt_tbl") |>
     # add figures to Figure column
     gt::text_transform(
       locations = gt::cells_body(columns = "Figures"),

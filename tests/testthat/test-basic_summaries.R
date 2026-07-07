@@ -10,7 +10,7 @@ test_that("basic_summaries returns S7 result with expected properties", {
     by_var = "Species"
   )
 
-  expect_s3_class(result, "basic_summaries_result")
+  expect_s7_class(result, basic_summaries_result)
   expect_s3_class(S7::prop(result, "tbl_gt"), "gt_tbl")
   expect_true(inherits(S7::prop(result, "raw_table"), "tbl_summary"))
 
@@ -48,8 +48,8 @@ test_that("printing basic_summaries_result defaults to tbl_gt", {
     by_var = "Species"
   )
 
-  result_output <- capture.output(print(result))
-  tbl_output <- capture.output(print(S7::prop(result, "tbl_gt")))
+  result_output <- capture_output(print(result))
+  tbl_output <- capture_output(print(S7::prop(result, "tbl_gt")))
 
   expect_identical(result_output, tbl_output)
   expect_invisible(print(result))
