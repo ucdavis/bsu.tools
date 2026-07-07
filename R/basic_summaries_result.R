@@ -7,6 +7,15 @@ basic_summaries_result <- S7::new_class(
     tbl_gt = S7::class_any,
     raw_table = S7::class_any,
     figures = S7::class_list
+  ),
+  validator = function(self) {
+    if (!inherits(self@tbl_gt, "gt_tbl")) {
+      "@tbl_gt must inherit from 'gt_tbl'"
+    } else if (!inherits(self@raw_table, "gtsummary")) {
+      "@raw_table must inherit from 'gtsummary'"
+    } else if (is.null(names(self@figures))) {
+      "@figures must be a named list"
+    }
   )
 )
 

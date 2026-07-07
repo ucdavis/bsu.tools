@@ -48,10 +48,11 @@ basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
       # if the variable is numeric, create a boxplot
       if (var_class[x] %in% c("numeric", "integer")) {
         plot_obj <- if (is.null(by_var)) {
+          hist_bins <- max(10, ceiling(sqrt(nrow(data))))
           data |>
             ggplot2::ggplot() +
             ggplot2::aes(x = .data[[x]]) +
-            ggplot2::geom_histogram(bins = 30)
+            ggplot2::geom_histogram(bins = hist_bins)
         } else {
           data |>
             ggplot2::ggplot() +
