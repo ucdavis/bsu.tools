@@ -1,3 +1,19 @@
+#' @title Create Basic Summary Tables and Figures
+#' @description
+#' Creates a summary table using `gtsummary::tbl_summary()`, generates
+#' variable-level figures, and returns an S7 object containing the gt table,
+#' raw gtsummary table, and figures.
+#' @param data A data frame.
+#' @param vars Character vector of variable names to summarize. Defaults to all
+#' columns in `data`.
+#' @param by_var Optional grouping variable name.
+#' @returns A `basic_summaries_result` object with properties:
+#' \itemize{
+#'   \item `tbl_gt`: gt table with embedded figures
+#'   \item `raw_table`: underlying gtsummary table
+#'   \item `figures`: named list of ggplot objects
+#' }
+#' @export
 basic_summaries <- function(data, vars = colnames(data), by_var = NULL) {
   # create summary table using gtsummary::tbl_summary()
   tbl <- basic_summary_table(
@@ -39,5 +55,9 @@ basic_summaries <- function(data, vars = colnames(data), by_var = NULL) {
     ) |>
     gt::fmt_markdown(columns = dplyr::starts_with("stat_"))
 
-  return(tbl_gt)
+  new_basic_summaries_result(
+    tbl_gt = tbl_gt,
+    raw_table = tbl,
+    figures = figs
+  )
 }

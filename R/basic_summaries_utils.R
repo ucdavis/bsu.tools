@@ -7,7 +7,7 @@ basic_summary_table <- function(data, vars = colnames(data), by_var = NULL) {
   # create initial summary table
   tbl_summary <- data |>
     gtsummary::tbl_summary(
-      by = dplyr::all_of(by_var),
+      by = if (is.null(by_var)) NULL else dplyr::all_of(by_var),
       include = dplyr::all_of(vars),
       type = dplyr::where(is.numeric) ~ "continuous",
       statistic = gtsummary::all_continuous() ~ c(
@@ -47,18 +47,34 @@ basic_summary_figures <- function(data, vars = colnames(data), by_var = NULL) {
     function(x) {
       # if the variable is numeric, create a boxplot
       if (var_class[x] %in% c("numeric", "integer")) {
-        data |>
-          ggplot2::ggplot() +
-          ggplot2::aes(x = .data[[by_var]], y = .data[[x]]) +
-          ggplot2::geom_boxplot() +
-          ggplot2::theme_classic()
+        if (is.null(by_var)) {
+          data |>
+            ggplot2::ggplot() +
+            ggplot2::aes(x = .data[[x]]) +
+            ggplot2::geom_histogram() +
+            ggplot2::theme_classic()
+        } else {
+          data |>
+            ggplot2::ggplot() +
+            ggplot2::aes(x = .data[[by_var]], y = .data[[x]]) +
+            ggplot2::geom_boxplot() +
+            ggplot2::theme_classic()
+        }
       } else {
         # if the variable is categorical, create a bar plot
-        data |>
-          ggplot2::ggplot() +
-          ggplot2::aes(x = .data[[x]], fill = .data[[by_var]]) +
-          ggplot2::geom_bar(position = "dodge") +
-          ggplot2::theme_classic()
+        if (is.null(by_var)) {
+          data |>
+            ggplot2::ggplot() +
+            ggplot2::aes(x = .data[[x]]) +
+            ggplot2::geom_bar() +
+            ggplot2::theme_classic()
+        } else {
+          data |>
+            ggplot2::ggplot() +
+            ggplot2::aes(x = .data[[x]], fill = .data[[by_var]]) +
+            ggplot2::geom_bar(position = "dodge") +
+            ggplot2::theme_classic()
+        }
       }
     }
   )

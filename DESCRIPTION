@@ -12,8 +12,10 @@ RoxygenNote: 8.0.0
 Suggests: 
     knitr,
     pkgdown,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 Imports:
+    S7,
     bookdown,
     here,
     stringr,
@@ -21,3 +23,4 @@ Imports:
 URL: https://ucdavis.github.io/bsu.tools/, https://silver-adventure-qjvmn6j.pages.github.io/
 BugReports: https://github.com/ucdavis/bsu.tools/issues
 VignetteBuilder: knitr
+Config/testthat/edition: 3
