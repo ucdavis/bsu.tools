@@ -36,11 +36,12 @@ histograms and categorical variables as bar charts.
 
 ### Example: `mtcars`
 
-```{r mtcars-no-group, eval=FALSE}
+```{r mtcars-no-group}
 result_mtcars <- basic_summaries(
   data = mtcars,
   vars = c("mpg", "hp", "wt", "cyl")
 )
+
 result_mtcars
 ```
 
@@ -64,12 +65,13 @@ column is also added automatically.
 
 ### Example: `iris` grouped by `Species`
 
-```{r iris-by-species, eval=FALSE}
+```{r iris-by-species, results='asis'}
 result_iris <- basic_summaries(
   data = iris,
   vars = c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"),
   by_var = "Species"
 )
+
 result_iris
 ```
 
@@ -85,7 +87,7 @@ result_iris@figures[["Petal.Width"]]
 You can pass any subset of column names to `vars`.  Variables not listed are
 excluded from both the table and the figures.
 
-```{r subset, eval=FALSE}
+```{r subset, results='asis'}
 basic_summaries(
   data = mtcars,
   vars = c("mpg", "am")

@@ -45,8 +45,7 @@ print.basic_summaries_result <- function(x, ...) {
   invisible(x)
 }
 
-local({
-  S7::method(print, basic_summaries_result) <- function(x, ...) {
+S7::method(print, basic_summaries_result) <- function(x, ...) {
     print.basic_summaries_result(x, ...)
-  }
-})
+}
+
