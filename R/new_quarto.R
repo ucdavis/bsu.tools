@@ -8,9 +8,9 @@
 #' @export
 #'
 new_quarto <- function(
-    filename = NULL,
-    path = here::here(),
-    gist = c("no_logo_quarto", "ctsc_quarto", "hac_quarto")) {
+  filename = NULL,
+  path = here::here(),
+  gist = c("no_logo_quarto", "ctsc_quarto", "hac_quarto")) {
 
   gist <- match.arg(gist)
   # Validate path

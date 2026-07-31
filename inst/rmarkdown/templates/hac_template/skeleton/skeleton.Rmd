@@ -94,7 +94,6 @@ send to the client.
 #      automatically load output and objects from a previous run.
 #         see https://bookdown.org/yihui/rmarkdown-cookbook/cache.html for more
 #         information
-
 ```
 
 ```{asis, echo=internal}
