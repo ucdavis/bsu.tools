@@ -1,0 +1,95 @@
+---
+title: "Using basic_summaries()"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using basic_summaries()}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(bsu.tools)
+```
+
+The `basic_summaries()` function produces a combined summary table and set of
+figures for a data frame.  It wraps `gtsummary::tbl_summary()` and returns an
+S7 object (`basic_summaries_result`) with three properties:
+
+- **`tbl_gt`** – a `gt` table with small inline figures embedded in a
+  *Figures* column.
+- **`raw_table`** – the underlying `gtsummary` table object, useful for
+  further customisation.
+- **`figures`** – a named list of `ggplot2` objects (one per summarised
+  variable).
+
+## Without a grouping variable
+
+When `by_var` is `NULL` (the default), numeric variables are shown as
+histograms and categorical variables as bar charts.
+
+### Example: `mtcars`
+
+```{r mtcars-no-group}
+result_mtcars <- basic_summaries(
+  data = mtcars,
+  vars = c("mpg", "hp", "wt", "cyl")
+)
+
+result_mtcars
+```
+
+The printed output is the `gt` table. You can also access each component
+directly:
+
+```{r mtcars-components, eval=FALSE}
+# raw gtsummary table
+result_mtcars@raw_table
+
+# individual ggplot figures
+result_mtcars@figures[["mpg"]]
+result_mtcars@figures[["cyl"]]
+```
+
+## With a grouping variable
+
+When `by_var` is supplied, numeric variables are shown as box plots (one box
+per group) and categorical variables as dodged bar charts.  An *Overall*
+column is also added automatically.
+
+### Example: `iris` grouped by `Species`
+
+```{r iris-by-species, results='asis'}
+result_iris <- basic_summaries(
+  data = iris,
+  vars = c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"),
+  by_var = "Species"
+)
+
+result_iris
+```
+
+Access the figures for any variable:
+
+```{r iris-figures, eval=FALSE}
+result_iris@figures[["Sepal.Length"]]
+result_iris@figures[["Petal.Width"]]
+```
+
+## Selecting a subset of variables
+
+You can pass any subset of column names to `vars`.  Variables not listed are
+excluded from both the table and the figures.
+
+```{r subset, results='asis'}
+basic_summaries(
+  data = mtcars,
+  vars = c("mpg", "am")
+)
+```

@@ -1,4 +1,11 @@
 url: https://silver-adventure-qjvmn6j.pages.github.io/
 template:
   bootstrap: 5
+  light-switch: true
+
+articles:
+  - title: "Vignettes"
+    contents:
+      - basic-summaries
+      - new-quarto
 
