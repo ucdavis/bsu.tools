@@ -18,7 +18,7 @@ the function will automatically add it for you.
 default.  
 - gist: the template you want to use (see below).
 
-As of 2026-07-07 there are currently 3 qmd gists available:  
+As of 2026-08-03 there are currently 3 qmd gists available:  
 - “no_logo_quarto”,  
 - “ctsc_quarto”,  
 - and “hac_quarto”.
