@@ -329,7 +329,7 @@ result_mtcars
 #>  ..  .. ..$ rows    :List of 2
 #>  ..  .. .. ..$ : logi TRUE
 #>  ..  .. .. ..$ : language ~.data$row_type %in% c("level", "missing")
-#>  ..  .. .. .. ..- attr(*, ".Environment")=<environment: 0x5622ede2ea80> 
+#>  ..  .. .. .. ..- attr(*, ".Environment")=<environment: 0x55d699f31638> 
 #>  ..  .. ..$ n_spaces: int [1:2] 0 4
 #>  ..  ..$ fmt_missing             : tibble [0 × 3] (S3: tbl_df/tbl/data.frame)
 #>  ..  .. ..$ column: chr(0) 
@@ -605,13 +605,13 @@ result_mtcars
 #>  ..  ..$ label       : list()
 #>  ..  ..$ statistic   :List of 4
 #>  ..  .. ..$ mpg: chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x5622eb8fa8e0> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55d6979da1a0> 
 #>  ..  .. ..$ hp : chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x5622eb8fa8e0> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55d6979da1a0> 
 #>  ..  .. ..$ wt : chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x5622eb8fa8e0> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55d6979da1a0> 
 #>  ..  .. ..$ cyl: chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x5622eb8fa8e0> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55d6979da1a0> 
 #>  ..  ..$ digits      :List of 4
 #>  ..  .. ..$ mpg:List of 12
 #>  ..  .. .. ..$ mean     :function (x)  
@@ -838,7 +838,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["mpg"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x5622ee0ae6d0> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55d69a1bc930> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -1275,7 +1275,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x5622ee0ae6d0> 
+#>  ..  ..@ plot_env   :<environment: 0x55d69a1bc930> 
 #>  .. $ hp : <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -1431,7 +1431,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["hp"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x5622f1e314b0> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55d69df33128> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -1868,7 +1868,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x5622f1e314b0> 
+#>  ..  ..@ plot_env   :<environment: 0x55d69df33128> 
 #>  .. $ wt : <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -2024,7 +2024,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["wt"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x5622f33a0fb0> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55d69f4a2c28> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -2461,7 +2461,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x5622f33a0fb0> 
+#>  ..  ..@ plot_env   :<environment: 0x55d69f4a2c28> 
 #>  .. $ cyl: <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -2617,7 +2617,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["cyl"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x5622f4910100> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55d6a0a11d78> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -3054,7 +3054,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x5622f4910100>
+#>  ..  ..@ plot_env   :<environment: 0x55d6a0a11d78>
 ```
 
 The printed output is the `gt` table. You can also access each component
@@ -3329,7 +3329,7 @@ chr(0) .. .. ..\$ undo_text_format: logi(0) .. ..\$ indent : tibble \[2
 × 3\] (S3: tbl_df/tbl/data.frame) .. .. ..\$ column : chr \[1:2\]
 “label” “label” .. .. ..\$ rows :List of 2 .. .. .. ..\$ : logi TRUE ..
 .. .. ..\$ : language ~.data\$row_type %in% c("level", "missing") .. ..
-.. .. ..- attr(\*, ".Environment")=\<environment: 0x5622f4f27678\> .. ..
+.. .. ..- attr(\*, ".Environment")=\<environment: 0x55d6a100f800\> .. ..
 ..\$ n_spaces: int \[1:2\] 0 4 .. ..\$ fmt_missing : tibble \[0 × 3\]
 (S3: tbl_df/tbl/data.frame) .. .. ..\$ column: chr(0) .. .. ..\$ rows :
 list() .. .. ..\$ symbol: chr(0) .. ..\$ fmt_fun : tibble \[0 × 3\] (S3:
@@ -3793,16 +3793,16 @@ Petal.Length: num \[1:150\] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 … ..
 ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5622f2ee8848\> .. .. ..\$ Sepal.Width : chr “{mean} ({sd})  
+0x55d69efd3480\> .. .. ..\$ Sepal.Width : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5622f2ee8848\> .. .. ..\$ Petal.Length: chr “{mean} ({sd})  
+0x55d69efd3480\> .. .. ..\$ Petal.Length: chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5622f2ee8848\> .. .. ..\$ Petal.Width : chr “{mean} ({sd})  
+0x55d69efd3480\> .. .. ..\$ Petal.Width : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5622f2ee8848\> .. ..\$ digits :List of 4 .. .. ..\$ Sepal.Length:List
+0x55d69efd3480\> .. ..\$ digits :List of 4 .. .. ..\$ Sepal.Length:List
 of 12 .. .. .. ..\$ mean :function (x)  
 .. .. .. ..\$ sd :function (x)  
 .. .. .. ..\$ median :function (x)  
@@ -3922,9 +3922,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5622ef7b4010\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55d69b8df7a8\> ..
 .. .. \$ y: language ~.data\[\[“Sepal.Length”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x5622ef7b4010\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x55d69b8df7a8\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4128,7 +4128,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5622ef7b4010\> .. \$ Sepal.Width :
+..@ plot_env :\<environment: 0x55d69b8df7a8\> .. \$ Sepal.Width :
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4190,9 +4190,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5622f2011e80\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55d69e0e6798\> ..
 .. .. \$ y: language ~.data\[\[“Sepal.Width”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x5622f2011e80\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x55d69e0e6798\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4396,7 +4396,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5622f2011e80\> .. \$ Petal.Length:
+..@ plot_env :\<environment: 0x55d69e0e6798\> .. \$ Petal.Length:
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4458,9 +4458,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5622f36fa7d8\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55d69f7ca280\> ..
 .. .. \$ y: language ~.data\[\[“Petal.Length”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x5622f36fa7d8\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x55d69f7ca280\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4664,7 +4664,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5622f36fa7d8\> .. \$ Petal.Width :
+..@ plot_env :\<environment: 0x55d69f7ca280\> .. \$ Petal.Width :
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4726,9 +4726,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5622f4da8f20\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55d6a0e754a8\> ..
 .. .. \$ y: language ~.data\[\[“Petal.Width”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x5622f4da8f20\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x55d6a0e754a8\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4932,7 +4932,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5622f4da8f20\>
+..@ plot_env :\<environment: 0x55d6a0e754a8\>
 
 Access the figures for any variable:
 
@@ -5112,7 +5112,7 @@ chr(0) .. .. ..\$ undo_text_format: logi(0) .. ..\$ indent : tibble \[2
 × 3\] (S3: tbl_df/tbl/data.frame) .. .. ..\$ column : chr \[1:2\]
 “label” “label” .. .. ..\$ rows :List of 2 .. .. .. ..\$ : logi TRUE ..
 .. .. ..\$ : language ~.data\$row_type %in% c("level", "missing") .. ..
-.. .. ..- attr(\*, ".Environment")=\<environment: 0x5622f4ea4258\> .. ..
+.. .. ..- attr(\*, ".Environment")=\<environment: 0x55d6a0f2f1c8\> .. ..
 ..\$ n_spaces: int \[1:2\] 0 4 .. ..\$ fmt_missing : tibble \[0 × 3\]
 (S3: tbl_df/tbl/data.frame) .. .. ..\$ column: chr(0) .. .. ..\$ rows :
 list() .. .. ..\$ symbol: chr(0) .. ..\$ fmt_fun : tibble \[0 × 3\] (S3:
@@ -5200,10 +5200,10 @@ cyl : num \[1:32\] 6 6 4 6 8 6 8 4 4 6 … .. .. ..\$ disp: num \[1:32\]
 mpg: chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5622f144ffa0\> .. .. ..\$ am : chr “{mean} ({sd})  
+0x55d69d4c9db0\> .. .. ..\$ am : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5622f144ffa0\> .. ..\$ digits :List of 2 .. .. ..\$ mpg:List of 12 ..
+0x55d69d4c9db0\> .. ..\$ digits :List of 2 .. .. ..\$ mpg:List of 12 ..
 .. .. ..\$ mean :function (x)  
 .. .. .. ..\$ sd :function (x)  
 .. .. .. ..\$ median :function (x)  
@@ -5298,7 +5298,7 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 1 .. .. .. \$ x: language ~.data\[\[“mpg”\]\] .. ..
-.. ..- attr(*, “.Environment”)=\<environment: 0x5622f3c609f8\> .. ..@
+.. ..- attr(*, “.Environment”)=\<environment: 0x55d69fcf10b0\> .. ..@
 theme : List of 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@
 colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -5502,7 +5502,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5622f3c609f8\> .. \$ am : \<:ggplot\> ..
+..@ plot_env :\<environment: 0x55d69fcf10b0\> .. \$ am : \<:ggplot\> ..
 ..@ data :‘data.frame’: 32 obs. of 11 variables: .. .. .. \$ mpg : num
 \[1:32\] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 … .. .. .. \$ cyl
 : num \[1:32\] 6 6 4 6 8 6 8 4 4 6 … .. .. .. \$ disp: num \[1:32\] 160
@@ -5566,7 +5566,7 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 1 .. .. .. \$ x: language ~.data\[\[“am”\]\] .. ..
-.. ..- attr(*, “.Environment”)=\<environment: 0x5622ee66f708\> .. ..@
+.. ..- attr(*, “.Environment”)=\<environment: 0x55d69a85d3f8\> .. ..@
 theme : List of 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@
 colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -5770,4 +5770,4 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5622ee66f708\>
+..@ plot_env :\<environment: 0x55d69a85d3f8\>
