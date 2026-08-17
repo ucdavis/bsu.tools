@@ -26,7 +26,7 @@ Imports:
     stringr,
     usethis,
     rlang
-URL: https://ucdavis.github.io/bsu.tools/, https://silver-adventure-qjvmn6j.pages.github.io/
+URL: https://ucdavis.github.io/bsu.tools/
 BugReports: https://github.com/ucdavis/bsu.tools/issues
 VignetteBuilder: knitr
 Config/testthat/edition: 3
