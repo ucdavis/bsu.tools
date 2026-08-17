@@ -1,0 +1,226 @@
+---
+title: "Using git within RStudio"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using git within RStudio}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+This vignette walks through using [git](https://git-scm.com/) with
+[RStudio](https://posit.co/download/rstudio-desktop/). git is a version control
+system that tracks changes to your project over time, and it pairs naturally
+with the collaborative workflow used across the BSU.
+
+Most of the guidance here follows the excellent, free resource
+[Happy Git and GitHub for the useR](https://happygitwithr.com/) by Jenny Bryan.
+When you want more detail than this vignette provides, that is the place to go.
+
+The code chunks below are shown for reference only and are not run when the
+vignette is built. Commands prefixed with `#` in a shell chunk are meant to be
+typed at a terminal (the RStudio **Terminal** tab), while R code is meant for
+the RStudio **Console**.
+
+## 1. Install git
+
+Before you can use git you need to install it on your computer. Download and
+install git from <https://git-scm.com/downloads>.
+
+- **Windows:** Install [Git for Windows](https://gitforwindows.org/). This also
+  gives you the "Git Bash" shell.
+- **macOS:** The easiest route is to open the Terminal and run `git --version`.
+  If git is not already installed, macOS will offer to install the Command Line
+  Tools for you.
+- **Linux:** Use your distribution's package manager, e.g.
+  `sudo apt-get install git` (Debian/Ubuntu) or `sudo dnf install git`
+  (Fedora).
+
+Confirm the installation by opening the **Terminal** tab in RStudio and running:
+
+```bash
+git --version
+```
+
+If you see a version number, git is installed. See
+[Happy Git chapter 6](https://happygitwithr.com/install-git.html) for more
+detail.
+
+You will also need a free account on [GitHub](https://github.com/), since the
+BSU hosts its repositories there.
+
+## 2. Introduce yourself to git
+
+git records *who* made each change, so you need to tell it your name and email.
+Use the same email address that is associated with your GitHub account.
+
+The `usethis` package (already a dependency of `bsu.tools`) makes this easy from
+the RStudio **Console**:
+
+```{r}
+usethis::use_git_config(
+  user.name = "Jane Doe",
+  user.email = "jdoe@example.com"
+)
+```
+
+Equivalently, you can do this from the **Terminal**:
+
+```bash
+git config --global user.name "Jane Doe"
+git config --global user.email "jdoe@example.com"
+```
+
+Check your settings at any time with:
+
+```{r}
+usethis::git_sitrep()
+```
+
+To connect to GitHub without typing your password repeatedly, set up a
+**Personal Access Token (PAT)**. Generate one and store it with:
+
+```{r}
+usethis::create_github_token()   # opens GitHub to create a PAT
+gitcreds::gitcreds_set()         # paste the PAT when prompted
+```
+
+See [Happy Git chapter 7](https://happygitwithr.com/hello-git.html) and the
+[credential caching chapter](https://happygitwithr.com/https-pat.html) for
+details.
+
+## 3. Clone a repository
+
+*Cloning* makes a local copy of a repository that is already on GitHub. In
+RStudio the smoothest path is to create a new **Project** from version control:
+
+1. **File > New Project > Version Control > Git**.
+2. Paste the repository URL, e.g.
+   `https://github.com/ucdavis/bsu.tools.git`. Find this under the green
+   **Code** button on the GitHub repository page.
+3. Choose a local folder for the project and click **Create Project**.
+
+RStudio will clone the repository and open it as a project, complete with a
+**Git** pane in the upper-right.
+
+You can accomplish the same thing from the **Console** with `usethis`:
+
+```{r}
+usethis::create_from_github(
+  "ucdavis/bsu.tools",
+  destdir = "~/projects"
+)
+```
+
+See [Happy Git chapter 15](https://happygitwithr.com/existing-github-first.html)
+for the "GitHub first" workflow.
+
+## 4. Using branches
+
+A *branch* lets you work on a change in isolation without affecting the main
+line of development (usually called `main`). The BSU workflow is to create a
+branch for each new feature or fix, then merge it back via a Pull Request.
+
+Create and switch to a new branch from the **Console**:
+
+```{r}
+usethis::pr_init("my-new-feature")
+```
+
+Or from the **Terminal**:
+
+```bash
+git checkout -b my-new-feature
+```
+
+In the RStudio **Git** pane, the current branch is shown in the top-right; you
+can switch between existing branches using the branch dropdown. Keep branch
+names short and descriptive.
+
+See [Happy Git chapter 22](https://happygitwithr.com/git-branches.html) for more
+on branching.
+
+## 5. Basics of commit / push / pull
+
+Once you have made changes, the core loop is **commit**, **push**, and **pull**.
+
+- **Commit** records a snapshot of your changes in the local repository.
+- **Push** sends your local commits up to GitHub.
+- **Pull** brings other people's commits down from GitHub to your computer.
+
+### Committing in RStudio
+
+1. In the **Git** pane, check the boxes next to the files you want to include
+   (this is *staging*).
+2. Click **Commit**.
+3. Write a short, meaningful commit message describing *what* changed and
+   *why*, then click **Commit** again.
+
+The equivalent **Terminal** commands are:
+
+```bash
+git add .
+git commit -m "Add a helpful summary of what changed"
+```
+
+### Pushing and pulling in RStudio
+
+Use the green **up arrow** (Push) and blue **down arrow** (Pull) in the **Git**
+pane. As a rule of thumb, **pull before you start working** and **push when you
+reach a good stopping point**.
+
+The equivalent **Terminal** commands are:
+
+```bash
+git pull
+git push
+```
+
+See [Happy Git chapter 21](https://happygitwithr.com/git-basics.html) for a
+walk-through of the commit/push/pull cycle.
+
+## 6. Basics of Pull Requests
+
+A *Pull Request* (PR) proposes merging the changes from your branch into
+`main`, and gives collaborators a place to review and discuss them before they
+are merged.
+
+The `usethis` package streamlines the whole cycle:
+
+```{r}
+# Start a branch for your work
+usethis::pr_init("my-new-feature")
+
+# ... edit files, then commit them via the Git pane or the Terminal ...
+
+# Push the branch and open a PR in your browser
+usethis::pr_push()
+```
+
+`pr_push()` pushes your branch to GitHub and opens the page where you fill in
+the PR title and description, then click **Create pull request**.
+
+After the PR is reviewed and merged on GitHub, tidy up locally with:
+
+```{r}
+usethis::pr_finish()
+```
+
+You can also open a PR manually on the GitHub website: after pushing your
+branch, GitHub shows a **Compare & pull request** button.
+
+See [Happy Git chapter 30](https://happygitwithr.com/pr-extend.html) for the
+full Pull Request workflow.
+
+## Where to go next
+
+This vignette is only a starting point. For a thorough, R-focused treatment of
+git and GitHub, work through
+[Happy Git and GitHub for the useR](https://happygitwithr.com/).
