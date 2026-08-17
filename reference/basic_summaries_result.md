@@ -1,7 +1,7 @@
 # basic_summaries Result Class
 
 S7 class for
-[`basic_summaries()`](https://silver-adventure-qjvmn6j.pages.github.io/reference/basic_summaries.md)
+[`basic_summaries()`](https://ucdavis.github.io/bsu.tools/reference/basic_summaries.md)
 output.
 
 ## Usage

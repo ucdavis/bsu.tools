@@ -6,7 +6,7 @@ library(bsu.tools)
 ```
 
 Borrowing from the `rUM` package, the
-[`new_quarto()`](https://silver-adventure-qjvmn6j.pages.github.io/reference/new_quarto.md)
+[`new_quarto()`](https://ucdavis.github.io/bsu.tools/reference/new_quarto.md)
 function enables you to create a new Quarto qmd file utilizing one of
 our built in templates.
 

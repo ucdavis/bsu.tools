@@ -68,7 +68,7 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ucdavis.github.io/bsu.tools/" class="external-link">bsu.tools</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ucdavis.github.io/bsu.tools/">bsu.tools</a></span><span class="op">)</span></span></code></pre></div>
 <p>The <code><a href="../reference/basic_summaries.html">basic_summaries()</a></code> function produces a combined
 summary table and set of figures for a data frame. It wraps
 <code><a href="https://www.danieldsjoberg.com/gtsummary/reference/tbl_summary.html" class="external-link">gtsummary::tbl_summary()</a></code> and returns an S7 object
@@ -395,7 +395,7 @@ charts.</p>
 <span><span class="co">#&gt;  ..  .. ..$ rows    :List of 2</span></span>
 <span><span class="co">#&gt;  ..  .. .. ..$ : logi TRUE</span></span>
 <span><span class="co">#&gt;  ..  .. .. ..$ : language ~.data$row_type %in% c("level", "missing")</span></span>
-<span><span class="co">#&gt;  ..  .. .. .. ..- attr(*, ".Environment")=&lt;environment: 0x560ce87fde38&gt; </span></span>
+<span><span class="co">#&gt;  ..  .. .. .. ..- attr(*, ".Environment")=&lt;environment: 0x557028f6ce40&gt; </span></span>
 <span><span class="co">#&gt;  ..  .. ..$ n_spaces: int [1:2] 0 4</span></span>
 <span><span class="co">#&gt;  ..  ..$ fmt_missing             : tibble [0 × 3] (S3: tbl_df/tbl/data.frame)</span></span>
 <span><span class="co">#&gt;  ..  .. ..$ column: chr(0) </span></span>
@@ -671,13 +671,13 @@ charts.</p>
 <span><span class="co">#&gt;  ..  ..$ label       : list()</span></span>
 <span><span class="co">#&gt;  ..  ..$ statistic   :List of 4</span></span>
 <span><span class="co">#&gt;  ..  .. ..$ mpg: chr "{mean} ({sd})&lt;br&gt;{median} [{p25}, {p75}]&lt;br&gt;{min}, {max}"</span></span>
-<span><span class="co">#&gt;  ..  .. .. ..- attr(*, ".Environment")=&lt;environment: 0x560ce62b0478&gt; </span></span>
+<span><span class="co">#&gt;  ..  .. .. ..- attr(*, ".Environment")=&lt;environment: 0x557026a21590&gt; </span></span>
 <span><span class="co">#&gt;  ..  .. ..$ hp : chr "{mean} ({sd})&lt;br&gt;{median} [{p25}, {p75}]&lt;br&gt;{min}, {max}"</span></span>
-<span><span class="co">#&gt;  ..  .. .. ..- attr(*, ".Environment")=&lt;environment: 0x560ce62b0478&gt; </span></span>
+<span><span class="co">#&gt;  ..  .. .. ..- attr(*, ".Environment")=&lt;environment: 0x557026a21590&gt; </span></span>
 <span><span class="co">#&gt;  ..  .. ..$ wt : chr "{mean} ({sd})&lt;br&gt;{median} [{p25}, {p75}]&lt;br&gt;{min}, {max}"</span></span>
-<span><span class="co">#&gt;  ..  .. .. ..- attr(*, ".Environment")=&lt;environment: 0x560ce62b0478&gt; </span></span>
+<span><span class="co">#&gt;  ..  .. .. ..- attr(*, ".Environment")=&lt;environment: 0x557026a21590&gt; </span></span>
 <span><span class="co">#&gt;  ..  .. ..$ cyl: chr "{mean} ({sd})&lt;br&gt;{median} [{p25}, {p75}]&lt;br&gt;{min}, {max}"</span></span>
-<span><span class="co">#&gt;  ..  .. .. ..- attr(*, ".Environment")=&lt;environment: 0x560ce62b0478&gt; </span></span>
+<span><span class="co">#&gt;  ..  .. .. ..- attr(*, ".Environment")=&lt;environment: 0x557026a21590&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..$ digits      :List of 4</span></span>
 <span><span class="co">#&gt;  ..  .. ..$ mpg:List of 12</span></span>
 <span><span class="co">#&gt;  ..  .. .. ..$ mean     :function (x)  </span></span>
@@ -904,7 +904,7 @@ charts.</p>
 <span><span class="co">#&gt;     super:  &lt;ggproto object: Class Guides, gg&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ mapping    : &lt;ggplot2::mapping&gt; List of 1</span></span>
 <span><span class="co">#&gt;  .. .. .. $ x: language ~.data[["mpg"]]</span></span>
-<span><span class="co">#&gt;  .. .. ..  ..- attr(*, ".Environment")=&lt;environment: 0x560ce8a805f8&gt; </span></span>
+<span><span class="co">#&gt;  .. .. ..  ..- attr(*, ".Environment")=&lt;environment: 0x5570291ee8c0&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ theme      : &lt;theme&gt; List of 144</span></span>
 <span><span class="co">#&gt;  .. .. .. $ line                            : &lt;ggplot2::element_line&gt;</span></span>
 <span><span class="co">#&gt;  .. .. ..  ..@ colour       : chr "black"</span></span>
@@ -1341,7 +1341,7 @@ charts.</p>
 <span><span class="co">#&gt;     super:  &lt;ggproto object: Class Layout, gg&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ labels     : &lt;ggplot2::labels&gt;  Named list()</span></span>
 <span><span class="co">#&gt;  ..  ..@ meta       : list()</span></span>
-<span><span class="co">#&gt;  ..  ..@ plot_env   :&lt;environment: 0x560ce8a805f8&gt; </span></span>
+<span><span class="co">#&gt;  ..  ..@ plot_env   :&lt;environment: 0x5570291ee8c0&gt; </span></span>
 <span><span class="co">#&gt;  .. $ hp : &lt;ggplot2::ggplot&gt;</span></span>
 <span><span class="co">#&gt;  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:</span></span>
 <span><span class="co">#&gt;  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...</span></span>
@@ -1497,7 +1497,7 @@ charts.</p>
 <span><span class="co">#&gt;     super:  &lt;ggproto object: Class Guides, gg&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ mapping    : &lt;ggplot2::mapping&gt; List of 1</span></span>
 <span><span class="co">#&gt;  .. .. .. $ x: language ~.data[["hp"]]</span></span>
-<span><span class="co">#&gt;  .. .. ..  ..- attr(*, ".Environment")=&lt;environment: 0x560cec800530&gt; </span></span>
+<span><span class="co">#&gt;  .. .. ..  ..- attr(*, ".Environment")=&lt;environment: 0x55702cf71660&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ theme      : &lt;theme&gt; List of 144</span></span>
 <span><span class="co">#&gt;  .. .. .. $ line                            : &lt;ggplot2::element_line&gt;</span></span>
 <span><span class="co">#&gt;  .. .. ..  ..@ colour       : chr "black"</span></span>
@@ -1934,7 +1934,7 @@ charts.</p>
 <span><span class="co">#&gt;     super:  &lt;ggproto object: Class Layout, gg&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ labels     : &lt;ggplot2::labels&gt;  Named list()</span></span>
 <span><span class="co">#&gt;  ..  ..@ meta       : list()</span></span>
-<span><span class="co">#&gt;  ..  ..@ plot_env   :&lt;environment: 0x560cec800530&gt; </span></span>
+<span><span class="co">#&gt;  ..  ..@ plot_env   :&lt;environment: 0x55702cf71660&gt; </span></span>
 <span><span class="co">#&gt;  .. $ wt : &lt;ggplot2::ggplot&gt;</span></span>
 <span><span class="co">#&gt;  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:</span></span>
 <span><span class="co">#&gt;  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...</span></span>
@@ -2090,7 +2090,7 @@ charts.</p>
 <span><span class="co">#&gt;     super:  &lt;ggproto object: Class Guides, gg&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ mapping    : &lt;ggplot2::mapping&gt; List of 1</span></span>
 <span><span class="co">#&gt;  .. .. .. $ x: language ~.data[["wt"]]</span></span>
-<span><span class="co">#&gt;  .. .. ..  ..- attr(*, ".Environment")=&lt;environment: 0x560cedd6c200&gt; </span></span>
+<span><span class="co">#&gt;  .. .. ..  ..- attr(*, ".Environment")=&lt;environment: 0x55702e4dd330&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ theme      : &lt;theme&gt; List of 144</span></span>
 <span><span class="co">#&gt;  .. .. .. $ line                            : &lt;ggplot2::element_line&gt;</span></span>
 <span><span class="co">#&gt;  .. .. ..  ..@ colour       : chr "black"</span></span>
@@ -2527,7 +2527,7 @@ charts.</p>
 <span><span class="co">#&gt;     super:  &lt;ggproto object: Class Layout, gg&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ labels     : &lt;ggplot2::labels&gt;  Named list()</span></span>
 <span><span class="co">#&gt;  ..  ..@ meta       : list()</span></span>
-<span><span class="co">#&gt;  ..  ..@ plot_env   :&lt;environment: 0x560cedd6c200&gt; </span></span>
+<span><span class="co">#&gt;  ..  ..@ plot_env   :&lt;environment: 0x55702e4dd330&gt; </span></span>
 <span><span class="co">#&gt;  .. $ cyl: &lt;ggplot2::ggplot&gt;</span></span>
 <span><span class="co">#&gt;  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:</span></span>
 <span><span class="co">#&gt;  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...</span></span>
@@ -2683,7 +2683,7 @@ charts.</p>
 <span><span class="co">#&gt;     super:  &lt;ggproto object: Class Guides, gg&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ mapping    : &lt;ggplot2::mapping&gt; List of 1</span></span>
 <span><span class="co">#&gt;  .. .. .. $ x: language ~.data[["cyl"]]</span></span>
-<span><span class="co">#&gt;  .. .. ..  ..- attr(*, ".Environment")=&lt;environment: 0x560cef2db350&gt; </span></span>
+<span><span class="co">#&gt;  .. .. ..  ..- attr(*, ".Environment")=&lt;environment: 0x55702fa4c480&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ theme      : &lt;theme&gt; List of 144</span></span>
 <span><span class="co">#&gt;  .. .. .. $ line                            : &lt;ggplot2::element_line&gt;</span></span>
 <span><span class="co">#&gt;  .. .. ..  ..@ colour       : chr "black"</span></span>
@@ -3120,7 +3120,7 @@ charts.</p>
 <span><span class="co">#&gt;     super:  &lt;ggproto object: Class Layout, gg&gt; </span></span>
 <span><span class="co">#&gt;  ..  ..@ labels     : &lt;ggplot2::labels&gt;  Named list()</span></span>
 <span><span class="co">#&gt;  ..  ..@ meta       : list()</span></span>
-<span><span class="co">#&gt;  ..  ..@ plot_env   :&lt;environment: 0x560cef2db350&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt;  ..  ..@ plot_env   :&lt;environment: 0x55702fa4c480&gt;</span></span></code></pre></div>
 <p>The printed output is the <code>gt</code> table. You can also access
 each component directly:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -3338,7 +3338,7 @@ tbl_df/tbl/data.frame) .. .. ..$ column : chr(0) .. .. ..$ rows : list()
 : chr [1:2] “label” “label” .. .. ..$ rows :List of 2 .. .. .. ..$ :
 logi TRUE .. .. .. ..$ : language ~.data<span class="math inline">$row_type %in% c("level", "missing")
 ..  .. .. .. ..- attr(*, ".Environment")=&lt;environment:
-0x560cef8c8e60&gt;
+0x55703003d068&gt;
 ..  .. ..$</span> n_spaces: int [1:2] 0 4 .. ..$ fmt_missing : tibble [0
 × 3] (S3: tbl_df/tbl/data.frame) .. .. ..$ column: chr(0) .. .. ..$ rows
 : list() .. .. ..$ symbol: chr(0) .. ..$ fmt_fun : tibble [0 × 3] (S3:
@@ -3789,15 +3789,15 @@ Petal.Length: num [1:150] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 … ..
 1 1 1 1 1 1 1 … .. ..$ by : chr “Species” .. ..$ label : list() .. ..$
 statistic :List of 4 .. .. ..$ Sepal.Length: chr “{mean}
 ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}” .. .. .. ..-
-attr(</em>, “.Environment”)=&lt;environment: 0x560ced890a58&gt; .. ..
+attr(</em>, “.Environment”)=&lt;environment: 0x55702e0018b0&gt; .. ..
 ..$ Sepal.Width : chr “{mean} ({sd})<br>{median} [{p25},
 {p75}]<br>{min}, {max}” .. .. .. ..- attr(<em>,
-“.Environment”)=&lt;environment: 0x560ced890a58&gt; .. .. ..$
+“.Environment”)=&lt;environment: 0x55702e0018b0&gt; .. .. ..$
 Petal.Length: chr “{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min},
 {max}” .. .. .. ..- attr(</em>, “.Environment”)=&lt;environment:
-0x560ced890a58&gt; .. .. ..$ Petal.Width : chr “{mean}
+0x55702e0018b0&gt; .. .. ..$ Petal.Width : chr “{mean}
 ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}” .. .. .. ..-
-attr(<em>, “.Environment”)=&lt;environment: 0x560ced890a58&gt; .. ..$
+attr(<em>, “.Environment”)=&lt;environment: 0x55702e0018b0&gt; .. ..$
 digits :List of 4 .. .. ..$ Sepal.Length:List of 12 .. .. .. ..$ mean
 :function (x)<br>
 .. .. .. ..$ sd :function (x)<br>
@@ -3920,9 +3920,9 @@ setup: function subset_guides: function train: function update_params:
 function super: &lt;ggproto object: Class Guides, gg&gt; .. ..@ mapping
 : <:mapping> List of 2 .. .. .. $ x: language
 ~.data[[“Species”]] .. .. .. ..- attr(<em>,
-“.Environment”)=&lt;environment: 0x560cea21f0e0&gt; .. .. .. $ y:
+“.Environment”)=&lt;environment: 0x55702a97f468&gt; .. .. .. $ y:
 language ~.data[[“Sepal.Length”]] .. .. .. ..- attr(</em>,
-“.Environment”)=&lt;environment: 0x560cea21f0e0&gt; .. ..@ theme :
+“.Environment”)=&lt;environment: 0x55702a97f468&gt; .. ..@ theme :
 <theme> List of 144 .. .. .. $ line : <:element_line> .. .. ..
 ..@ colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -4129,7 +4129,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: &lt;ggproto object: Class
 Layout, gg&gt; .. ..@ labels : <:labels> Named list() .. ..@
-meta : list() .. ..@ plot_env :&lt;environment: 0x560cea21f0e0&gt; .. $
+meta : list() .. ..@ plot_env :&lt;environment: 0x55702a97f468&gt; .. $
 Sepal.Width : <:ggplot> .. ..@ data :‘data.frame’: 150 obs. of 5
 variables: .. .. .. $ Sepal.Length: num [1:150] 5.1 4.9 4.7 4.6 5 5.4
 4.6 5 4.4 4.9 … .. .. .. $ Sepal.Width : num [1:150] 3.5 3 3.2 3.1 3.6
@@ -4193,9 +4193,9 @@ setup: function subset_guides: function train: function update_params:
 function super: &lt;ggproto object: Class Guides, gg&gt; .. ..@ mapping
 : <:mapping> List of 2 .. .. .. $ x: language
 ~.data[[“Species”]] .. .. .. ..- attr(<em>,
-“.Environment”)=&lt;environment: 0x560cec98fbe0&gt; .. .. .. $ y:
+“.Environment”)=&lt;environment: 0x55702d105bc8&gt; .. .. .. $ y:
 language ~.data[[“Sepal.Width”]] .. .. .. ..- attr(</em>,
-“.Environment”)=&lt;environment: 0x560cec98fbe0&gt; .. ..@ theme :
+“.Environment”)=&lt;environment: 0x55702d105bc8&gt; .. ..@ theme :
 <theme> List of 144 .. .. .. $ line : <:element_line> .. .. ..
 ..@ colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -4402,7 +4402,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: &lt;ggproto object: Class
 Layout, gg&gt; .. ..@ labels : <:labels> Named list() .. ..@
-meta : list() .. ..@ plot_env :&lt;environment: 0x560cec98fbe0&gt; .. $
+meta : list() .. ..@ plot_env :&lt;environment: 0x55702d105bc8&gt; .. $
 Petal.Length: <:ggplot> .. ..@ data :‘data.frame’: 150 obs. of 5
 variables: .. .. .. $ Sepal.Length: num [1:150] 5.1 4.9 4.7 4.6 5 5.4
 4.6 5 4.4 4.9 … .. .. .. $ Sepal.Width : num [1:150] 3.5 3 3.2 3.1 3.6
@@ -4466,9 +4466,9 @@ setup: function subset_guides: function train: function update_params:
 function super: &lt;ggproto object: Class Guides, gg&gt; .. ..@ mapping
 : <:mapping> List of 2 .. .. .. $ x: language
 ~.data[[“Species”]] .. .. .. ..- attr(<em>,
-“.Environment”)=&lt;environment: 0x560cee071490&gt; .. .. .. $ y:
+“.Environment”)=&lt;environment: 0x55702e7ee198&gt; .. .. .. $ y:
 language ~.data[[“Petal.Length”]] .. .. .. ..- attr(</em>,
-“.Environment”)=&lt;environment: 0x560cee071490&gt; .. ..@ theme :
+“.Environment”)=&lt;environment: 0x55702e7ee198&gt; .. ..@ theme :
 <theme> List of 144 .. .. .. $ line : <:element_line> .. .. ..
 ..@ colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -4675,7 +4675,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: &lt;ggproto object: Class
 Layout, gg&gt; .. ..@ labels : <:labels> Named list() .. ..@
-meta : list() .. ..@ plot_env :&lt;environment: 0x560cee071490&gt; .. $
+meta : list() .. ..@ plot_env :&lt;environment: 0x55702e7ee198&gt; .. $
 Petal.Width : <:ggplot> .. ..@ data :‘data.frame’: 150 obs. of 5
 variables: .. .. .. $ Sepal.Length: num [1:150] 5.1 4.9 4.7 4.6 5 5.4
 4.6 5 4.4 4.9 … .. .. .. $ Sepal.Width : num [1:150] 3.5 3 3.2 3.1 3.6
@@ -4739,9 +4739,9 @@ setup: function subset_guides: function train: function update_params:
 function super: &lt;ggproto object: Class Guides, gg&gt; .. ..@ mapping
 : <:mapping> List of 2 .. .. .. $ x: language
 ~.data[[“Species”]] .. .. .. ..- attr(<em>,
-“.Environment”)=&lt;environment: 0x560cef722508&gt; .. .. .. $ y:
+“.Environment”)=&lt;environment: 0x55702fe98f38&gt; .. .. .. $ y:
 language ~.data[[“Petal.Width”]] .. .. .. ..- attr(</em>,
-“.Environment”)=&lt;environment: 0x560cef722508&gt; .. ..@ theme :
+“.Environment”)=&lt;environment: 0x55702fe98f38&gt; .. ..@ theme :
 <theme> List of 144 .. .. .. $ line : <:element_line> .. .. ..
 ..@ colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -4948,7 +4948,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: &lt;ggproto object: Class
 Layout, gg&gt; .. ..@ labels : <:labels> Named list() .. ..@
-meta : list() .. ..@ plot_env :&lt;environment: 0x560cef722508&gt;</:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:mapping></:ggplot></:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:mapping></:ggplot></:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:mapping></:ggplot></:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:mapping></:ggplot></p>
+meta : list() .. ..@ plot_env :&lt;environment: 0x55702fe98f38&gt;</:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:mapping></:ggplot></:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:mapping></:ggplot></:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:mapping></:ggplot></:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:mapping></:ggplot></p>
 <p>Access the figures for any variable:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">result_iris</span><span class="op">@</span><span class="va">figures</span><span class="op">[[</span><span class="st">"Sepal.Length"</span><span class="op">]</span><span class="op">]</span></span>
@@ -5112,7 +5112,7 @@ logi(0) .. ..$ text_format : tibble [0 × 4] (S3: tbl_df/tbl/data.frame)
 : language ~.data<span class="math inline">$row_type %in% c("level",
 "missing")
 ..  .. .. .. ..- attr(*, ".Environment")=&lt;environment:
-0x560cef79a790&gt;
+0x55702ff4e9b8&gt;
 ..  .. ..$</span> n_spaces: int [1:2] 0 4 .. ..$ fmt_missing : tibble [0
 × 3] (S3: tbl_df/tbl/data.frame) .. .. ..$ column: chr(0) .. .. ..$ rows
 : list() .. .. ..$ symbol: chr(0) .. ..$ fmt_fun : tibble [0 × 3] (S3:
@@ -5197,9 +5197,9 @@ qsec: num [1:32] 16.5 17 18.6 19.4 17 … .. .. ..$ vs : num [1:32] 0 0 1
 4 1 1 2 1 4 2 2 4 … .. ..$ by : chr(0) .. ..$ label : list() .. ..$
 statistic :List of 2 .. .. ..$ mpg: chr “{mean} ({sd})<br>{median}
 [{p25}, {p75}]<br>{min}, {max}” .. .. .. ..- attr(</em>,
-“.Environment”)=&lt;environment: 0x560cebd3a7d0&gt; .. .. ..$ am : chr
+“.Environment”)=&lt;environment: 0x55702c4e90c0&gt; .. .. ..$ am : chr
 “{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}” .. .. .. ..-
-attr(<em>, “.Environment”)=&lt;environment: 0x560cebd3a7d0&gt; .. ..$
+attr(<em>, “.Environment”)=&lt;environment: 0x55702c4e90c0&gt; .. ..$
 digits :List of 2 .. .. ..$ mpg:List of 12 .. .. .. ..$ mean :function
 (x)<br>
 .. .. .. ..$ sd :function (x)<br>
@@ -5295,7 +5295,7 @@ gg&gt; package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: &lt;ggproto object: Class Guides, gg&gt; .. ..@ mapping
 : <:mapping> List of 1 .. .. .. $ x: language ~.data[[“mpg”]] ..
-.. .. ..- attr(<em>, “.Environment”)=&lt;environment: 0x560cee5507d0&gt;
+.. .. ..- attr(<em>, “.Environment”)=&lt;environment: 0x55702ed144d8&gt;
 .. ..@ theme : <theme> List of 144 .. .. .. $ line :
 <:element_line> .. .. .. ..@ colour : chr “black” .. .. .. ..@
 linewidth : num 0.5 .. .. .. ..@ linetype : num 1 .. .. .. ..@ lineend :
@@ -5502,7 +5502,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: &lt;ggproto object: Class
 Layout, gg&gt; .. ..@ labels : <:labels> Named list() .. ..@
-meta : list() .. ..@ plot_env :&lt;environment: 0x560cee5507d0&gt; .. $
+meta : list() .. ..@ plot_env :&lt;environment: 0x55702ed144d8&gt; .. $
 am : <:ggplot> .. ..@ data :‘data.frame’: 32 obs. of 11
 variables: .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3
 24.4 22.8 19.2 … .. .. .. $ cyl : num [1:32] 6 6 4 6 8 6 8 4 4 6 … .. ..
@@ -5568,7 +5568,7 @@ setup: function subset_guides: function train: function update_params:
 function super: &lt;ggproto object: Class Guides, gg&gt; .. ..@ mapping
 : <:mapping> List of 1 .. .. .. $ x: language ~.data[[“am”]] ..
 .. .. ..- attr(</:mapping></:ggplot></:labels></:element_text></:element_text></em>, “.Environment”)=&lt;environment:
-0x560ce92b95e0&gt; .. ..@ theme : <theme> List of 144 .. .. .. $ line :
+0x5570299ca2f8&gt; .. ..@ theme : <theme> List of 144 .. .. .. $ line :
 <:element_line> .. .. .. ..@ colour : chr “black” .. .. .. ..@
 linewidth : num 0.5 .. .. .. ..@ linetype : num 1 .. .. .. ..@ lineend :
 chr “butt” .. .. .. ..@ linejoin : chr “round” .. .. .. ..@ arrow : logi
@@ -5774,7 +5774,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: &lt;ggproto object: Class
 Layout, gg&gt; .. ..@ labels : <:labels> Named list() .. ..@
-meta : list() .. ..@ plot_env :&lt;environment: 0x560ce92b95e0&gt;</:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:element_rect></:element_line></:element_line></:margin></:element_text></:margin></:element_text></:margin></:element_text></:margin></:element_text></:margin></:element_text></:element_text></:margin></:element_text></:margin></:element_text></:margin></:element_text></:margin></:element_text></:margin></:mapping></:ggplot></p>
+meta : list() .. ..@ plot_env :&lt;environment: 0x5570299ca2f8&gt;</:labels></:element_text></:element_text></:element_geom></:element_polygon></:element_point></:element_text></:margin></:element_text></:element_rect></:element_line></theme></:element_rect></:element_line></:element_line></:margin></:element_text></:margin></:element_text></:margin></:element_text></:margin></:element_text></:margin></:element_text></:element_text></:margin></:element_text></:margin></:element_text></:margin></:element_text></:margin></:element_text></:margin></:mapping></:ggplot></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

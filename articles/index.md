@@ -3,8 +3,8 @@
 ### Vignettes
 
 - [Using
-  basic_summaries()](https://silver-adventure-qjvmn6j.pages.github.io/articles/basic-summaries.md):
+  basic_summaries()](https://ucdavis.github.io/bsu.tools/articles/basic-summaries.md):
 - [How to create a qmd from
-  gists](https://silver-adventure-qjvmn6j.pages.github.io/articles/new-quarto.md):
+  gists](https://ucdavis.github.io/bsu.tools/articles/new-quarto.md):
 - [Using git within
-  RStudio](https://silver-adventure-qjvmn6j.pages.github.io/articles/using-git.md):
+  RStudio](https://ucdavis.github.io/bsu.tools/articles/using-git.md):
