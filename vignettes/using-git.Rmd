@@ -25,9 +25,9 @@ Most of the guidance here follows the excellent, free resource
 When you want more detail than this vignette provides, that is the place to go.
 
 The code chunks below are shown for reference only and are not run when the
-vignette is built. Commands prefixed with `#` in a shell chunk are meant to be
-typed at a terminal (the RStudio **Terminal** tab), while R code is meant for
-the RStudio **Console**.
+vignette is built. Shell chunks are meant to be typed at a terminal (the
+RStudio **Terminal** tab), while R chunks are meant for the RStudio
+**Console**.
 
 ## 1. Install git
 
@@ -216,8 +216,9 @@ usethis::pr_finish()
 You can also open a PR manually on the GitHub website: after pushing your
 branch, GitHub shows a **Compare & pull request** button.
 
-See [Happy Git chapter 30](https://happygitwithr.com/pr-extend.html) for the
-full Pull Request workflow.
+See the Happy Git
+[Pull request helpers chapter](https://happygitwithr.com/pr-functions.html) for
+the full `usethis` Pull Request workflow.
 
 ## Where to go next
 
