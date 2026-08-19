@@ -17,7 +17,9 @@ new_quarto(
 - filename:
 
   Character string. The name of the file without the ".qmd" extension.
-  Only letters, numbers, hyphens, and underscores are allowed.
+  Only letters, numbers, hyphens, and underscores are allowed. When
+  \`NULL\` (the default) an interactive file explorer pop-up is opened
+  to choose the file name and location.
 
 - path:
 
