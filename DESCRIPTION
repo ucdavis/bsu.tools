@@ -13,6 +13,7 @@ Suggests:
     knitr,
     pkgdown,
     rmarkdown,
+    rstudioapi,
     testthat (>= 3.0.0)
 Imports:
     S7,
