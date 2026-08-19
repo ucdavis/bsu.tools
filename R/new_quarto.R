@@ -1,6 +1,8 @@
 #' @title Create a new Quarto Document from Template
 #' @param filename Character string. The name of the file without the ".qmd"
-#'  extension. Only letters, numbers, hyphens, and underscores are allowed.
+#'  extension. Only letters, numbers, hyphens, and underscores are allowed. When
+#'  `NULL` (the default) an interactive file explorer pop-up is opened to choose
+#'  the file name and location.
 #' @param path Character string. Directory where the file will be created.
 #'  Defaults to the current project's base directory.
 #' @param gist Character string. Qmd template file to create/open.
@@ -18,8 +20,15 @@ new_quarto <- function(
     stop("Invalid `path`. Please enter a valid project directory.")
   }
 
-  # Validate filename: part 1
-  if (is.null(filename)) stop("Invalid filename. Please input a value.")
+  # Prompt for a file name/location via a file explorer pop-up when NULL
+  if (is.null(filename)) {
+    selected <- choose_quarto_file(path)
+    if (is.null(selected) || length(selected) == 0 || selected == "") {
+      stop("Invalid filename. Please input a value.")
+    }
+    path <- dirname(selected)
+    filename <- basename(selected)
+  }
 
   # Remove .qmd if accidentally typed
   filename <- stringr::str_replace_all(filename, ".qmd$", "")
@@ -73,4 +82,27 @@ new_quarto <- function(
   }
 
   invisible(NULL)
+}
+
+# Open a file explorer pop-up to choose the Quarto file name and location.
+# Returns the selected path (without extension) or NULL if cancelled.
+choose_quarto_file <- function(path) {
+  if (!interactive() || !rstudioapi::isAvailable()) {
+    stop("Invalid filename. Please input a value.")
+  }
+
+  selected <- rstudioapi::selectFile(
+    caption = "Create New Quarto Document",
+    label = "Create",
+    path = path,
+    filter = "Quarto Files (*.qmd)",
+    existing = FALSE
+  )
+
+  if (is.null(selected)) {
+    return(NULL)
+  }
+
+  # Remove .qmd if present so downstream logic can append it consistently
+  stringr::str_replace_all(selected, "\\.qmd$", "")
 }
