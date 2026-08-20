@@ -28,9 +28,9 @@ function will automatically add it for you.
 - gist: the template you want to use (see below).  
 
 As of `r Sys.Date()` there are currently 3 qmd gists available:   
-- "no_logo_quarto",  
-- "ctsc_quarto",  
-- and "hac_quarto".  
+- "no_logo",  
+- "ctsc",  
+- and "hac".  
 
 Simply call `new_quarto(filename = "your-new-qmd", gist = "<one-of-the-three>")` 
 in the console to create and open your new qmd file from the template.  

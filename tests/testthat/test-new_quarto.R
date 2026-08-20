@@ -23,7 +23,7 @@ test_that("new_quarto uses the file chosen by the explorer pop-up", {
     choose_quarto_file = function(path) chosen
   )
 
-  new_quarto(filename = NULL, path = dir, gist = "no_logo_quarto")
+  new_quarto(filename = NULL, path = dir, gist = "no_logo")
 
   expect_true(file.exists(file.path(dir, "my_report.qmd")))
 })
