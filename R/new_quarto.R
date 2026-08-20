@@ -12,8 +12,8 @@
 new_quarto <- function(
   filename = NULL,
   path = here::here(),
-  gist = c("no_logo_quarto", "ctsc_quarto", "hac_quarto")) {
-
+  gist = c("no_logo", "ctsc", "hac")
+) {
   gist <- match.arg(gist)
   # Validate path
   if (is.null(path) || !dir.exists(path)) {

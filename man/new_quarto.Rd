@@ -7,7 +7,7 @@
 new_quarto(
   filename = NULL,
   path = here::here(),
-  gist = c("no_logo_quarto", "ctsc_quarto", "hac_quarto")
+  gist = c("no_logo", "ctsc", "hac")
 )
 }
 \arguments{
