@@ -8,7 +8,7 @@ format:
     toc-location: left
     toc-depth: 3
     embed-resources: true
-    css: template_css.css
+    css: "`r system.file('styling/template_css.css', package = 'bsu.tools')`"
 ---
 
 ```{r setup, include=FALSE}

@@ -26,7 +26,4 @@ test_that("new_quarto uses the file chosen by the explorer pop-up", {
   new_quarto(filename = NULL, path = dir, gist = "no_logo_quarto")
 
   expect_true(file.exists(file.path(dir, "my_report.qmd")))
-  # The shared stylesheet is copied alongside the document so the template's
-  # `css: template_css.css` reference resolves at render time.
-  expect_true(file.exists(file.path(dir, "template_css.css")))
 })

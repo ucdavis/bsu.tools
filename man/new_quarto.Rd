@@ -27,8 +27,3 @@ Opens file after creating the Quarto document.
 \description{
 Create a new Quarto Document from Template
 }
-\details{
-The shared `template_css.css` stylesheet is copied into `path`
-alongside the new Quarto document so that the template's `css:` reference
-resolves when the document is rendered.
-}

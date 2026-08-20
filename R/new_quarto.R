@@ -6,9 +6,6 @@
 #' @param path Character string. Directory where the file will be created.
 #'  Defaults to the current project's base directory.
 #' @param gist Character string. Qmd template file to create/open.
-#' @details The shared `template_css.css` stylesheet is copied into `path`
-#'  alongside the new Quarto document so that the template's `css:` reference
-#'  resolves when the document is rendered.
 #' @returns Opens file after creating the Quarto document.
 #' @export
 #'
@@ -76,20 +73,6 @@ new_quarto <- function(
   }
 
   file.copy(from = template_path, to = the_quarto_file, overwrite = FALSE)
-
-  # Copy the shared CSS stylesheet alongside the Quarto document so the
-  # `css: template_css.css` reference in the template resolves at render time.
-  css_path <- system.file("styling/template_css.css", package = "bsu.tools")
-
-  if (css_path == "") {
-    stop("Could not find CSS stylesheet in package installation")
-  }
-
-  file.copy(
-    from = css_path,
-    to = file.path(path, "template_css.css"),
-    overwrite = FALSE
-  )
 
   # Open the new template upon successful copy
   if (file.exists(the_quarto_file)) {
