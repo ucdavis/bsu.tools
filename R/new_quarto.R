@@ -5,9 +5,9 @@
 #'  the file name and location.
 #' @param path Character string. Directory where the file will be created.
 #'  Defaults to the current project's base directory.
-#' @param gist Character string. Qmd template file to create/open. Accepted
-#'  values are `"no_logo_quarto"`, `"ctsc_quarto"`, and `"hac_quarto"`, plus
-#'  the shortened aliases `"no_logo"`, `"ctsc"`, and `"hac"`.
+#' @param gist Character string. Qmd template file to create/open. Primary
+#'  values are `"no_logo"`, `"ctsc"`, and `"hac"`. Legacy aliases
+#'  `"no_logo_quarto"`, `"ctsc_quarto"`, and `"hac_quarto"` are also accepted.
 #' @returns Opens file after creating the Quarto document.
 #' @export
 #'
