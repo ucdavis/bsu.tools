@@ -14,7 +14,8 @@ Suggests:
     pkgdown,
     rmarkdown,
     rstudioapi,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    withr
 Imports:
     S7,
     bookdown,
