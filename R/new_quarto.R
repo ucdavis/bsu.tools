@@ -5,23 +5,23 @@
 #'  the file name and location.
 #' @param path Character string. Directory where the file will be created.
 #'  Defaults to the current project's base directory.
-#' @param gist Character string. Qmd template file to create/open. Legacy
-#'  values `"no_logo_quarto"`, `"ctsc_quarto"`, and `"hac_quarto"` are also
-#'  accepted.
+#' @param gist Character string. Qmd template file to create/open. Preferred
+#'  values are `"no_logo"`, `"ctsc"`, and `"hac"`. Legacy values
+#'  `"no_logo_quarto"`, `"ctsc_quarto"`, and `"hac_quarto"` are also accepted.
 #' @returns Opens file after creating the Quarto document.
 #' @export
 #'
 new_quarto <- function(
   filename = NULL,
   path = here::here(),
-  gist = c("no_logo", "ctsc", "hac")
+  gist = c("no_logo_quarto", "ctsc_quarto", "hac_quarto")
 ) {
   legacy_gists <- c(
     no_logo_quarto = "no_logo",
     ctsc_quarto = "ctsc",
     hac_quarto = "hac"
   )
-  gist <- match.arg(gist, c(unname(legacy_gists), names(legacy_gists)))
+  gist <- match.arg(gist, c(names(legacy_gists), unname(legacy_gists)))
   if (gist %in% names(legacy_gists)) {
     gist <- legacy_gists[[gist]]
   }

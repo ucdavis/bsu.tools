@@ -7,7 +7,7 @@
 new_quarto(
   filename = NULL,
   path = here::here(),
-  gist = c("no_logo", "ctsc", "hac")
+  gist = c("no_logo_quarto", "ctsc_quarto", "hac_quarto")
 )
 }
 \arguments{
@@ -19,9 +19,9 @@ the file name and location.}
 \item{path}{Character string. Directory where the file will be created.
 Defaults to the current project's base directory.}
 
-\item{gist}{Character string. Qmd template file to create/open. Legacy
-values \code{"no_logo_quarto"}, \code{"ctsc_quarto"}, and \code{"hac_quarto"} are also
-accepted.}
+\item{gist}{Character string. Qmd template file to create/open. Preferred
+values are \code{"no_logo"}, \code{"ctsc"}, and \code{"hac"}. Legacy values
+\code{"no_logo_quarto"}, \code{"ctsc_quarto"}, and \code{"hac_quarto"} are also accepted.}
 }
 \value{
 Opens file after creating the Quarto document.
