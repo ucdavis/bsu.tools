@@ -29,9 +29,14 @@ test_that("new_quarto uses the file chosen by the explorer pop-up", {
 })
 
 test_that("new_quarto accepts legacy gist names", {
-  dir <- withr::local_tempdir()
+  aliases <- c("no_logo_quarto", "ctsc_quarto", "hac_quarto")
 
-  new_quarto(filename = "legacy_report", path = dir, gist = "no_logo_quarto")
+  purrr::walk(aliases, function(alias) {
+    dir <- withr::local_tempdir()
+    filename <- paste0("legacy_report_", alias)
 
-  expect_true(file.exists(file.path(dir, "legacy_report.qmd")))
+    new_quarto(filename = filename, path = dir, gist = alias)
+
+    expect_true(file.exists(file.path(dir, paste0(filename, ".qmd"))))
+  })
 })
