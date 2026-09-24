@@ -27,3 +27,11 @@ test_that("new_quarto uses the file chosen by the explorer pop-up", {
 
   expect_true(file.exists(file.path(dir, "my_report.qmd")))
 })
+
+test_that("new_quarto accepts legacy gist names", {
+  dir <- withr::local_tempdir()
+
+  new_quarto(filename = "legacy_report", path = dir, gist = "no_logo_quarto")
+
+  expect_true(file.exists(file.path(dir, "legacy_report.qmd")))
+})
