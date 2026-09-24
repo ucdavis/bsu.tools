@@ -48,7 +48,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">new_quarto</span><span class="op">(</span></span>
 <span>  filename <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  path <span class="op">=</span> <span class="fu">here</span><span class="fu">::</span><span class="fu"><a href="https://here.r-lib.org/reference/here.html" class="external-link">here</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  gist <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"no_logo_quarto"</span>, <span class="st">"ctsc_quarto"</span>, <span class="st">"hac_quarto"</span><span class="op">)</span></span>
+<span>  gist <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"no_logo"</span>, <span class="st">"ctsc"</span>, <span class="st">"hac"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -59,7 +59,7 @@
 <dl><dt id="arg-filename">filename<a class="anchor" aria-label="anchor" href="#arg-filename"></a></dt>
 <dd><p>Character string. The name of the file without the ".qmd"
 extension. Only letters, numbers, hyphens, and underscores are allowed. When
-`NULL` (the default) an interactive file explorer pop-up is opened to choose
+<code>NULL</code> (the default) an interactive file explorer pop-up is opened to choose
 the file name and location.</p></dd>
 
 
@@ -69,7 +69,9 @@ Defaults to the current project's base directory.</p></dd>
 
 
 <dt id="arg-gist">gist<a class="anchor" aria-label="anchor" href="#arg-gist"></a></dt>
-<dd><p>Character string. Qmd template file to create/open.</p></dd>
+<dd><p>Character string. Qmd template file to create/open. Primary
+values are <code>"no_logo"</code>, <code>"ctsc"</code>, and <code>"hac"</code>. Legacy aliases
+<code>"no_logo_quarto"</code>, <code>"ctsc_quarto"</code>, and <code>"hac_quarto"</code> are also accepted.</p></dd>
 
 </dl></div>
     <div class="section level2">

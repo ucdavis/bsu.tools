@@ -19,9 +19,9 @@ default.
 - gist: the template you want to use (see below).
 
 As of 2026-09-24 there are currently 3 qmd gists available:  
-- “no_logo_quarto”,  
-- “ctsc_quarto”,  
-- and “hac_quarto”.
+- “no_logo”,  
+- “ctsc”,  
+- and “hac”.
 
 Simply call
 `new_quarto(filename = "your-new-qmd", gist = "<one-of-the-three>")` in
