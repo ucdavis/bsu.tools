@@ -14,20 +14,17 @@
 new_quarto <- function(
   filename = NULL,
   path = here::here(),
-  gist = c(
-    "no_logo", "ctsc", "hac",
-    "no_logo_quarto", "ctsc_quarto", "hac_quarto"
-  )
+  gist = c("no_logo", "ctsc", "hac")
 ) {
   legacy_gists <- c(
     no_logo_quarto = "no_logo",
     ctsc_quarto = "ctsc",
     hac_quarto = "hac"
   )
-  gist <- match.arg(gist)
-  if (gist %in% names(legacy_gists)) {
+  if (length(gist) == 1 && gist %in% names(legacy_gists)) {
     gist <- legacy_gists[[gist]]
   }
+  gist <- match.arg(gist)
   # Validate path
   if (is.null(path) || !dir.exists(path)) {
     stop("Invalid `path`. Please enter a valid project directory.")
