@@ -23,7 +23,61 @@ test_that("new_quarto uses the file chosen by the explorer pop-up", {
     choose_quarto_file = function(path) chosen
   )
 
-  new_quarto(filename = NULL, path = dir, gist = "no_logo_quarto")
+  new_quarto(filename = NULL, path = dir, gist = "no_logo")
 
   expect_true(file.exists(file.path(dir, "my_report.qmd")))
+})
+
+test_that("new_quarto accepts legacy gist names", {
+  aliases <- c("no_logo_quarto", "ctsc_quarto", "hac_quarto")
+
+  purrr::walk(aliases, function(alias) {
+    dir <- withr::local_tempdir()
+    filename <- paste0("legacy_report_", alias)
+
+    new_quarto(filename = filename, path = dir, gist = alias)
+
+    expect_true(file.exists(file.path(dir, paste0(filename, ".qmd"))))
+  })
+})
+
+test_that("new_quarto accepts shortened gist names", {
+  aliases <- c("no_logo", "ctsc", "hac")
+
+  purrr::walk(aliases, function(alias) {
+    dir <- withr::local_tempdir()
+    filename <- paste0("short_report_", alias)
+
+    new_quarto(filename = filename, path = dir, gist = alias)
+
+    expect_true(file.exists(file.path(dir, paste0(filename, ".qmd"))))
+  })
+})
+
+test_that("new_quarto accepts unique partial legacy gist names", {
+  dir <- withr::local_tempdir()
+
+  new_quarto(filename = "partial_legacy_report", path = dir, gist = "no_logo_q")
+
+  expect_true(file.exists(file.path(dir, "partial_legacy_report.qmd")))
+})
+
+test_that("new_quarto accepts unique partial canonical gist names", {
+  dir <- withr::local_tempdir()
+
+  new_quarto(filename = "partial_canonical_report", path = dir, gist = "ha")
+
+  expect_true(file.exists(file.path(dir, "partial_canonical_report.qmd")))
+})
+
+test_that("new_quarto uses the first gist when given a vector", {
+  dir <- withr::local_tempdir()
+
+  new_quarto(
+    filename = "vector_gist_report",
+    path = dir,
+    gist = c("ctsc", "hac")
+  )
+
+  expect_true(file.exists(file.path(dir, "vector_gist_report.qmd")))
 })

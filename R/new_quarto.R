@@ -5,16 +5,37 @@
 #'  the file name and location.
 #' @param path Character string. Directory where the file will be created.
 #'  Defaults to the current project's base directory.
-#' @param gist Character string. Qmd template file to create/open.
+#' @param gist Character string. Qmd template file to create/open. Primary
+#'  values are `"no_logo"`, `"ctsc"`, and `"hac"`. Legacy aliases
+#'  `"no_logo_quarto"`, `"ctsc_quarto"`, and `"hac_quarto"` are also accepted.
 #' @returns Opens file after creating the Quarto document.
 #' @export
 #'
 new_quarto <- function(
   filename = NULL,
   path = here::here(),
-  gist = c("no_logo_quarto", "ctsc_quarto", "hac_quarto")) {
-
-  gist <- match.arg(gist)
+  gist = c("no_logo", "ctsc", "hac")
+) {
+  legacy_gists <- c(
+    no_logo_quarto = "no_logo",
+    ctsc_quarto = "ctsc",
+    hac_quarto = "hac"
+  )
+  canonical_gists <- unname(legacy_gists)
+  legacy_names <- names(legacy_gists)
+  if (length(gist) > 1) {
+    gist <- gist[[1]]
+  }
+  canonical_match <- pmatch(gist, canonical_gists)
+  if (!is.na(canonical_match)) {
+    gist <- canonical_gists[[canonical_match]]
+  } else {
+    legacy_match <- pmatch(gist, legacy_names)
+    if (!is.na(legacy_match)) {
+      gist <- legacy_gists[[legacy_names[[legacy_match]]]]
+    }
+  }
+  gist <- match.arg(gist, canonical_gists)
   # Validate path
   if (is.null(path) || !dir.exists(path)) {
     stop("Invalid `path`. Please enter a valid project directory.")
