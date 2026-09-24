@@ -69,3 +69,15 @@ test_that("new_quarto accepts unique partial canonical gist names", {
 
   expect_true(file.exists(file.path(dir, "partial_canonical_report.qmd")))
 })
+
+test_that("new_quarto uses the first gist when given a vector", {
+  dir <- withr::local_tempdir()
+
+  new_quarto(
+    filename = "vector_gist_report",
+    path = dir,
+    gist = c("ctsc", "hac")
+  )
+
+  expect_true(file.exists(file.path(dir, "vector_gist_report.qmd")))
+})
