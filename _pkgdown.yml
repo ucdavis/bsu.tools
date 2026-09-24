@@ -9,4 +9,7 @@ articles:
       - basic-summaries
       - new-quarto
       - using-git
-
+  - title: "Professional Development Meetings"
+    desc: "Slides and supporting materials from BSU professional development meetings."
+    contents:
+      - professional-development
