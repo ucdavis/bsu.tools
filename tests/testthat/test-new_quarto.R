@@ -53,3 +53,11 @@ test_that("new_quarto accepts shortened gist names", {
     expect_true(file.exists(file.path(dir, paste0(filename, ".qmd"))))
   })
 })
+
+test_that("new_quarto accepts unique partial legacy gist names", {
+  dir <- withr::local_tempdir()
+
+  new_quarto(filename = "partial_legacy_report", path = dir, gist = "no_logo_q")
+
+  expect_true(file.exists(file.path(dir, "partial_legacy_report.qmd")))
+})

@@ -21,8 +21,11 @@ new_quarto <- function(
     ctsc_quarto = "ctsc",
     hac_quarto = "hac"
   )
-  if (length(gist) == 1 && gist %in% names(legacy_gists)) {
-    gist <- legacy_gists[[gist]]
+  if (length(gist) == 1) {
+    gist <- match.arg(gist, c(unname(legacy_gists), names(legacy_gists)))
+    if (gist %in% names(legacy_gists)) {
+      gist <- legacy_gists[[gist]]
+    }
   }
   gist <- match.arg(gist)
   # Validate path
