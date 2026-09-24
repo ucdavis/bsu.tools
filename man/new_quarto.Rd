@@ -13,7 +13,7 @@ new_quarto(
 \arguments{
 \item{filename}{Character string. The name of the file without the ".qmd"
 extension. Only letters, numbers, hyphens, and underscores are allowed. When
-`NULL` (the default) an interactive file explorer pop-up is opened to choose
+\code{NULL} (the default) an interactive file explorer pop-up is opened to choose
 the file name and location.}
 
 \item{path}{Character string. Directory where the file will be created.

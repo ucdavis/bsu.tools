@@ -4,7 +4,7 @@ Version: 0.0.0.9001
 Authors@R: 
     person("Matthew", "Ponzini", , "mdponzini@health.ucdavis.edu", role = c("aut", "cre"))
 Description: Contains internal tools for the UC Davis BSU, including RMarkdown
-    templates and Quarto markdown gists
+    templates and Quarto markdown gists.
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -32,3 +32,5 @@ URL: https://ucdavis.github.io/bsu.tools/
 BugReports: https://github.com/ucdavis/bsu.tools/issues
 VignetteBuilder: knitr
 Config/testthat/edition: 3
+Depends:
+    R (>= 4.1)
