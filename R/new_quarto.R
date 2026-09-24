@@ -24,7 +24,7 @@ new_quarto <- function(
     ctsc_quarto = "ctsc",
     hac_quarto = "hac"
   )
-  gist <- match.arg(gist, c(unname(legacy_gists), names(legacy_gists)))
+  gist <- match.arg(gist)
   if (gist %in% names(legacy_gists)) {
     gist <- legacy_gists[[gist]]
   }
