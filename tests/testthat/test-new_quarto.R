@@ -40,3 +40,16 @@ test_that("new_quarto accepts legacy gist names", {
     expect_true(file.exists(file.path(dir, paste0(filename, ".qmd"))))
   })
 })
+
+test_that("new_quarto accepts shortened gist names", {
+  aliases <- c("no_logo", "ctsc", "hac")
+
+  purrr::walk(aliases, function(alias) {
+    dir <- withr::local_tempdir()
+    filename <- paste0("short_report_", alias)
+
+    new_quarto(filename = filename, path = dir, gist = alias)
+
+    expect_true(file.exists(file.path(dir, paste0(filename, ".qmd"))))
+  })
+})

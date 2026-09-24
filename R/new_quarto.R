@@ -15,8 +15,8 @@ new_quarto <- function(
   filename = NULL,
   path = here::here(),
   gist = c(
-    "no_logo_quarto", "ctsc_quarto", "hac_quarto",
-    "no_logo", "ctsc", "hac"
+    "no_logo", "ctsc", "hac",
+    "no_logo_quarto", "ctsc_quarto", "hac_quarto"
   )
 ) {
   legacy_gists <- c(
