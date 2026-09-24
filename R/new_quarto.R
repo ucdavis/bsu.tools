@@ -22,13 +22,19 @@ new_quarto <- function(
     hac_quarto = "hac"
   )
   canonical_gists <- unname(legacy_gists)
+  legacy_names <- names(legacy_gists)
   if (length(gist) > 1) {
     gist <- gist[[1]]
   }
-  gist <- tryCatch(
-    match.arg(gist, canonical_gists),
-    error = function(...) legacy_gists[[match.arg(gist, names(legacy_gists))]]
-  )
+  canonical_match <- pmatch(gist, canonical_gists)
+  if (!is.na(canonical_match)) {
+    gist <- canonical_gists[[canonical_match]]
+  } else {
+    legacy_match <- pmatch(gist, legacy_names)
+    if (!is.na(legacy_match)) {
+      gist <- legacy_gists[[legacy_names[[legacy_match]]]]
+    }
+  }
   gist <- match.arg(gist, canonical_gists)
   # Validate path
   if (is.null(path) || !dir.exists(path)) {
