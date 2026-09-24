@@ -7,15 +7,6 @@ navbar:
   structure:
     left: [reference, articles, professional-development]
   components:
-    articles:
-      text: Articles
-      menu:
-        - text: "Using basic_summaries()"
-          href: articles/basic-summaries.html
-        - text: "How to create a qmd from gists"
-          href: articles/new-quarto.html
-        - text: "Using git within RStudio"
-          href: articles/using-git.html
     professional-development:
       text: "Professional Development"
       href: articles/professional-development.html
