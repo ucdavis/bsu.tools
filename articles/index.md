@@ -8,3 +8,11 @@
   gists](https://ucdavis.github.io/bsu.tools/articles/new-quarto.md):
 - [Using git within
   RStudio](https://ucdavis.github.io/bsu.tools/articles/using-git.md):
+
+### Professional Development Meetings
+
+Slides and supporting materials from BSU professional development
+meetings.
+
+- [Professional Development
+  Meetings](https://ucdavis.github.io/bsu.tools/articles/professional-development.md):

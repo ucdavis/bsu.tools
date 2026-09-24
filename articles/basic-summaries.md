@@ -329,7 +329,7 @@ result_mtcars
 #>  ..  .. ..$ rows    :List of 2
 #>  ..  .. .. ..$ : logi TRUE
 #>  ..  .. .. ..$ : language ~.data$row_type %in% c("level", "missing")
-#>  ..  .. .. .. ..- attr(*, ".Environment")=<environment: 0x55d8ea8db710> 
+#>  ..  .. .. .. ..- attr(*, ".Environment")=<environment: 0x556572a48250> 
 #>  ..  .. ..$ n_spaces: int [1:2] 0 4
 #>  ..  ..$ fmt_missing             : tibble [0 × 3] (S3: tbl_df/tbl/data.frame)
 #>  ..  .. ..$ column: chr(0) 
@@ -605,13 +605,13 @@ result_mtcars
 #>  ..  ..$ label       : list()
 #>  ..  ..$ statistic   :List of 4
 #>  ..  .. ..$ mpg: chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55d8e83822a8> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55657209cf10> 
 #>  ..  .. ..$ hp : chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55d8e83822a8> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55657209cf10> 
 #>  ..  .. ..$ wt : chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55d8e83822a8> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55657209cf10> 
 #>  ..  .. ..$ cyl: chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55d8e83822a8> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x55657209cf10> 
 #>  ..  ..$ digits      :List of 4
 #>  ..  .. ..$ mpg:List of 12
 #>  ..  .. .. ..$ mean     :function (x)  
@@ -675,7 +675,11 @@ result_mtcars
 #>  ..  .. ..$ hp : NULL
 #>  ..  .. ..$ wt : NULL
 #>  ..  .. ..$ cyl: NULL
-#>  ..  ..$ missing     : chr "ifany"
+#>  ..  ..$ missing     :List of 4
+#>  ..  .. ..$ mpg: chr "ifany"
+#>  ..  .. ..$ hp : chr "ifany"
+#>  ..  .. ..$ wt : chr "ifany"
+#>  ..  .. ..$ cyl: chr "ifany"
 #>  ..  ..$ missing_text: chr "Unknown"
 #>  ..  ..$ missing_stat: chr "{N_miss}"
 #>  ..  ..$ sort        : list()
@@ -838,7 +842,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["mpg"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55d8eab6cc90> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x556575c7e3b0> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -1275,7 +1279,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x55d8eab6cc90> 
+#>  ..  ..@ plot_env   :<environment: 0x556575c7e3b0> 
 #>  .. $ hp : <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -1431,7 +1435,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["hp"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55d8ee8de450> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x556578a9bc48> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -1868,7 +1872,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x55d8ee8de450> 
+#>  ..  ..@ plot_env   :<environment: 0x556578a9bc48> 
 #>  .. $ wt : <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -2024,7 +2028,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["wt"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55d8efe4df50> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55657a00d668> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -2461,7 +2465,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x55d8efe4df50> 
+#>  ..  ..@ plot_env   :<environment: 0x55657a00d668> 
 #>  .. $ cyl: <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -2617,7 +2621,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["cyl"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55d8f13befc0> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x55657b57d068> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -3054,7 +3058,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x55d8f13befc0>
+#>  ..  ..@ plot_env   :<environment: 0x55657b57d068>
 ```
 
 The printed output is the `gt` table. You can also access each component
@@ -3329,7 +3333,7 @@ chr(0) .. .. ..\$ undo_text_format: logi(0) .. ..\$ indent : tibble \[2
 × 3\] (S3: tbl_df/tbl/data.frame) .. .. ..\$ column : chr \[1:2\]
 “label” “label” .. .. ..\$ rows :List of 2 .. .. .. ..\$ : logi TRUE ..
 .. .. ..\$ : language ~.data\$row_type %in% c("level", "missing") .. ..
-.. .. ..- attr(\*, ".Environment")=\<environment: 0x55d8f19bfaa8\> .. ..
+.. .. ..- attr(\*, ".Environment")=\<environment: 0x5565720daf98\> .. ..
 ..\$ n_spaces: int \[1:2\] 0 4 .. ..\$ fmt_missing : tibble \[0 × 3\]
 (S3: tbl_df/tbl/data.frame) .. .. ..\$ column: chr(0) .. .. ..\$ rows :
 list() .. .. ..\$ symbol: chr(0) .. ..\$ fmt_fun : tibble \[0 × 3\] (S3:
@@ -3793,16 +3797,16 @@ Petal.Length: num \[1:150\] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 … ..
 ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x55d8ef984620\> .. .. ..\$ Sepal.Width : chr “{mean} ({sd})  
+0x55657af0b070\> .. .. ..\$ Sepal.Width : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x55d8ef984620\> .. .. ..\$ Petal.Length: chr “{mean} ({sd})  
+0x55657af0b070\> .. .. ..\$ Petal.Length: chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x55d8ef984620\> .. .. ..\$ Petal.Width : chr “{mean} ({sd})  
+0x55657af0b070\> .. .. ..\$ Petal.Width : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x55d8ef984620\> .. ..\$ digits :List of 4 .. .. ..\$ Sepal.Length:List
+0x55657af0b070\> .. ..\$ digits :List of 4 .. .. ..\$ Sepal.Length:List
 of 12 .. .. .. ..\$ mean :function (x)  
 .. .. .. ..\$ sd :function (x)  
 .. .. .. ..\$ median :function (x)  
@@ -3856,75 +3860,78 @@ of 12 .. .. .. ..\$ mean :function (x)
 “continuous” .. .. ..\$ Petal.Width : chr “continuous” .. ..\$ value
 :List of 4 .. .. ..\$ Sepal.Length: NULL .. .. ..\$ Sepal.Width : NULL
 .. .. ..\$ Petal.Length: NULL .. .. ..\$ Petal.Width : NULL .. ..\$
-missing : chr “ifany” .. ..\$ missing_text: chr “Unknown” .. ..\$
-missing_stat: chr “{N_miss}” .. ..\$ sort : list() .. ..\$ percent : chr
-“column” .. ..\$ include : chr \[1:4\] “Sepal.Length” “Sepal.Width”
-“Petal.Length” “Petal.Width” .. - attr(*, “class”)= chr \[1:2\]
-“tbl_summary” “gtsummary” @ figures :List of 4 .. \$ Sepal.Length:
-\<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
-\$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
-.. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
-3.1 … .. .. .. \$ Petal.Length: num \[1:150\] 1.4 1.4 1.3 1.5 1.4 1.7
-1.4 1.5 1.4 1.5 … .. .. .. \$ Petal.Width : num \[1:150\] 0.2 0.2 0.2
-0.2 0.2 0.4 0.3 0.2 0.2 0.1 … .. .. .. \$ Species : Factor w/ 3 levels
-“setosa”,“versicolor”,..: 1 1 1 1 1 1 1 1 1 1 … .. ..@ layers :List of 1
-.. .. .. \$ geom_boxplot:Classes ‘LayerInstance’, ‘Layer’, ‘ggproto’,
-‘gg’ \<ggproto object: Class LayerInstance, Layer, gg\> aes_params: list
-compute_aesthetics: function compute_geom_1: function compute_geom_2:
-function compute_position: function compute_statistic: function
-computed_geom_params: NULL computed_mapping: NULL computed_stat_params:
-NULL constructor: call data: waiver draw_geom: function
-finish_statistics: function geom: \<ggproto object: Class GeomBoxplot,
-Geom, gg\> aesthetics: function default_aes: ggplot2::mapping, uneval,
-gg, S7_object draw_group: function draw_key: function draw_layer:
-function draw_panel: function extra_params: na.rm orientation outliers
-handle_na: function non_missing_aes: optional_aes: parameters: function
-rename_size: TRUE required_aes: x\|y lower\|xlower upper\|xupper
-middle\|xmiddle ymin\|xmin y … setup_data: function setup_params:
-function use_defaults: function super: \<ggproto object: Class Geom,
-gg\> geom_params: list inherit.aes: TRUE layer_data: function layout:
-NULL map_statistic: function mapping: NULL name: NULL position:
-\<ggproto object: Class PositionDodge2, PositionDodge, Position, gg\>
-aesthetics: function compute_layer: function compute_panel: function
-default_aes: ggplot2::mapping, uneval, gg, S7_object orientation: x
-padding: 0.1 preserve: total required_aes: reverse: FALSE setup_data:
-function setup_params: function use_defaults: function width: NULL
-super: \<ggproto object: Class PositionDodge, Position, gg\> print:
-function setup_layer: function show.legend: NA stat: \<ggproto object:
-Class StatBoxplot, Stat, gg\> aesthetics: function compute_group:
-function compute_layer: function compute_panel: function default_aes:
-ggplot2::mapping, uneval, gg, S7_object dropped_aes: x y weight
-extra_params: na.rm orientation finish_layer: function non_missing_aes:
-weight optional_aes: width parameters: function required_aes: y\|x
-retransform: TRUE setup_data: function setup_params: function super:
-\<ggproto object: Class Stat, gg\> stat_params: list super: \<ggproto
-object: Class Layer, gg\> .. ..@ scales :Classes ‘ScalesList’,
-‘ggproto’, ‘gg’ \<ggproto object: Class ScalesList, gg\> add: function
-add_defaults: function add_missing: function backtransform_df: function
-clone: function find: function get_scales: function has_scale: function
-input: function map_df: function n: function non_position_scales:
-function scales: list set_palettes: function train_df: function
-transform_df: function super: \<ggproto object: Class ScalesList, gg\>
-.. ..@ guides :Classes ‘Guides’, ‘ggproto’, ‘gg’ \<ggproto object: Class
-Guides, gg\> add: function assemble: function build: function draw:
-function get_custom: function get_guide: function get_params: function
-get_position: function guides: NULL merge: function missing: \<ggproto
-object: Class GuideNone, Guide, gg\> add_title: function arrange_layout:
-function assemble_drawing: function available_aes: any build_decor:
-function build_labels: function build_ticks: function build_title:
-function draw: function draw_early_exit: function elements: list
-extract_decor: function extract_key: function extract_params: function
-get_layer_key: function hashables: list measure_grobs: function merge:
-function override_elements: function params: list process_layers:
-function setup_elements: function setup_params: function train: function
+missing :List of 4 .. .. ..\$ Sepal.Length: chr “ifany” .. .. ..\$
+Sepal.Width : chr “ifany” .. .. ..\$ Petal.Length: chr “ifany” .. ..
+..\$ Petal.Width : chr “ifany” .. ..\$ missing_text: chr “Unknown” ..
+..\$ missing_stat: chr “{N_miss}” .. ..\$ sort : list() .. ..\$ percent
+: chr “column” .. ..\$ include : chr \[1:4\] “Sepal.Length”
+“Sepal.Width” “Petal.Length” “Petal.Width” .. - attr(*, “class”)= chr
+\[1:2\] “tbl_summary” “gtsummary” @ figures :List of 4 .. \$
+Sepal.Length: \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5
+variables: .. .. .. \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4
+4.6 5 4.4 4.9 … .. .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1
+3.6 3.9 3.4 3.4 2.9 3.1 … .. .. .. \$ Petal.Length: num \[1:150\] 1.4
+1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 … .. .. .. \$ Petal.Width : num
+\[1:150\] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 … .. .. .. \$ Species
+: Factor w/ 3 levels “setosa”,“versicolor”,..: 1 1 1 1 1 1 1 1 1 1 … ..
+..@ layers :List of 1 .. .. .. \$ geom_boxplot:Classes ‘LayerInstance’,
+‘Layer’, ‘ggproto’, ‘gg’ \<ggproto object: Class LayerInstance, Layer,
+gg\> aes_params: list compute_aesthetics: function compute_geom_1:
+function compute_geom_2: function compute_position: function
+compute_statistic: function computed_geom_params: NULL computed_mapping:
+NULL computed_stat_params: NULL constructor: call data: waiver
+draw_geom: function finish_statistics: function geom: \<ggproto object:
+Class GeomBoxplot, Geom, gg\> aesthetics: function default_aes:
+ggplot2::mapping, uneval, gg, S7_object draw_group: function draw_key:
+function draw_layer: function draw_panel: function extra_params: na.rm
+orientation outliers handle_na: function non_missing_aes: optional_aes:
+parameters: function rename_size: TRUE required_aes: x\|y lower\|xlower
+upper\|xupper middle\|xmiddle ymin\|xmin y … setup_data: function
+setup_params: function use_defaults: function super: \<ggproto object:
+Class Geom, gg\> geom_params: list inherit.aes: TRUE layer_data:
+function layout: NULL map_statistic: function mapping: NULL name: NULL
+position: \<ggproto object: Class PositionDodge2, PositionDodge,
+Position, gg\> aesthetics: function compute_layer: function
+compute_panel: function default_aes: ggplot2::mapping, uneval, gg,
+S7_object orientation: x padding: 0.1 preserve: total required_aes:
+reverse: FALSE setup_data: function setup_params: function use_defaults:
+function width: NULL super: \<ggproto object: Class PositionDodge,
+Position, gg\> print: function setup_layer: function show.legend: NA
+stat: \<ggproto object: Class StatBoxplot, Stat, gg\> aesthetics:
+function compute_group: function compute_layer: function compute_panel:
+function default_aes: ggplot2::mapping, uneval, gg, S7_object
+dropped_aes: x y weight extra_params: na.rm orientation finish_layer:
+function non_missing_aes: weight optional_aes: width parameters:
+function required_aes: y\|x retransform: TRUE setup_data: function
+setup_params: function super: \<ggproto object: Class Stat, gg\>
+stat_params: list super: \<ggproto object: Class Layer, gg\> .. ..@
+scales :Classes ‘ScalesList’, ‘ggproto’, ‘gg’ \<ggproto object: Class
+ScalesList, gg\> add: function add_defaults: function add_missing:
+function backtransform_df: function clone: function find: function
+get_scales: function has_scale: function input: function map_df:
+function n: function non_position_scales: function scales: list
+set_palettes: function train_df: function transform_df: function super:
+\<ggproto object: Class ScalesList, gg\> .. ..@ guides :Classes
+‘Guides’, ‘ggproto’, ‘gg’ \<ggproto object: Class Guides, gg\> add:
+function assemble: function build: function draw: function get_custom:
+function get_guide: function get_params: function get_position: function
+guides: NULL merge: function missing: \<ggproto object: Class GuideNone,
+Guide, gg\> add_title: function arrange_layout: function
+assemble_drawing: function available_aes: any build_decor: function
+build_labels: function build_ticks: function build_title: function draw:
+function draw_early_exit: function elements: list extract_decor:
+function extract_key: function extract_params: function get_layer_key:
+function hashables: list measure_grobs: function merge: function
+override_elements: function params: list process_layers: function
+setup_elements: function setup_params: function train: function
 transform: function super: \<ggproto object: Class GuideNone, Guide,
 gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55d8ec28a968\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55657b23e0c0\> ..
 .. .. \$ y: language ~.data\[\[“Sepal.Length”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x55d8ec28a968\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x55657b23e0c0\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4128,7 +4135,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x55d8ec28a968\> .. \$ Sepal.Width :
+..@ plot_env :\<environment: 0x55657b23e0c0\> .. \$ Sepal.Width :
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4190,9 +4197,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55d8eea9d4d8\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5565779ece30\> ..
 .. .. \$ y: language ~.data\[\[“Sepal.Width”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x55d8eea9d4d8\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x5565779ece30\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4396,7 +4403,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x55d8eea9d4d8\> .. \$ Petal.Length:
+..@ plot_env :\<environment: 0x5565779ece30\> .. \$ Petal.Length:
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4458,9 +4465,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55d8f0181068\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5565796fbbd0\> ..
 .. .. \$ y: language ~.data\[\[“Petal.Length”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x55d8f0181068\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x5565796fbbd0\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4664,7 +4671,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x55d8f0181068\> .. \$ Petal.Width :
+..@ plot_env :\<environment: 0x5565796fbbd0\> .. \$ Petal.Width :
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4726,9 +4733,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55d8f182c1c0\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x55657ae12ae8\> ..
 .. .. \$ y: language ~.data\[\[“Petal.Width”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x55d8f182c1c0\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x55657ae12ae8\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4932,7 +4939,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x55d8f182c1c0\>
+..@ plot_env :\<environment: 0x55657ae12ae8\>
 
 Access the figures for any variable:
 
@@ -5112,7 +5119,7 @@ chr(0) .. .. ..\$ undo_text_format: logi(0) .. ..\$ indent : tibble \[2
 × 3\] (S3: tbl_df/tbl/data.frame) .. .. ..\$ column : chr \[1:2\]
 “label” “label” .. .. ..\$ rows :List of 2 .. .. .. ..\$ : logi TRUE ..
 .. .. ..\$ : language ~.data\$row_type %in% c("level", "missing") .. ..
-.. .. ..- attr(\*, ".Environment")=\<environment: 0x55d8f18e2148\> .. ..
+.. .. ..- attr(\*, ".Environment")=\<environment: 0x55657b28a9d8\> .. ..
 ..\$ n_spaces: int \[1:2\] 0 4 .. ..\$ fmt_missing : tibble \[0 × 3\]
 (S3: tbl_df/tbl/data.frame) .. .. ..\$ column: chr(0) .. .. ..\$ rows :
 list() .. .. ..\$ symbol: chr(0) .. ..\$ fmt_fun : tibble \[0 × 3\] (S3:
@@ -5200,10 +5207,10 @@ cyl : num \[1:32\] 6 6 4 6 8 6 8 4 4 6 … .. .. ..\$ disp: num \[1:32\]
 mpg: chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x55d8ede7e738\> .. .. ..\$ am : chr “{mean} ({sd})  
+0x55657828fa20\> .. .. ..\$ am : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x55d8ede7e738\> .. ..\$ digits :List of 2 .. .. ..\$ mpg:List of 12 ..
+0x55657828fa20\> .. ..\$ digits :List of 2 .. .. ..\$ mpg:List of 12 ..
 .. .. ..\$ mean :function (x)  
 .. .. .. ..\$ sd :function (x)  
 .. .. .. ..\$ median :function (x)  
@@ -5230,46 +5237,46 @@ mpg: chr “{mean} ({sd})
 .. .. .. ..\$ p_nonmiss:function (x)  
 .. ..\$ type :List of 2 .. .. ..\$ mpg: chr “continuous” .. .. ..\$ am :
 chr “continuous” .. ..\$ value :List of 2 .. .. ..\$ mpg: NULL .. ..
-..\$ am : NULL .. ..\$ missing : chr “ifany” .. ..\$ missing_text: chr
-“Unknown” .. ..\$ missing_stat: chr “{N_miss}” .. ..\$ sort : list() ..
-..\$ percent : chr “column” .. ..\$ include : chr \[1:2\] “mpg” “am”
-.. - attr(*, “class”)= chr \[1:2\] “tbl_summary” “gtsummary” @ figures
-:List of 2 .. \$ mpg: \<:ggplot\> .. ..@ data :‘data.frame’: 32 obs. of
-11 variables: .. .. .. \$ mpg : num \[1:32\] 21 21 22.8 21.4 18.7 18.1
-14.3 24.4 22.8 19.2 … .. .. .. \$ cyl : num \[1:32\] 6 6 4 6 8 6 8 4 4 6
-… .. .. .. \$ disp: num \[1:32\] 160 160 108 258 360 … .. .. .. \$ hp :
-num \[1:32\] 110 110 93 110 175 105 245 62 95 123 … .. .. .. \$ drat:
-num \[1:32\] 3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 … .. .. ..
-\$ wt : num \[1:32\] 2.62 2.88 2.32 3.21 3.44 … .. .. .. \$ qsec: num
-\[1:32\] 16.5 17 18.6 19.4 17 … .. .. .. \$ vs : num \[1:32\] 0 0 1 1 0
-1 0 1 1 1 … .. .. .. \$ am : num \[1:32\] 1 1 1 0 0 0 0 0 0 0 … .. .. ..
-\$ gear: num \[1:32\] 4 4 4 3 3 3 3 4 4 4 … .. .. .. \$ carb: num
-\[1:32\] 4 4 1 1 2 1 4 2 2 4 … .. ..@ layers :List of 1 .. .. .. \$
-geom_histogram:Classes ‘LayerInstance’, ‘Layer’, ‘ggproto’, ‘gg’
-\<ggproto object: Class LayerInstance, Layer, gg\> aes_params: list
-compute_aesthetics: function compute_geom_1: function compute_geom_2:
-function compute_position: function compute_statistic: function
-computed_geom_params: NULL computed_mapping: NULL computed_stat_params:
-NULL constructor: call data: waiver draw_geom: function
-finish_statistics: function geom: \<ggproto object: Class GeomBar,
-GeomRect, Geom, gg\> aesthetics: function default_aes: ggplot2::mapping,
-uneval, gg, S7_object draw_group: function draw_key: function
-draw_layer: function draw_panel: function extra_params: just na.rm
-orientation handle_na: function non_missing_aes: xmin xmax ymin ymax
-optional_aes: parameters: function rename_size: FALSE required_aes: x y
-setup_data: function setup_params: function use_defaults: function
-super: \<ggproto object: Class GeomRect, Geom, gg\> geom_params: list
-inherit.aes: TRUE layer_data: function layout: NULL map_statistic:
-function mapping: NULL name: NULL position: \<ggproto object: Class
-PositionStack, Position, gg\> aesthetics: function compute_layer:
-function compute_panel: function default_aes: ggplot2::mapping, uneval,
-gg, S7_object fill: FALSE required_aes: reverse: FALSE setup_data:
-function setup_params: function type: NULL use_defaults: function vjust:
-1 super: \<ggproto object: Class Position, gg\> print: function
-setup_layer: function show.legend: NA stat: \<ggproto object: Class
-StatBin, Stat, gg\> aesthetics: function compute_group: function
-compute_layer: function compute_panel: function default_aes:
-ggplot2::mapping, uneval, gg, S7_object dropped_aes: weight
+..\$ am : NULL .. ..\$ missing :List of 2 .. .. ..\$ mpg: chr “ifany” ..
+.. ..\$ am : chr “ifany” .. ..\$ missing_text: chr “Unknown” .. ..\$
+missing_stat: chr “{N_miss}” .. ..\$ sort : list() .. ..\$ percent : chr
+“column” .. ..\$ include : chr \[1:2\] “mpg” “am” .. - attr(*, “class”)=
+chr \[1:2\] “tbl_summary” “gtsummary” @ figures :List of 2 .. \$ mpg:
+\<:ggplot\> .. ..@ data :‘data.frame’: 32 obs. of 11 variables: .. .. ..
+\$ mpg : num \[1:32\] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 … ..
+.. .. \$ cyl : num \[1:32\] 6 6 4 6 8 6 8 4 4 6 … .. .. .. \$ disp: num
+\[1:32\] 160 160 108 258 360 … .. .. .. \$ hp : num \[1:32\] 110 110 93
+110 175 105 245 62 95 123 … .. .. .. \$ drat: num \[1:32\] 3.9 3.9 3.85
+3.08 3.15 2.76 3.21 3.69 3.92 3.92 … .. .. .. \$ wt : num \[1:32\] 2.62
+2.88 2.32 3.21 3.44 … .. .. .. \$ qsec: num \[1:32\] 16.5 17 18.6 19.4
+17 … .. .. .. \$ vs : num \[1:32\] 0 0 1 1 0 1 0 1 1 1 … .. .. .. \$ am
+: num \[1:32\] 1 1 1 0 0 0 0 0 0 0 … .. .. .. \$ gear: num \[1:32\] 4 4
+4 3 3 3 3 4 4 4 … .. .. .. \$ carb: num \[1:32\] 4 4 1 1 2 1 4 2 2 4 …
+.. ..@ layers :List of 1 .. .. .. \$ geom_histogram:Classes
+‘LayerInstance’, ‘Layer’, ‘ggproto’, ‘gg’ \<ggproto object: Class
+LayerInstance, Layer, gg\> aes_params: list compute_aesthetics: function
+compute_geom_1: function compute_geom_2: function compute_position:
+function compute_statistic: function computed_geom_params: NULL
+computed_mapping: NULL computed_stat_params: NULL constructor: call
+data: waiver draw_geom: function finish_statistics: function geom:
+\<ggproto object: Class GeomBar, GeomRect, Geom, gg\> aesthetics:
+function default_aes: ggplot2::mapping, uneval, gg, S7_object
+draw_group: function draw_key: function draw_layer: function draw_panel:
+function extra_params: just na.rm orientation handle_na: function
+non_missing_aes: xmin xmax ymin ymax optional_aes: parameters: function
+rename_size: FALSE required_aes: x y setup_data: function setup_params:
+function use_defaults: function super: \<ggproto object: Class GeomRect,
+Geom, gg\> geom_params: list inherit.aes: TRUE layer_data: function
+layout: NULL map_statistic: function mapping: NULL name: NULL position:
+\<ggproto object: Class PositionStack, Position, gg\> aesthetics:
+function compute_layer: function compute_panel: function default_aes:
+ggplot2::mapping, uneval, gg, S7_object fill: FALSE required_aes:
+reverse: FALSE setup_data: function setup_params: function type: NULL
+use_defaults: function vjust: 1 super: \<ggproto object: Class Position,
+gg\> print: function setup_layer: function show.legend: NA stat:
+\<ggproto object: Class StatBin, Stat, gg\> aesthetics: function
+compute_group: function compute_layer: function compute_panel: function
+default_aes: ggplot2::mapping, uneval, gg, S7_object dropped_aes: weight
 extra_params: na.rm orientation finish_layer: function non_missing_aes:
 optional_aes: parameters: function required_aes: x\|y retransform: TRUE
 setup_data: function setup_params: function super: \<ggproto object:
@@ -5298,7 +5305,7 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 1 .. .. .. \$ x: language ~.data\[\[“mpg”\]\] .. ..
-.. ..- attr(*, “.Environment”)=\<environment: 0x55d8f06a3760\> .. ..@
+.. ..- attr(*, “.Environment”)=\<environment: 0x55657861c1b8\> .. ..@
 theme : List of 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@
 colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -5502,7 +5509,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x55d8f06a3760\> .. \$ am : \<:ggplot\> ..
+..@ plot_env :\<environment: 0x55657861c1b8\> .. \$ am : \<:ggplot\> ..
 ..@ data :‘data.frame’: 32 obs. of 11 variables: .. .. .. \$ mpg : num
 \[1:32\] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 … .. .. .. \$ cyl
 : num \[1:32\] 6 6 4 6 8 6 8 4 4 6 … .. .. .. \$ disp: num \[1:32\] 160
@@ -5566,7 +5573,7 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 1 .. .. .. \$ x: language ~.data\[\[“am”\]\] .. ..
-.. ..- attr(*, “.Environment”)=\<environment: 0x55d8eb1e4510\> .. ..@
+.. ..- attr(*, “.Environment”)=\<environment: 0x556579dc4378\> .. ..@
 theme : List of 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@
 colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -5770,4 +5777,4 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x55d8eb1e4510\>
+..@ plot_env :\<environment: 0x556579dc4378\>
