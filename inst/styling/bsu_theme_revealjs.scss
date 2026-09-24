@@ -78,6 +78,7 @@ section.has-dark-background a:hover {
 
 .reveal .quarto-title-block h1.title::before {
   content: "Biostatistics Support Unit (BSU)";
+  display: block;
   color: $accent-yellow;
   width: 100%;
   height: 30px;
