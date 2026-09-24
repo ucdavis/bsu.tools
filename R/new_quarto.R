@@ -21,13 +21,14 @@ new_quarto <- function(
     ctsc_quarto = "ctsc",
     hac_quarto = "hac"
   )
+  canonical_gists <- unname(legacy_gists)
   if (length(gist) == 1) {
-    gist <- match.arg(gist, c(unname(legacy_gists), names(legacy_gists)))
-    if (gist %in% names(legacy_gists)) {
-      gist <- legacy_gists[[gist]]
-    }
+    gist <- tryCatch(
+      match.arg(gist, canonical_gists),
+      error = function(...) legacy_gists[[match.arg(gist, names(legacy_gists))]]
+    )
   }
-  gist <- match.arg(gist)
+  gist <- match.arg(gist, canonical_gists)
   # Validate path
   if (is.null(path) || !dir.exists(path)) {
     stop("Invalid `path`. Please enter a valid project directory.")

@@ -61,3 +61,11 @@ test_that("new_quarto accepts unique partial legacy gist names", {
 
   expect_true(file.exists(file.path(dir, "partial_legacy_report.qmd")))
 })
+
+test_that("new_quarto accepts unique partial canonical gist names", {
+  dir <- withr::local_tempdir()
+
+  new_quarto(filename = "partial_canonical_report", path = dir, gist = "ha")
+
+  expect_true(file.exists(file.path(dir, "partial_canonical_report.qmd")))
+})
