@@ -13,3 +13,4 @@ articles:
     desc: "Slides and supporting materials from BSU professional development meetings."
     contents:
       - professional-development
+      - starts_with("professional-development-")
