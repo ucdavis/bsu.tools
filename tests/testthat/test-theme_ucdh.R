@@ -3,7 +3,7 @@ test_that("theme_ucdh applies UCDH styling without changing axis colors", {
   default_theme <- ggplot2::theme_minimal()
 
   expect_s3_class(theme, "theme")
-  expect_identical(theme$title$colour, "#002855")
+  expect_identical(theme$plot.title$colour, "#002855")
   expect_identical(
     ggplot2::calc_element("axis.text.x", theme)$colour,
     ggplot2::calc_element("axis.text.x", default_theme)$colour

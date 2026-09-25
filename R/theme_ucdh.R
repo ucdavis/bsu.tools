@@ -25,8 +25,9 @@ theme_ucdh <- function(base_size = 11, base_family = "") {
     base_family = base_family
   ) +
     ggplot2::theme(
-      title = ggplot2::element_text(colour = "#002855"),
-      plot.title = ggplot2::element_text(face = "bold"),
+      plot.title = ggplot2::element_text(colour = "#002855", face = "bold"),
+      plot.subtitle = ggplot2::element_text(colour = "#002855"),
+      plot.caption = ggplot2::element_text(colour = "#002855"),
       plot.tag = ggplot2::element_text(colour = "#C99700", face = "bold"),
       axis.title = ggplot2::element_text(face = "bold"),
       panel.grid.major = ggplot2::element_line(colour = "#B1B3B3"),
@@ -36,7 +37,7 @@ theme_ucdh <- function(base_size = 11, base_family = "") {
         colour = NA
       ),
       strip.text = ggplot2::element_text(colour = "white", face = "bold"),
-      legend.title = ggplot2::element_text(face = "bold"),
+      legend.title = ggplot2::element_text(colour = "#002855", face = "bold"),
       legend.key = ggplot2::element_rect(fill = "white", colour = NA),
       panel.background = ggplot2::element_rect(fill = "white", colour = NA),
       plot.background = ggplot2::element_rect(fill = "white", colour = NA)
