@@ -25,12 +25,10 @@ theme_ucdh <- function(base_size = 11, base_family = "") {
     base_family = base_family
   ) +
     ggplot2::theme(
-      text = ggplot2::element_text(colour = "#333433"),
       title = ggplot2::element_text(colour = "#002855"),
       plot.title = ggplot2::element_text(face = "bold"),
       plot.tag = ggplot2::element_text(colour = "#C99700", face = "bold"),
       axis.title = ggplot2::element_text(face = "bold"),
-      axis.line = ggplot2::element_line(colour = "#C99700"),
       panel.grid.major = ggplot2::element_line(colour = "#B1B3B3"),
       panel.grid.minor = ggplot2::element_blank(),
       strip.background = ggplot2::element_rect(
