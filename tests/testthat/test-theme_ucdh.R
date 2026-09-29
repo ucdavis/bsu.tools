@@ -47,3 +47,12 @@ test_that("UCDH theme and scales can be added to a plot", {
   expect_s3_class(plot, "ggplot")
   expect_s3_class(plot$scales$get_scales("colour"), "ScaleDiscrete")
 })
+
+test_that("UCDH flextable theme styles a flextable", {
+  skip_if_not_installed("flextable")
+
+  table <- flextable::flextable(head(iris))
+  styled_table <- theme_flextable_ucdh(table)
+
+  expect_s3_class(styled_table, "flextable")
+})
