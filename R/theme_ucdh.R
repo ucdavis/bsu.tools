@@ -8,7 +8,7 @@
 #'
 #' @return A ggplot2 theme.
 #' @references
-#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/)
+#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/) # nolintr
 #' @export
 #'
 #' @examples
@@ -65,7 +65,7 @@ ucdh_print_palette <- c(
 #'
 #' @return A ggplot2 discrete scale.
 #' @references
-#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/)
+#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/) # nolintr
 #' @export
 #'
 #' @examples
@@ -98,7 +98,7 @@ scale_fill_ucdh <- function(...) {
 #'
 #' @return A flextable with UCDH styling applied.
 #' @references
-#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/)
+#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/) # nolintr
 #' @export
 #'
 #' @examples
