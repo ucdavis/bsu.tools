@@ -109,5 +109,6 @@ theme_flextable_ucdh <- function(x) {
     flextable::bg(bg = "#002855", part = "header") |>
     flextable::color(color = "#C99700", part = "header") |>
     flextable::bold(bold = TRUE, part = "header") |>
+    flextable::bold(j = 1, bold = TRUE, part = "body") |>
     flextable::color(color = "#002855", part = "body")
 }
