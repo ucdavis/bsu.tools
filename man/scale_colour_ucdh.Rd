@@ -32,5 +32,5 @@ ggplot2::ggplot(
   scale_colour_ucdh()
 }
 \references{
-\href{https://health.ucdavis.edu/graphic-standards/colors/}{UC Davis Health Graphic Standards: Colors}
+\href{https://health.ucdavis.edu/graphic-standards/colors/}{UC Davis Health Graphic Standards: Colors} # nolintr
 }

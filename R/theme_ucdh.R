@@ -101,7 +101,7 @@ scale_fill_ucdh <- function(...) {
 #' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/) # nolintr
 #' @export
 #'
-#' @examples
+#' @examplesIf requireNamespace("flextable", quietly = TRUE)
 #' flextable::flextable(head(iris)) |>
 #'   theme_flextable_ucdh()
 theme_flextable_ucdh <- function(x) {
