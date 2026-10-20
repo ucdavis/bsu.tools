@@ -8,7 +8,7 @@
 #'
 #' @return A ggplot2 theme.
 #' @references
-#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/)
+#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/) # nolintr
 #' @export
 #'
 #' @examples
@@ -65,7 +65,7 @@ ucdh_print_palette <- c(
 #'
 #' @return A ggplot2 discrete scale.
 #' @references
-#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/)
+#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/) # nolintr
 #' @export
 #'
 #' @examples
@@ -87,4 +87,28 @@ scale_color_ucdh <- scale_colour_ucdh
 #' @export
 scale_fill_ucdh <- function(...) {
   ggplot2::scale_fill_manual(..., values = ucdh_print_palette)
+}
+
+#' UCDH flextable theme
+#'
+#' Applies UC Davis Health styling to a flextable, using the UCDH navy and gold
+#' colors.
+#'
+#' @param x A flextable object.
+#'
+#' @return A flextable with UCDH styling applied.
+#' @references
+#' [UC Davis Health Graphic Standards: Colors](https://health.ucdavis.edu/graphic-standards/colors/) # nolintr
+#' @export
+#'
+#' @examplesIf requireNamespace("flextable", quietly = TRUE)
+#' flextable::flextable(head(iris)) |>
+#'   theme_flextable_ucdh()
+theme_flextable_ucdh <- function(x) {
+  x |>
+    flextable::bg(bg = "#002855", part = "header") |>
+    flextable::color(color = "#C99700", part = "header") |>
+    flextable::bold(bold = TRUE, part = "header") |>
+    flextable::bold(j = 1, bold = TRUE, part = "body") |>
+    flextable::color(color = "#002855", part = "body")
 }
