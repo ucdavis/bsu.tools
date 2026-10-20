@@ -13,8 +13,8 @@ scale_color_ucdh(...)
 scale_fill_ucdh(...)
 }
 \arguments{
-\item{...}{Arguments passed to \code{\link[ggplot2:scale_manual]{ggplot2::scale_colour_manual()}} or
-\code{\link[ggplot2:scale_manual]{ggplot2::scale_fill_manual()}}.}
+\item{...}{Arguments passed to \code{\link[ggplot2:scale_colour_manual]{ggplot2::scale_colour_manual()}} or
+\code{\link[ggplot2:scale_fill_manual]{ggplot2::scale_fill_manual()}}.}
 }
 \value{
 A ggplot2 discrete scale.
