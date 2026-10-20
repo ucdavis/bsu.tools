@@ -17,9 +17,11 @@ Applies UC Davis Health styling to a flextable, using the UCDH navy and gold
 colors.
 }
 \examples{
+\dontshow{if (requireNamespace("flextable", quietly = TRUE)) withAutoprint(\{ # examplesIf}
 flextable::flextable(head(iris)) |>
   theme_flextable_ucdh()
+\dontshow{\}) # examplesIf}
 }
 \references{
-\href{https://health.ucdavis.edu/graphic-standards/colors/}{UC Davis Health Graphic Standards: Colors}
+\href{https://health.ucdavis.edu/graphic-standards/colors/}{UC Davis Health Graphic Standards: Colors} # nolintr
 }
