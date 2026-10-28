@@ -36,7 +36,7 @@ result_mtcars <- basic_summaries(
 
 result_mtcars
 #> <bsu.tools::basic_summaries_result>
-#>  @ tbl_gt   :List of 20
+#>  @ tbl_gt   :List of 22
 #>  .. $ _data              : tibble [4 × 7] (S3: tbl_df/tbl/data.frame)
 #>  ..  ..$ variable : chr [1:4] "mpg" "hp" "wt" "cyl"
 #>  ..  ..$ var_type : chr [1:4] "continuous" "continuous" "continuous" "continuous"
@@ -88,6 +88,7 @@ result_mtcars
 #>  ..  ..$ built_group_label: chr [1:4] NA NA NA NA
 #>  .. $ _row_groups        : chr(0) 
 #>  .. $ _row_order         : list()
+#>  .. $ _rows_hidden       : int(0) 
 #>  .. $ _heading           :List of 3
 #>  ..  ..$ title    : NULL
 #>  ..  ..$ subtitle : NULL
@@ -116,13 +117,15 @@ result_mtcars
 #>  .. $ _source_notes      : list()
 #>  .. $ _formats           :List of 1
 #>  ..  ..$ :List of 4
-#>  ..  .. ..$ func  :List of 6
-#>  ..  .. .. ..$ html   :function (x)  
-#>  ..  .. .. ..$ latex  :function (x)  
-#>  ..  .. .. ..$ rtf    :function (x)  
-#>  ..  .. .. ..$ word   :function (x)  
-#>  ..  .. .. ..$ grid   :function (x)  
-#>  ..  .. .. ..$ default:function (x)  
+#>  ..  .. ..$ func  :List of 8
+#>  ..  .. .. ..$ html      :function (x)  
+#>  ..  .. .. ..$ latex     :function (x)  
+#>  ..  .. .. ..$ rtf       :function (x)  
+#>  ..  .. .. ..$ word      :function (x)  
+#>  ..  .. .. ..$ ooxml/word:function (x)  
+#>  ..  .. .. ..$ ooxml/pptx:function (x)  
+#>  ..  .. .. ..$ grid      :function (x)  
+#>  ..  .. .. ..$ default   :function (x)  
 #>  ..  .. ..$ cols  : chr "stat_0"
 #>  ..  .. ..$ rows  : int [1:4] 1 2 3 4
 #>  ..  .. ..$ compat: NULL
@@ -143,15 +146,16 @@ result_mtcars
 #>  ..  ..$ rownum : int(0) 
 #>  ..  ..$ colnum : int(0) 
 #>  ..  ..$ styles : list()
+#>  .. $ _deferred_styles   : list()
 #>  .. $ _summary           : list()
 #>  .. $ _summary_cols      : list()
 #>  .. $ _summary_cols_build: list()
-#>  .. $ _options           : tibble [200 × 5] (S3: tbl_df/tbl/data.frame)
-#>  ..  ..$ parameter: chr [1:200] "table_id" "table_caption" "table_width" "table_layout" ...
-#>  ..  ..$ scss     : logi [1:200] FALSE FALSE TRUE TRUE TRUE TRUE ...
-#>  ..  ..$ category : chr [1:200] "table" "table" "table" "table" ...
-#>  ..  ..$ type     : chr [1:200] "value" "value" "px" "value" ...
-#>  ..  ..$ value    :List of 200
+#>  .. $ _options           : tibble [201 × 5] (S3: tbl_df/tbl/data.frame)
+#>  ..  ..$ parameter: chr [1:201] "table_id" "table_caption" "table_width" "table_layout" ...
+#>  ..  ..$ scss     : logi [1:201] FALSE FALSE TRUE TRUE TRUE TRUE ...
+#>  ..  ..$ category : chr [1:201] "table" "table" "table" "table" ...
+#>  ..  ..$ type     : chr [1:201] "value" "value" "px" "value" ...
+#>  ..  ..$ value    :List of 201
 #>  ..  .. ..$ : chr "gt_tbl"
 #>  ..  .. ..$ : chr NA
 #>  ..  .. ..$ : chr "auto"
@@ -160,6 +164,7 @@ result_mtcars
 #>  ..  .. ..$ : chr "auto"
 #>  ..  .. ..$ : chr "#FFFFFF"
 #>  ..  .. ..$ : chr(0) 
+#>  ..  .. ..$ : chr NA
 #>  ..  .. ..$ : chr [1:10] "system-ui" "Segoe UI" "Roboto" "Helvetica" ...
 #>  ..  .. ..$ : chr "16px"
 #>  ..  .. ..$ : chr "normal"
@@ -250,17 +255,17 @@ result_mtcars
 #>  ..  .. ..$ : chr "5px"
 #>  ..  .. ..$ : chr NA
 #>  ..  .. ..$ : chr "100%"
-#>  ..  .. ..$ : chr "initial"
 #>  ..  .. .. [list output truncated]
 #>  .. $ _transforms        :List of 1
-#>  ..  ..$ :List of 2
-#>  ..  .. ..$ resolved:List of 3
+#>  ..  ..$ :List of 3
+#>  ..  .. ..$ resolved  :List of 3
 #>  ..  .. .. ..$ columns : language ~"Figures"
 #>  ..  .. .. .. ..- attr(*, ".Environment")=<environment: R_EmptyEnv> 
 #>  ..  .. .. ..$ rows    : int [1:4] 1 2 3 4
 #>  ..  .. .. ..$ colnames: chr "Figures"
 #>  ..  .. .. ..- attr(*, "class")= chr [1:3] "resolved" "cells_body" "location_cells"
-#>  ..  .. ..$ fn      :function (x)  
+#>  ..  .. ..$ fn        :function (x)  
+#>  ..  .. ..$ plain_text: logi FALSE
 #>  .. $ _locale            :List of 1
 #>  ..  ..$ locale: NULL
 #>  .. $ _has_built         : logi FALSE
@@ -329,7 +334,7 @@ result_mtcars
 #>  ..  .. ..$ rows    :List of 2
 #>  ..  .. .. ..$ : logi TRUE
 #>  ..  .. .. ..$ : language ~.data$row_type %in% c("level", "missing")
-#>  ..  .. .. .. ..- attr(*, ".Environment")=<environment: 0x5636e7121870> 
+#>  ..  .. .. .. ..- attr(*, ".Environment")=<environment: 0x56040fed6308> 
 #>  ..  .. ..$ n_spaces: int [1:2] 0 4
 #>  ..  ..$ fmt_missing             : tibble [0 × 3] (S3: tbl_df/tbl/data.frame)
 #>  ..  .. ..$ column: chr(0) 
@@ -605,13 +610,13 @@ result_mtcars
 #>  ..  ..$ label       : list()
 #>  ..  ..$ statistic   :List of 4
 #>  ..  .. ..$ mpg: chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x5636e6757050> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x56040bf9d5c8> 
 #>  ..  .. ..$ hp : chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x5636e6757050> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x56040bf9d5c8> 
 #>  ..  .. ..$ wt : chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x5636e6757050> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x56040bf9d5c8> 
 #>  ..  .. ..$ cyl: chr "{mean} ({sd})<br>{median} [{p25}, {p75}]<br>{min}, {max}"
-#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x5636e6757050> 
+#>  ..  .. .. ..- attr(*, ".Environment")=<environment: 0x56040bf9d5c8> 
 #>  ..  ..$ digits      :List of 4
 #>  ..  .. ..$ mpg:List of 12
 #>  ..  .. .. ..$ mean     :function (x)  
@@ -842,7 +847,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["mpg"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x5636ea3338b0> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x56040fb6c870> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -1279,7 +1284,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x5636ea3338b0> 
+#>  ..  ..@ plot_env   :<environment: 0x56040fb6c870> 
 #>  .. $ hp : <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -1435,7 +1440,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["hp"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x5636ed152d90> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x56041294e948> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -1872,7 +1877,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x5636ed152d90> 
+#>  ..  ..@ plot_env   :<environment: 0x56041294e948> 
 #>  .. $ wt : <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -2028,7 +2033,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["wt"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x5636ee6c0970> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x560413ebc528> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -2465,7 +2470,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x5636ee6c0970> 
+#>  ..  ..@ plot_env   :<environment: 0x560413ebc528> 
 #>  .. $ cyl: <ggplot2::ggplot>
 #>  ..  ..@ data       :'data.frame':   32 obs. of  11 variables:
 #>  .. .. .. $ mpg : num [1:32] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
@@ -2621,7 +2626,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Guides, gg> 
 #>  ..  ..@ mapping    : <ggplot2::mapping> List of 1
 #>  .. .. .. $ x: language ~.data[["cyl"]]
-#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x5636efc2e450> 
+#>  .. .. ..  ..- attr(*, ".Environment")=<environment: 0x56041542bf28> 
 #>  ..  ..@ theme      : <theme> List of 144
 #>  .. .. .. $ line                            : <ggplot2::element_line>
 #>  .. .. ..  ..@ colour       : chr "black"
@@ -3058,7 +3063,7 @@ result_mtcars
 #>     super:  <ggproto object: Class Layout, gg> 
 #>  ..  ..@ labels     : <ggplot2::labels>  Named list()
 #>  ..  ..@ meta       : list()
-#>  ..  ..@ plot_env   :<environment: 0x5636efc2e450>
+#>  ..  ..@ plot_env   :<environment: 0x56041542bf28>
 ```
 
 The printed output is the `gt` table. You can also access each component
@@ -3093,7 +3098,7 @@ result_iris <- basic_summaries(
 result_iris
 ```
 
-\<bsu.tools::basic_summaries_result\> @ tbl_gt :List of 20 .. \$ \_data
+\<bsu.tools::basic_summaries_result\> @ tbl_gt :List of 22 .. \$ \_data
 : tibble \[4 × 10\] (S3: tbl_df/tbl/data.frame) .. ..\$ variable : chr
 \[1:4\] “Sepal.Length” “Sepal.Width” “Petal.Length” “Petal.Width” ..
 ..\$ var_type : chr \[1:4\] “continuous” “continuous” “continuous”
@@ -3159,19 +3164,20 @@ group_id : chr \[1:4\] NA NA NA NA .. ..\$ group_label :List of 4 .. ..
 ..\$ : NULL .. .. ..\$ : NULL .. .. ..\$ : NULL .. .. ..\$ : NULL ..
 ..\$ indent : chr \[1:4\] NA NA NA NA .. ..\$ built_group_label: chr
 \[1:4\] NA NA NA NA .. \$ \_row_groups : chr(0) .. \$ \_row_order :
-list() .. \$ \_heading :List of 3 .. ..\$ title : NULL .. ..\$ subtitle
-: NULL .. ..\$ preheader: NULL .. \$ \_spanners :‘data.frame’: 0 obs. of
-8 variables: .. ..\$ vars : list() .. ..\$ spanner_label : list() ..
-..\$ spanner_units : chr(0) .. ..\$ spanner_pattern: chr(0) .. ..\$
-spanner_id : chr(0) .. ..\$ spanner_level : int(0) .. ..\$ gather :
-logi(0) .. ..\$ built : chr(0) .. \$ \_stubhead :List of 1 .. ..\$
-label: NULL .. \$ \_footnotes :‘data.frame’: 4 obs. of 8 variables: ..
-..\$ locname : chr \[1:4\] “columns_columns” “columns_columns”
-“columns_columns” “columns_columns” .. ..\$ grpname : chr \[1:4\] NA NA
-NA NA .. ..\$ colname : chr \[1:4\] “stat_1” “stat_2” “stat_3” “stat_0”
-.. ..\$ locnum : num \[1:4\] 4 4 4 4 .. ..\$ rownum : int \[1:4\] NA NA
-NA NA .. ..\$ colnum : int \[1:4\] NA NA NA NA .. ..\$ footnotes:List of
-4 .. .. ..\$ : ‘from_markdown’ chr “Mean (SD)  
+list() .. \$ \_rows_hidden : int(0) .. \$ \_heading :List of 3 .. ..\$
+title : NULL .. ..\$ subtitle : NULL .. ..\$ preheader: NULL .. \$
+\_spanners :‘data.frame’: 0 obs. of 8 variables: .. ..\$ vars : list()
+.. ..\$ spanner_label : list() .. ..\$ spanner_units : chr(0) .. ..\$
+spanner_pattern: chr(0) .. ..\$ spanner_id : chr(0) .. ..\$
+spanner_level : int(0) .. ..\$ gather : logi(0) .. ..\$ built : chr(0)
+.. \$ \_stubhead :List of 1 .. ..\$ label: NULL .. \$ \_footnotes
+:‘data.frame’: 4 obs. of 8 variables: .. ..\$ locname : chr \[1:4\]
+“columns_columns” “columns_columns” “columns_columns” “columns_columns”
+.. ..\$ grpname : chr \[1:4\] NA NA NA NA .. ..\$ colname : chr \[1:4\]
+“stat_1” “stat_2” “stat_3” “stat_0” .. ..\$ locnum : num \[1:4\] 4 4 4 4
+.. ..\$ rownum : int \[1:4\] NA NA NA NA .. ..\$ colnum : int \[1:4\] NA
+NA NA NA .. ..\$ footnotes:List of 4 .. .. ..\$ : ‘from_markdown’ chr
+“Mean (SD)  
 Median \[Q1, Q3\]  
 Min, Max” .. .. ..\$ : ‘from_markdown’ chr “Mean (SD)  
 Median \[Q1, Q3\]  
@@ -3181,12 +3187,14 @@ Min, Max” .. .. ..\$ : ‘from_markdown’ chr “Mean (SD)
 Median \[Q1, Q3\]  
 Min, Max” .. ..\$ placement: chr \[1:4\] “auto” “auto” “auto” “auto” ..
 \$ \_source_notes : list() .. \$ \_formats :List of 1 .. ..\$ :List of 4
-.. .. ..\$ func :List of 6 .. .. .. ..\$ html :function (x)  
+.. .. ..\$ func :List of 8 .. .. .. ..\$ html :function (x)  
 .. .. .. ..\$ latex :function (x)  
 .. .. .. ..\$ rtf :function (x)  
 .. .. .. ..\$ word :function (x)  
+.. .. .. ..\$ ooxml/word:function (x)  
+.. .. .. ..\$ ooxml/pptx:function (x)  
 .. .. .. ..\$ grid :function (x)  
-.. .. .. ..\$ default:function (x)  
+.. .. .. ..\$ default :function (x)  
 .. .. ..\$ cols : chr \[1:4\] “stat_0” “stat_1” “stat_2” “stat_3” .. ..
 ..\$ rows : int \[1:4\] 1 2 3 4 .. .. ..\$ compat: NULL .. \$
 \_substitutions :List of 1 .. ..\$ :List of 3 .. .. ..\$ func:List of 4
@@ -3199,64 +3207,65 @@ Min, Max” .. ..\$ placement: chr \[1:4\] “auto” “auto” “auto” “a
 :‘data.frame’: 0 obs. of 7 variables: .. ..\$ locname: chr(0) .. ..\$
 grpname: chr(0) .. ..\$ colname: chr(0) .. ..\$ locnum : num(0) .. ..\$
 rownum : int(0) .. ..\$ colnum : int(0) .. ..\$ styles : list() .. \$
-\_summary : list() .. \$ \_summary_cols : list() .. \$
-\_summary_cols_build: list() .. \$ \_options : tibble \[200 × 5\] (S3:
-tbl_df/tbl/data.frame) .. ..\$ parameter: chr \[1:200\] “table_id”
-“table_caption” “table_width” “table_layout” … .. ..\$ scss : logi
-\[1:200\] FALSE FALSE TRUE TRUE TRUE TRUE … .. ..\$ category : chr
-\[1:200\] “table” “table” “table” “table” … .. ..\$ type : chr \[1:200\]
-“value” “value” “px” “value” … .. ..\$ value :List of 200 .. .. ..\$ :
+\_deferred_styles : list() .. \$ \_summary : list() .. \$ \_summary_cols
+: list() .. \$ \_summary_cols_build: list() .. \$ \_options : tibble
+\[201 × 5\] (S3: tbl_df/tbl/data.frame) .. ..\$ parameter: chr \[1:201\]
+“table_id” “table_caption” “table_width” “table_layout” … .. ..\$ scss :
+logi \[1:201\] FALSE FALSE TRUE TRUE TRUE TRUE … .. ..\$ category : chr
+\[1:201\] “table” “table” “table” “table” … .. ..\$ type : chr \[1:201\]
+“value” “value” “px” “value” … .. ..\$ value :List of 201 .. .. ..\$ :
 chr “gt_tbl” .. .. ..\$ : chr NA .. .. ..\$ : chr “auto” .. .. ..\$ :
 chr “fixed” .. .. ..\$ : chr “auto” .. .. ..\$ : chr “auto” .. .. ..\$ :
-chr “#FFFFFF” .. .. ..\$ : chr(0) .. .. ..\$ : chr \[1:10\] “system-ui”
-“Segoe UI” “Roboto” “Helvetica” … .. .. ..\$ : chr “16px” .. .. ..\$ :
-chr “normal” .. .. ..\$ : chr “normal” .. .. ..\$ : chr “#333333” .. ..
-..\$ : chr “#FFFFFF” .. .. ..\$ : logi TRUE .. .. ..\$ : chr “solid” ..
-.. ..\$ : chr “2px” .. .. ..\$ : chr “#A8A8A8” .. .. ..\$ : chr “none”
-.. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : logi TRUE
-.. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr
-“#A8A8A8” .. .. ..\$ : chr “none” .. .. ..\$ : chr “2px” .. .. ..\$ :
-chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : chr “center” .. .. ..\$ :
-chr “125%” .. .. ..\$ : chr “initial” .. .. ..\$ : chr “85%” .. .. ..\$
-: chr “initial” .. .. ..\$ : chr “4px” .. .. ..\$ : chr “5px” .. .. ..\$
-: chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3” .. ..
-..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3” ..
-.. ..\$ : chr NA .. .. ..\$ : chr “100%” .. .. ..\$ : chr “normal” .. ..
-..\$ : chr “inherit” .. .. ..\$ : chr “5px” .. .. ..\$ : chr “5px” .. ..
-..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3” ..
-.. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3”
-.. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr
+chr “#FFFFFF” .. .. ..\$ : chr(0) .. .. ..\$ : chr NA .. .. ..\$ : chr
+\[1:10\] “system-ui” “Segoe UI” “Roboto” “Helvetica” … .. .. ..\$ : chr
+“16px” .. .. ..\$ : chr “normal” .. .. ..\$ : chr “normal” .. .. ..\$ :
+chr “#333333” .. .. ..\$ : chr “#FFFFFF” .. .. ..\$ : logi TRUE .. ..
+..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#A8A8A8” ..
+.. ..\$ : chr “none” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3”
+.. .. ..\$ : logi TRUE .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px”
+.. .. ..\$ : chr “#A8A8A8” .. .. ..\$ : chr “none” .. .. ..\$ : chr
+“2px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : chr
+“center” .. .. ..\$ : chr “125%” .. .. ..\$ : chr “initial” .. .. ..\$ :
+chr “85%” .. .. ..\$ : chr “initial” .. .. ..\$ : chr “4px” .. .. ..\$ :
+chr “5px” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ :
+chr “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$
+: chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : chr “100%” .. .. ..\$ :
+chr “normal” .. .. ..\$ : chr “inherit” .. .. ..\$ : chr “5px” .. ..
+..\$ : chr “5px” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. ..
+..\$ : chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” ..
+.. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px”
+.. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr
+“1px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : logi FALSE .. .. ..\$ :
+chr “{1}, {2}” .. .. ..\$ : chr NA .. .. ..\$ : chr “100%” .. .. ..\$ :
+chr “initial” .. .. ..\$ : chr “inherit” .. .. ..\$ : chr “8px” .. ..
+..\$ : chr “5px” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. ..
+..\$ : chr “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” ..
+.. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px”
+.. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr
+“1px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : logi
+FALSE .. .. ..\$ : chr “solid” .. .. ..\$ : chr “1px” .. .. ..\$ : chr
 “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ :
-chr “#D3D3D3” .. .. ..\$ : logi FALSE .. .. ..\$ : chr “{1}, {2}” .. ..
-..\$ : chr NA .. .. ..\$ : chr “100%” .. .. ..\$ : chr “initial” .. ..
-..\$ : chr “inherit” .. .. ..\$ : chr “8px” .. .. ..\$ : chr “5px” .. ..
-..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3” ..
-.. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3”
-.. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr
-“#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ :
-chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : logi FALSE .. .. ..\$ :
-chr “solid” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$
-: chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3” .. ..
-..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3” ..
-.. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3”
-.. .. ..\$ : chr “8px” .. .. ..\$ : chr “5px” .. .. ..\$ : chr NA .. ..
-..\$ : chr “100%” .. .. ..\$ : chr “initial” .. .. .. \[list output
-truncated\] .. \$ \_transforms :List of 1 .. ..\$ :List of 2 .. .. ..\$
-resolved:List of 3 .. .. .. ..\$ columns : language ~“Figures” .. .. ..
-.. ..- attr(*, “.Environment”)=\<environment: R_EmptyEnv\> .. .. .. ..\$
-rows : int \[1:4\] 1 2 3 4 .. .. .. ..\$ colnames: chr “Figures” .. ..
-.. ..- attr(*, “class”)= chr \[1:3\] “resolved” “cells_body”
-“location_cells” .. .. ..\$ fn :function (x)  
-.. \$ \_locale :List of 1 .. ..\$ locale: NULL .. \$ \_has_built : logi
-FALSE .. - attr(*, “class”)= chr \[1:2\] “gt_tbl” “list” @
-raw_table:List of 5 .. \$ table_body : tibble \[4 × 9\] (S3:
-tbl_df/tbl/data.frame) .. ..\$ variable : chr \[1:4\] “Sepal.Length”
-“Sepal.Width” “Petal.Length” “Petal.Width” .. ..\$ var_type : chr
-\[1:4\] “continuous” “continuous” “continuous” “continuous” .. ..\$
-row_type : chr \[1:4\] “label” “label” “label” “label” .. ..\$
-var_label: chr \[1:4\] “Sepal.Length” “Sepal.Width” “Petal.Length”
-“Petal.Width” .. ..\$ label : chr \[1:4\] “Sepal.Length” “Sepal.Width”
-“Petal.Length” “Petal.Width” .. ..\$ stat_0 : chr \[1:4\] “5.84 (0.83)  
+chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$
+: chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. ..
+..\$ : chr “#D3D3D3” .. .. ..\$ : chr “8px” .. .. ..\$ : chr “5px” .. ..
+..\$ : chr NA .. .. ..\$ : chr “100%” .. .. .. \[list output truncated\]
+.. \$ \_transforms :List of 1 .. ..\$ :List of 3 .. .. ..\$ resolved
+:List of 3 .. .. .. ..\$ columns : language ~“Figures” .. .. .. .. ..-
+attr(*, “.Environment”)=\<environment: R_EmptyEnv\> .. .. .. ..\$ rows :
+int \[1:4\] 1 2 3 4 .. .. .. ..\$ colnames: chr “Figures” .. .. .. ..-
+attr(*, “class”)= chr \[1:3\] “resolved” “cells_body” “location_cells”
+.. .. ..\$ fn :function (x)  
+.. .. ..\$ plain_text: logi FALSE .. \$ \_locale :List of 1 .. ..\$
+locale: NULL .. \$ \_has_built : logi FALSE .. - attr(*, “class”)= chr
+\[1:2\] “gt_tbl” “list” @ raw_table:List of 5 .. \$ table_body : tibble
+\[4 × 9\] (S3: tbl_df/tbl/data.frame) .. ..\$ variable : chr \[1:4\]
+“Sepal.Length” “Sepal.Width” “Petal.Length” “Petal.Width” .. ..\$
+var_type : chr \[1:4\] “continuous” “continuous” “continuous”
+“continuous” .. ..\$ row_type : chr \[1:4\] “label” “label” “label”
+“label” .. ..\$ var_label: chr \[1:4\] “Sepal.Length” “Sepal.Width”
+“Petal.Length” “Petal.Width” .. ..\$ label : chr \[1:4\] “Sepal.Length”
+“Sepal.Width” “Petal.Length” “Petal.Width” .. ..\$ stat_0 : chr \[1:4\]
+“5.84 (0.83)  
 5.80 \[5.10, 6.40\]  
 4.30, 7.90” “3.06 (0.44)  
 3.00 \[2.80, 3.30\]  
@@ -3333,7 +3342,7 @@ chr(0) .. .. ..\$ undo_text_format: logi(0) .. ..\$ indent : tibble \[2
 × 3\] (S3: tbl_df/tbl/data.frame) .. .. ..\$ column : chr \[1:2\]
 “label” “label” .. .. ..\$ rows :List of 2 .. .. .. ..\$ : logi TRUE ..
 .. .. ..\$ : language ~.data\$row_type %in% c("level", "missing") .. ..
-.. .. ..- attr(\*, ".Environment")=\<environment: 0x5636e6857658\> .. ..
+.. .. ..- attr(\*, ".Environment")=\<environment: 0x560411533168\> .. ..
 ..\$ n_spaces: int \[1:2\] 0 4 .. ..\$ fmt_missing : tibble \[0 × 3\]
 (S3: tbl_df/tbl/data.frame) .. .. ..\$ column: chr(0) .. .. ..\$ rows :
 list() .. .. ..\$ symbol: chr(0) .. ..\$ fmt_fun : tibble \[0 × 3\] (S3:
@@ -3797,16 +3806,16 @@ Petal.Length: num \[1:150\] 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 … ..
 ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5636ef5ac4c8\> .. .. ..\$ Sepal.Width : chr “{mean} ({sd})  
+0x560414f72780\> .. .. ..\$ Sepal.Width : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5636ef5ac4c8\> .. .. ..\$ Petal.Length: chr “{mean} ({sd})  
+0x560414f72780\> .. .. ..\$ Petal.Length: chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5636ef5ac4c8\> .. .. ..\$ Petal.Width : chr “{mean} ({sd})  
+0x560414f72780\> .. .. ..\$ Petal.Width : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5636ef5ac4c8\> .. ..\$ digits :List of 4 .. .. ..\$ Sepal.Length:List
+0x560414f72780\> .. ..\$ digits :List of 4 .. .. ..\$ Sepal.Length:List
 of 12 .. .. .. ..\$ mean :function (x)  
 .. .. .. ..\$ sd :function (x)  
 .. .. .. ..\$ median :function (x)  
@@ -3929,9 +3938,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5636ef8e4e18\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5604153372a8\> ..
 .. .. \$ y: language ~.data\[\[“Sepal.Length”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x5636ef8e4e18\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x5604153372a8\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4135,7 +4144,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5636ef8e4e18\> .. \$ Sepal.Width :
+..@ plot_env :\<environment: 0x5604153372a8\> .. \$ Sepal.Width :
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4197,9 +4206,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5636ec07bb28\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x560412096a48\> ..
 .. .. \$ y: language ~.data\[\[“Sepal.Width”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x5636ec07bb28\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x560412096a48\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4403,7 +4412,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5636ec07bb28\> .. \$ Petal.Length:
+..@ plot_env :\<environment: 0x560412096a48\> .. \$ Petal.Length:
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4465,9 +4474,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5636edda2d88\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x560413856328\> ..
 .. .. \$ y: language ~.data\[\[“Petal.Length”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x5636edda2d88\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x560413856328\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4671,7 +4680,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5636edda2d88\> .. \$ Petal.Width :
+..@ plot_env :\<environment: 0x560413856328\> .. \$ Petal.Width :
 \<:ggplot\> .. ..@ data :‘data.frame’: 150 obs. of 5 variables: .. .. ..
 \$ Sepal.Length: num \[1:150\] 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 … ..
 .. .. \$ Sepal.Width : num \[1:150\] 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9
@@ -4733,9 +4742,9 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 2 .. .. .. \$ x: language ~.data\[\[“Species”\]\]
-.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x5636ef4ba598\> ..
+.. .. .. ..- attr(*, “.Environment”)=\<environment: 0x560414f28658\> ..
 .. .. \$ y: language ~.data\[\[“Petal.Width”\]\] .. .. .. ..- attr(*,
-“.Environment”)=\<environment: 0x5636ef4ba598\> .. ..@ theme : List of
+“.Environment”)=\<environment: 0x560414f28658\> .. ..@ theme : List of
 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@ colour : chr
 “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@ linetype : num 1
 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin : chr “round” ..
@@ -4939,7 +4948,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5636ef4ba598\>
+..@ plot_env :\<environment: 0x560414f28658\>
 
 Access the figures for any variable:
 
@@ -4962,7 +4971,7 @@ basic_summaries(
 )
 ```
 
-\<bsu.tools::basic_summaries_result\> @ tbl_gt :List of 20 .. \$ \_data
+\<bsu.tools::basic_summaries_result\> @ tbl_gt :List of 22 .. \$ \_data
 : tibble \[2 × 7\] (S3: tbl_df/tbl/data.frame) .. ..\$ variable : chr
 \[1:2\] “mpg” “am” .. ..\$ var_type : chr \[1:2\] “continuous”
 “continuous” .. ..\$ row_type : chr \[1:2\] “label” “label” .. ..\$
@@ -4992,26 +5001,29 @@ column_units : chr \[1:7\] NA NA NA NA … .. ..\$ column_pattern: chr
 .. ..\$ group_label :List of 2 .. .. ..\$ : NULL .. .. ..\$ : NULL ..
 ..\$ indent : chr \[1:2\] NA NA .. ..\$ built_group_label: chr \[1:2\]
 NA NA .. \$ \_row_groups : chr(0) .. \$ \_row_order : list() .. \$
-\_heading :List of 3 .. ..\$ title : NULL .. ..\$ subtitle : NULL ..
-..\$ preheader: NULL .. \$ \_spanners :‘data.frame’: 0 obs. of 8
-variables: .. ..\$ vars : list() .. ..\$ spanner_label : list() .. ..\$
-spanner_units : chr(0) .. ..\$ spanner_pattern: chr(0) .. ..\$
-spanner_id : chr(0) .. ..\$ spanner_level : int(0) .. ..\$ gather :
-logi(0) .. ..\$ built : chr(0) .. \$ \_stubhead :List of 1 .. ..\$
-label: NULL .. \$ \_footnotes :‘data.frame’: 1 obs. of 8 variables: ..
-..\$ locname : chr “columns_columns” .. ..\$ grpname : chr NA .. ..\$
-colname : chr “stat_0” .. ..\$ locnum : num 4 .. ..\$ rownum : int NA ..
-..\$ colnum : int NA .. ..\$ footnotes:List of 1 .. .. ..\$ :
-‘from_markdown’ chr “Mean (SD)  
+\_rows_hidden : int(0) .. \$ \_heading :List of 3 .. ..\$ title : NULL
+.. ..\$ subtitle : NULL .. ..\$ preheader: NULL .. \$ \_spanners
+:‘data.frame’: 0 obs. of 8 variables: .. ..\$ vars : list() .. ..\$
+spanner_label : list() .. ..\$ spanner_units : chr(0) .. ..\$
+spanner_pattern: chr(0) .. ..\$ spanner_id : chr(0) .. ..\$
+spanner_level : int(0) .. ..\$ gather : logi(0) .. ..\$ built : chr(0)
+.. \$ \_stubhead :List of 1 .. ..\$ label: NULL .. \$ \_footnotes
+:‘data.frame’: 1 obs. of 8 variables: .. ..\$ locname : chr
+“columns_columns” .. ..\$ grpname : chr NA .. ..\$ colname : chr
+“stat_0” .. ..\$ locnum : num 4 .. ..\$ rownum : int NA .. ..\$ colnum :
+int NA .. ..\$ footnotes:List of 1 .. .. ..\$ : ‘from_markdown’ chr
+“Mean (SD)  
 Median \[Q1, Q3\]  
 Min, Max” .. ..\$ placement: chr “auto” .. \$ \_source_notes : list() ..
-\$ \_formats :List of 1 .. ..\$ :List of 4 .. .. ..\$ func :List of 6 ..
+\$ \_formats :List of 1 .. ..\$ :List of 4 .. .. ..\$ func :List of 8 ..
 .. .. ..\$ html :function (x)  
 .. .. .. ..\$ latex :function (x)  
 .. .. .. ..\$ rtf :function (x)  
 .. .. .. ..\$ word :function (x)  
+.. .. .. ..\$ ooxml/word:function (x)  
+.. .. .. ..\$ ooxml/pptx:function (x)  
 .. .. .. ..\$ grid :function (x)  
-.. .. .. ..\$ default:function (x)  
+.. .. .. ..\$ default :function (x)  
 .. .. ..\$ cols : chr “stat_0” .. .. ..\$ rows : int \[1:2\] 1 2 .. ..
 ..\$ compat: NULL .. \$ \_substitutions :List of 1 .. ..\$ :List of 3 ..
 .. ..\$ func:List of 4 .. .. .. ..\$ html :function (x)  
@@ -5023,62 +5035,62 @@ Min, Max” .. ..\$ placement: chr “auto” .. \$ \_source_notes : list() ..
 :‘data.frame’: 0 obs. of 7 variables: .. ..\$ locname: chr(0) .. ..\$
 grpname: chr(0) .. ..\$ colname: chr(0) .. ..\$ locnum : num(0) .. ..\$
 rownum : int(0) .. ..\$ colnum : int(0) .. ..\$ styles : list() .. \$
-\_summary : list() .. \$ \_summary_cols : list() .. \$
-\_summary_cols_build: list() .. \$ \_options : tibble \[200 × 5\] (S3:
-tbl_df/tbl/data.frame) .. ..\$ parameter: chr \[1:200\] “table_id”
-“table_caption” “table_width” “table_layout” … .. ..\$ scss : logi
-\[1:200\] FALSE FALSE TRUE TRUE TRUE TRUE … .. ..\$ category : chr
-\[1:200\] “table” “table” “table” “table” … .. ..\$ type : chr \[1:200\]
-“value” “value” “px” “value” … .. ..\$ value :List of 200 .. .. ..\$ :
+\_deferred_styles : list() .. \$ \_summary : list() .. \$ \_summary_cols
+: list() .. \$ \_summary_cols_build: list() .. \$ \_options : tibble
+\[201 × 5\] (S3: tbl_df/tbl/data.frame) .. ..\$ parameter: chr \[1:201\]
+“table_id” “table_caption” “table_width” “table_layout” … .. ..\$ scss :
+logi \[1:201\] FALSE FALSE TRUE TRUE TRUE TRUE … .. ..\$ category : chr
+\[1:201\] “table” “table” “table” “table” … .. ..\$ type : chr \[1:201\]
+“value” “value” “px” “value” … .. ..\$ value :List of 201 .. .. ..\$ :
 chr “gt_tbl” .. .. ..\$ : chr NA .. .. ..\$ : chr “auto” .. .. ..\$ :
 chr “fixed” .. .. ..\$ : chr “auto” .. .. ..\$ : chr “auto” .. .. ..\$ :
-chr “#FFFFFF” .. .. ..\$ : chr(0) .. .. ..\$ : chr \[1:10\] “system-ui”
-“Segoe UI” “Roboto” “Helvetica” … .. .. ..\$ : chr “16px” .. .. ..\$ :
-chr “normal” .. .. ..\$ : chr “normal” .. .. ..\$ : chr “#333333” .. ..
-..\$ : chr “#FFFFFF” .. .. ..\$ : logi TRUE .. .. ..\$ : chr “solid” ..
-.. ..\$ : chr “2px” .. .. ..\$ : chr “#A8A8A8” .. .. ..\$ : chr “none”
-.. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : logi TRUE
-.. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr
-“#A8A8A8” .. .. ..\$ : chr “none” .. .. ..\$ : chr “2px” .. .. ..\$ :
-chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : chr “center” .. .. ..\$ :
-chr “125%” .. .. ..\$ : chr “initial” .. .. ..\$ : chr “85%” .. .. ..\$
-: chr “initial” .. .. ..\$ : chr “4px” .. .. ..\$ : chr “5px” .. .. ..\$
-: chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3” .. ..
-..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3” ..
-.. ..\$ : chr NA .. .. ..\$ : chr “100%” .. .. ..\$ : chr “normal” .. ..
-..\$ : chr “inherit” .. .. ..\$ : chr “5px” .. .. ..\$ : chr “5px” .. ..
-..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3” ..
-.. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3”
-.. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr
+chr “#FFFFFF” .. .. ..\$ : chr(0) .. .. ..\$ : chr NA .. .. ..\$ : chr
+\[1:10\] “system-ui” “Segoe UI” “Roboto” “Helvetica” … .. .. ..\$ : chr
+“16px” .. .. ..\$ : chr “normal” .. .. ..\$ : chr “normal” .. .. ..\$ :
+chr “#333333” .. .. ..\$ : chr “#FFFFFF” .. .. ..\$ : logi TRUE .. ..
+..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#A8A8A8” ..
+.. ..\$ : chr “none” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3”
+.. .. ..\$ : logi TRUE .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px”
+.. .. ..\$ : chr “#A8A8A8” .. .. ..\$ : chr “none” .. .. ..\$ : chr
+“2px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : chr
+“center” .. .. ..\$ : chr “125%” .. .. ..\$ : chr “initial” .. .. ..\$ :
+chr “85%” .. .. ..\$ : chr “initial” .. .. ..\$ : chr “4px” .. .. ..\$ :
+chr “5px” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ :
+chr “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$
+: chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : chr “100%” .. .. ..\$ :
+chr “normal” .. .. ..\$ : chr “inherit” .. .. ..\$ : chr “5px” .. ..
+..\$ : chr “5px” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. ..
+..\$ : chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” ..
+.. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px”
+.. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr
+“1px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : logi FALSE .. .. ..\$ :
+chr “{1}, {2}” .. .. ..\$ : chr NA .. .. ..\$ : chr “100%” .. .. ..\$ :
+chr “initial” .. .. ..\$ : chr “inherit” .. .. ..\$ : chr “8px” .. ..
+..\$ : chr “5px” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. ..
+..\$ : chr “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” ..
+.. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px”
+.. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr
+“1px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : logi
+FALSE .. .. ..\$ : chr “solid” .. .. ..\$ : chr “1px” .. .. ..\$ : chr
 “#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ :
-chr “#D3D3D3” .. .. ..\$ : logi FALSE .. .. ..\$ : chr “{1}, {2}” .. ..
-..\$ : chr NA .. .. ..\$ : chr “100%” .. .. ..\$ : chr “initial” .. ..
-..\$ : chr “inherit” .. .. ..\$ : chr “8px” .. .. ..\$ : chr “5px” .. ..
-..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3” ..
-.. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3”
-.. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr
-“#D3D3D3” .. .. ..\$ : chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ :
-chr “#D3D3D3” .. .. ..\$ : chr NA .. .. ..\$ : logi FALSE .. .. ..\$ :
-chr “solid” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3” .. .. ..\$
-: chr “none” .. .. ..\$ : chr “1px” .. .. ..\$ : chr “#D3D3D3” .. ..
-..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3” ..
-.. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$ : chr “#D3D3D3”
-.. .. ..\$ : chr “8px” .. .. ..\$ : chr “5px” .. .. ..\$ : chr NA .. ..
-..\$ : chr “100%” .. .. ..\$ : chr “initial” .. .. .. \[list output
-truncated\] .. \$ \_transforms :List of 1 .. ..\$ :List of 2 .. .. ..\$
-resolved:List of 3 .. .. .. ..\$ columns : language ~“Figures” .. .. ..
-.. ..- attr(*, “.Environment”)=\<environment: R_EmptyEnv\> .. .. .. ..\$
-rows : int \[1:2\] 1 2 .. .. .. ..\$ colnames: chr “Figures” .. .. ..
-..- attr(*, “class”)= chr \[1:3\] “resolved” “cells_body”
-“location_cells” .. .. ..\$ fn :function (x)  
-.. \$ \_locale :List of 1 .. ..\$ locale: NULL .. \$ \_has_built : logi
-FALSE .. - attr(*, “class”)= chr \[1:2\] “gt_tbl” “list” @
-raw_table:List of 5 .. \$ table_body : tibble \[2 × 6\] (S3:
-tbl_df/tbl/data.frame) .. ..\$ variable : chr \[1:2\] “mpg” “am” .. ..\$
-var_type : chr \[1:2\] “continuous” “continuous” .. ..\$ row_type : chr
-\[1:2\] “label” “label” .. ..\$ var_label: chr \[1:2\] “mpg” “am” ..
-..\$ label : chr \[1:2\] “mpg” “am” .. ..\$ stat_0 : chr \[1:2\] “20.1
-(6.0)  
+chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. .. ..\$
+: chr “#D3D3D3” .. .. ..\$ : chr “solid” .. .. ..\$ : chr “2px” .. ..
+..\$ : chr “#D3D3D3” .. .. ..\$ : chr “8px” .. .. ..\$ : chr “5px” .. ..
+..\$ : chr NA .. .. ..\$ : chr “100%” .. .. .. \[list output truncated\]
+.. \$ \_transforms :List of 1 .. ..\$ :List of 3 .. .. ..\$ resolved
+:List of 3 .. .. .. ..\$ columns : language ~“Figures” .. .. .. .. ..-
+attr(*, “.Environment”)=\<environment: R_EmptyEnv\> .. .. .. ..\$ rows :
+int \[1:2\] 1 2 .. .. .. ..\$ colnames: chr “Figures” .. .. .. ..-
+attr(*, “class”)= chr \[1:3\] “resolved” “cells_body” “location_cells”
+.. .. ..\$ fn :function (x)  
+.. .. ..\$ plain_text: logi FALSE .. \$ \_locale :List of 1 .. ..\$
+locale: NULL .. \$ \_has_built : logi FALSE .. - attr(*, “class”)= chr
+\[1:2\] “gt_tbl” “list” @ raw_table:List of 5 .. \$ table_body : tibble
+\[2 × 6\] (S3: tbl_df/tbl/data.frame) .. ..\$ variable : chr \[1:2\]
+“mpg” “am” .. ..\$ var_type : chr \[1:2\] “continuous” “continuous” ..
+..\$ row_type : chr \[1:2\] “label” “label” .. ..\$ var_label: chr
+\[1:2\] “mpg” “am” .. ..\$ label : chr \[1:2\] “mpg” “am” .. ..\$ stat_0
+: chr \[1:2\] “20.1 (6.0)  
 19.2 \[15.4, 22.8\]  
 10.4, 33.9” “0.41 (0.50)  
 0.00 \[0.00, 1.00\]  
@@ -5119,7 +5131,7 @@ chr(0) .. .. ..\$ undo_text_format: logi(0) .. ..\$ indent : tibble \[2
 × 3\] (S3: tbl_df/tbl/data.frame) .. .. ..\$ column : chr \[1:2\]
 “label” “label” .. .. ..\$ rows :List of 2 .. .. .. ..\$ : logi TRUE ..
 .. .. ..\$ : language ~.data\$row_type %in% c("level", "missing") .. ..
-.. .. ..- attr(\*, ".Environment")=\<environment: 0x5636ef94f0d8\> .. ..
+.. .. ..- attr(\*, ".Environment")=\<environment: 0x560414e96050\> .. ..
 ..\$ n_spaces: int \[1:2\] 0 4 .. ..\$ fmt_missing : tibble \[0 × 3\]
 (S3: tbl_df/tbl/data.frame) .. .. ..\$ column: chr(0) .. .. ..\$ rows :
 list() .. .. ..\$ symbol: chr(0) .. ..\$ fmt_fun : tibble \[0 × 3\] (S3:
@@ -5207,10 +5219,10 @@ cyl : num \[1:32\] 6 6 4 6 8 6 8 4 4 6 … .. .. ..\$ disp: num \[1:32\]
 mpg: chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5636ec963110\> .. .. ..\$ am : chr “{mean} ({sd})  
+0x5604125c8ff8\> .. .. ..\$ am : chr “{mean} ({sd})  
 {median} \[{p25}, {p75}\]  
 {min}, {max}” .. .. .. ..- attr(*, “.Environment”)=\<environment:
-0x5636ec963110\> .. ..\$ digits :List of 2 .. .. ..\$ mpg:List of 12 ..
+0x5604125c8ff8\> .. ..\$ digits :List of 2 .. .. ..\$ mpg:List of 12 ..
 .. .. ..\$ mean :function (x)  
 .. .. .. ..\$ sd :function (x)  
 .. .. .. ..\$ median :function (x)  
@@ -5305,7 +5317,7 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 1 .. .. .. \$ x: language ~.data\[\[“mpg”\]\] .. ..
-.. ..- attr(*, “.Environment”)=\<environment: 0x5636eccea450\> .. ..@
+.. ..- attr(*, “.Environment”)=\<environment: 0x5604128e0e88\> .. ..@
 theme : List of 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@
 colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -5509,7 +5521,7 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5636eccea450\> .. \$ am : \<:ggplot\> ..
+..@ plot_env :\<environment: 0x5604128e0e88\> .. \$ am : \<:ggplot\> ..
 ..@ data :‘data.frame’: 32 obs. of 11 variables: .. .. .. \$ mpg : num
 \[1:32\] 21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 … .. .. .. \$ cyl
 : num \[1:32\] 6 6 4 6 8 6 8 4 4 6 … .. .. .. \$ disp: num \[1:32\] 160
@@ -5573,7 +5585,7 @@ gg\> package_box: function print: function process_layers: function
 setup: function subset_guides: function train: function update_params:
 function super: \<ggproto object: Class Guides, gg\> .. ..@ mapping :
 \<:mapping\> List of 1 .. .. .. \$ x: language ~.data\[\[“am”\]\] .. ..
-.. ..- attr(*, “.Environment”)=\<environment: 0x5636ee4996a8\> .. ..@
+.. ..- attr(*, “.Environment”)=\<environment: 0x5604140fb690\> .. ..@
 theme : List of 144 .. .. .. \$ line : \<:element_line\> .. .. .. ..@
 colour : chr “black” .. .. .. ..@ linewidth : num 0.5 .. .. .. ..@
 linetype : num 1 .. .. .. ..@ lineend : chr “butt” .. .. .. ..@ linejoin
@@ -5777,4 +5789,4 @@ render_labels: function reset_scales: function resolve_label: function
 setup: function setup_panel_guides: function setup_panel_params:
 function train_position: function super: \<ggproto object: Class Layout,
 gg\> .. ..@ labels : \<:labels\> Named list() .. ..@ meta : list() ..
-..@ plot_env :\<environment: 0x5636ee4996a8\>
+..@ plot_env :\<environment: 0x5604140fb690\>
