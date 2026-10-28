@@ -17,5 +17,7 @@
   [`scale_color_ucdh()`](https://ucdavis.github.io/bsu.tools/reference/scale_colour_ucdh.md)
   [`scale_fill_ucdh()`](https://ucdavis.github.io/bsu.tools/reference/scale_colour_ucdh.md)
   : UCDH discrete scales
+- [`theme_flextable_ucdh()`](https://ucdavis.github.io/bsu.tools/reference/theme_flextable_ucdh.md)
+  : UCDH flextable theme
 - [`theme_ucdh()`](https://ucdavis.github.io/bsu.tools/reference/theme_ucdh.md)
   : UCDH ggplot2 theme

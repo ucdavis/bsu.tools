@@ -26,7 +26,7 @@ A ggplot2 theme.
 ## References
 
 [UC Davis Health Graphic Standards:
-Colors](https://health.ucdavis.edu/graphic-standards/colors/)
+Colors](https://health.ucdavis.edu/graphic-standards/colors/) \# nolintr
 
 ## Examples
 

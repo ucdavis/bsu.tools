@@ -29,7 +29,7 @@ A ggplot2 discrete scale.
 ## References
 
 [UC Davis Health Graphic Standards:
-Colors](https://health.ucdavis.edu/graphic-standards/colors/)
+Colors](https://health.ucdavis.edu/graphic-standards/colors/) \# nolintr
 
 ## Examples
 
