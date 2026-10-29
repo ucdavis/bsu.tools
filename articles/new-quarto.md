@@ -18,7 +18,7 @@ the function will automatically add it for you.
 default.  
 - gist: the template you want to use (see below).
 
-As of 2026-10-28 there are currently 3 qmd gists available:  
+As of 2026-10-29 there are currently 3 qmd gists available:  
 - “no_logo”,  
 - “ctsc”,  
 - and “hac”.

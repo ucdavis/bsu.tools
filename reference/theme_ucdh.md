@@ -1,12 +1,19 @@
 # UCDH ggplot2 theme
 
 Applies UC Davis Health styling using colors from the UC Davis print
-palette.
+palette. Uses a combination of ggplot2's `theme_classic()`, `theme_bw()`
+and customizations to apply UCDH colors to text, lines, and backgrounds.
 
 ## Usage
 
 ``` r
-theme_ucdh(base_size = 11, base_family = "")
+theme_ucdh(
+  base_size = 11,
+  base_family = "",
+  ink = "black",
+  paper = "white",
+  grid_lines = TRUE
+)
 ```
 
 ## Arguments
@@ -18,6 +25,18 @@ theme_ucdh(base_size = 11, base_family = "")
 - base_family:
 
   Base font family.
+
+- ink:
+
+  Color of text and lines.
+
+- paper:
+
+  Color of the background.
+
+- grid_lines:
+
+  Logical, whether to display grid lines.
 
 ## Value
 
