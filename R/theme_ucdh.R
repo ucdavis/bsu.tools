@@ -1,10 +1,14 @@
 #' UCDH ggplot2 theme
 #'
 #' Applies UC Davis Health styling using colors from the UC Davis print
-#' palette.
+#' palette. Uses a combination of ggplot2's `theme_classic()`, `theme_bw()`
+#' and customizations to apply UCDH colors to text, lines, and backgrounds.
 #'
 #' @param base_size Base font size in points.
 #' @param base_family Base font family.
+#' @param ink Color of text and lines.
+#' @param paper Color of the background.
+#' @param grid_lines Logical, whether to display grid lines.
 #'
 #' @return A ggplot2 theme.
 #' @references
@@ -19,8 +23,17 @@
 #'   ggplot2::geom_point() +
 #'   scale_colour_ucdh() +
 #'   theme_ucdh()
-theme_ucdh <- function(base_size = 11, base_family = "") {
-  ggplot2::theme_minimal(
+theme_ucdh <- function(
+  base_size = 11,
+  base_family = "",
+  ink = "black",
+  paper = "white",
+  grid_lines = TRUE
+) {
+
+  #
+
+  ggplot2::theme_classic(
     base_size = base_size,
     base_family = base_family
   ) +
@@ -29,9 +42,17 @@ theme_ucdh <- function(base_size = 11, base_family = "") {
       plot.subtitle = ggplot2::element_text(colour = "#002855"),
       plot.caption = ggplot2::element_text(colour = "#002855"),
       plot.tag = ggplot2::element_text(colour = "#C99700", face = "bold"),
-      axis.title = ggplot2::element_text(face = "bold"),
-      panel.grid.major = ggplot2::element_line(colour = "#B1B3B3"),
-      panel.grid.minor = ggplot2::element_blank(),
+      axis.title = ggplot2::element_text(colour = "#002855", face = "bold"),
+      panel.grid = if (grid_lines) {
+        ggplot2::element_line(colour = scales::col_mix(ink, paper, 0.92))
+      } else {
+        ggplot2::element_blank()
+      },
+      panel.grid.minor = if (grid_lines) {
+        ggplot2::element_line(linewidth = ggplot2::rel(0.5))
+      } else {
+        ggplot2::element_blank()
+      },
       strip.background = ggplot2::element_rect(
         fill = "#002855",
         colour = NA
