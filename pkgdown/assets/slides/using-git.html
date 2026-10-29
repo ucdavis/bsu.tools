@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using Git within RStudio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, sans-serif;
+      color: #022851;
+      background: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-snap-type: y mandatory;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .slide {
+      min-height: 100vh;
+      padding: 8vh 9vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      scroll-snap-align: start;
+      border-bottom: 0.5rem solid #ffbf00;
+    }
+
+    .title {
+      color: #fff;
+      background: #022851;
+    }
+
+    h1,
+    h2 {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    p,
+    li {
+      font-size: clamp(1.25rem, 2.5vw, 2rem);
+      line-height: 1.45;
+    }
+
+    code {
+      color: #13639e;
+      background: #f2f2f2;
+      padding: 0.1em 0.25em;
+      border-radius: 0.2em;
+    }
+
+    .title code {
+      color: #ffbf00;
+      background: transparent;
+    }
+
+    .navigation {
+      margin-top: auto;
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-end;
+    }
+
+    .navigation a {
+      color: inherit;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .title .navigation a {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="slide title" id="slide-1">
+      <h1>Using Git within RStudio</h1>
+      <p>A practical workflow for collaborative analysis</p>
+      <nav class="navigation" aria-label="Slide navigation">
+        <a href="#slide-2" aria-label="Next slide">Next &rarr;</a>
+      </nav>
+    </section>
+
+    <section class="slide" id="slide-2">
+      <h2>Get ready</h2>
+      <ul>
+        <li>Install Git and RStudio.</li>
+        <li>Create a GitHub account.</li>
+        <li>Set your Git name and email.</li>
+      </ul>
+      <p><code>usethis::use_git_config()</code></p>
+      <nav class="navigation" aria-label="Slide navigation">
+        <a href="#slide-1" aria-label="Previous slide">&larr; Back</a>
+        <a href="#slide-3" aria-label="Next slide">Next &rarr;</a>
+      </nav>
+    </section>
+
+    <section class="slide" id="slide-3">
+      <h2>Clone the repository</h2>
+      <ol>
+        <li>Choose <strong>File &gt; New Project</strong>.</li>
+        <li>Select <strong>Version Control &gt; Git</strong>.</li>
+        <li>Paste the repository URL and create the project.</li>
+      </ol>
+      <nav class="navigation" aria-label="Slide navigation">
+        <a href="#slide-2" aria-label="Previous slide">&larr; Back</a>
+        <a href="#slide-4" aria-label="Next slide">Next &rarr;</a>
+      </nav>
+    </section>
+
+    <section class="slide" id="slide-4">
+      <h2>Work on a branch</h2>
+      <p>Keep each change isolated from the main branch.</p>
+      <p><code>usethis::pr_init("short-description")</code></p>
+      <nav class="navigation" aria-label="Slide navigation">
+        <a href="#slide-3" aria-label="Previous slide">&larr; Back</a>
+        <a href="#slide-5" aria-label="Next slide">Next &rarr;</a>
+      </nav>
+    </section>
+
+    <section class="slide" id="slide-5">
+      <h2>The everyday loop</h2>
+      <ol>
+        <li>Pull before starting.</li>
+        <li>Edit and review your files.</li>
+        <li>Commit a focused change.</li>
+        <li>Push your branch.</li>
+      </ol>
+      <nav class="navigation" aria-label="Slide navigation">
+        <a href="#slide-4" aria-label="Previous slide">&larr; Back</a>
+        <a href="#slide-6" aria-label="Next slide">Next &rarr;</a>
+      </nav>
+    </section>
+
+    <section class="slide" id="slide-6">
+      <h2>Open a pull request</h2>
+      <p>A pull request lets collaborators review, discuss, and approve a
+      change before it reaches the main branch.</p>
+      <p><code>usethis::pr_push()</code></p>
+      <nav class="navigation" aria-label="Slide navigation">
+        <a href="#slide-5" aria-label="Previous slide">&larr; Back</a>
+        <a href="#slide-7" aria-label="Next slide">Next &rarr;</a>
+      </nav>
+    </section>
+
+    <section class="slide title" id="slide-7">
+      <h2>Keep learning</h2>
+      <p>Practice the workflow on a small change, and use the written guide for
+      step-by-step instructions.</p>
+      <p><a href="../articles/using-git.html" target="_parent">Read the full guide</a></p>
+      <nav class="navigation" aria-label="Slide navigation">
+        <a href="#slide-6" aria-label="Previous slide">&larr; Back</a>
+        <a href="#slide-1">Start over</a>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

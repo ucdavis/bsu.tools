@@ -10,3 +10,8 @@ vignette: >
 This section contains slides and supporting materials from BSU professional
 development meetings. Each presentation is published as its own article so it
 can be viewed and shared independently.
+
+## Presentation topics
+
+- [Using Git within RStudio](professional-development-using-git.html) — Set up
+  Git, work with branches, and contribute changes through pull requests.
