@@ -1,6 +1,6 @@
 test_that("theme_ucdh applies UCDH styling without changing axis colors", {
   theme <- theme_ucdh()
-  default_theme <- ggplot2::theme_minimal()
+  default_theme <- ggplot2::theme_classic()
 
   expect_s3_class(theme, "theme")
   expect_identical(theme$plot.title$colour, "#002855")
@@ -10,10 +10,13 @@ test_that("theme_ucdh applies UCDH styling without changing axis colors", {
   )
   expect_identical(
     ggplot2::calc_element("axis.title.x", theme)$colour,
-    ggplot2::calc_element("axis.title.x", default_theme)$colour
+    "#002855"
   )
   expect_identical(theme$axis.line, default_theme$axis.line)
-  expect_identical(theme$panel.grid.major$colour, "#B1B3B3")
+  expect_identical(
+    theme$panel.grid$colour,
+    scales::col_mix("black", "white", 0.92)
+  )
   expect_identical(theme$strip.background$fill, "#002855")
 })
 

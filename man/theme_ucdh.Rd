@@ -4,19 +4,32 @@
 \alias{theme_ucdh}
 \title{UCDH ggplot2 theme}
 \usage{
-theme_ucdh(base_size = 11, base_family = "")
+theme_ucdh(
+  base_size = 11,
+  base_family = "",
+  ink = "black",
+  paper = "white",
+  grid_lines = TRUE
+)
 }
 \arguments{
 \item{base_size}{Base font size in points.}
 
 \item{base_family}{Base font family.}
+
+\item{ink}{Color of text and lines.}
+
+\item{paper}{Color of the background.}
+
+\item{grid_lines}{Logical, whether to display grid lines.}
 }
 \value{
 A ggplot2 theme.
 }
 \description{
 Applies UC Davis Health styling using colors from the UC Davis print
-palette.
+palette. Uses a combination of ggplot2's \code{theme_classic()}, \code{theme_bw()}
+and customizations to apply UCDH colors to text, lines, and backgrounds.
 }
 \examples{
 ggplot2::ggplot(
