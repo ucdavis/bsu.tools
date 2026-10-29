@@ -1,0 +1,22 @@
+---
+title: "Using Git within RStudio"
+description: "A practical introduction to Git and GitHub workflows in RStudio."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using Git within RStudio}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    src="../slides/using-git.html"
+    title="Using Git within RStudio presentation"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/using-git.html){target="_blank"}
+
+For more detail, see the [full written guide](using-git.html).
