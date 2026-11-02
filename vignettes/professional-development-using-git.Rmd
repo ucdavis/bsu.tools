@@ -10,6 +10,7 @@ vignette: >
 
 <div class="ratio ratio-16x9">
   <iframe
+    class="w-100 h-100"
     src="../slides/using-git.html"
     title="Using Git within RStudio presentation"
     loading="lazy"

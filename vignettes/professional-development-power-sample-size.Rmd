@@ -1,0 +1,21 @@
+---
+title: "Power and Sample Size in R"
+description: "How to conduct common power and sample size calculations in R."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Power and Sample Size in R}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/power_samp-size_slides.html"
+    title="Power and Sample Size in R"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/power_samp-size_slides.html){target="_blank"}
