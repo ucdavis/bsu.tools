@@ -91,12 +91,12 @@ Use `theme_flextable_ucdh()` to style a flextable with a navy and gold header
 and navy body text. The first column is also bolded.
 
 ```{r flextable}
-iris |> 
+iris |>
   dplyr::summarise(
-    `Sepal Width`  = mean(Sepal.Width), `Sepal Length` = mean(Sepal.Length), 
-    `Petal Width` = mean(Petal.Width), `Petal Length` = mean(Petal.Length), 
+    `Sepal Width`  = mean(Sepal.Width), `Sepal Length` = mean(Sepal.Length),
+    `Petal Width` = mean(Petal.Width), `Petal Length` = mean(Petal.Length),
     .by = Species
-  ) |> 
+  ) |>
   flextable::flextable() |>
   theme_flextable_ucdh()
 ```
