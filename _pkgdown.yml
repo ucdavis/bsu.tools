@@ -16,6 +16,7 @@ articles:
     contents:
       - basic-summaries
       - new-quarto
+      - styling-figures
       - using-git
   - title: internal
     contents:
