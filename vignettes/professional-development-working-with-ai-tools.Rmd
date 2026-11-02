@@ -1,0 +1,21 @@
+---
+title: "Working with AI Tools"
+description: "A practical introduction to utilizing AI tools."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Working with AI Tools}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/working-with-ai-tools.html"
+    title="Working with AI Tools presentation"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/working-with-ai-tools.html){target="_blank"}
