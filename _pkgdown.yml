@@ -16,6 +16,7 @@ articles:
     contents:
       - basic-summaries
       - new-quarto
+      - styling-figures
       - using-git
   - title: "Professional Development Meetings"
     desc: "Slides and supporting materials from BSU professional development meetings."
