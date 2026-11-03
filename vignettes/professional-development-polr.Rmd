@@ -1,0 +1,21 @@
+---
+title: "Proportional Odds Logistic Regression"
+description: "An overview of Proportional Odds Logistic Regression (POLR)"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{POLR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/polr.html"
+    title="Proportional Odds Logistic Regression"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/polr.html){target="_blank"}

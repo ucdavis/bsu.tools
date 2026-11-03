@@ -1,0 +1,21 @@
+---
+title: "Contal and O'Quigley Method"
+description: "A review of the Contal and O'Quigley method for determining optimal cutpoints"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Contal and O'Quigley Method}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/Contal_OQuigleyMethods.pdf"
+    title="Contal and O'Quigley Method"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/Contal_OQuigleyMethods.pdf){target="_blank"}

@@ -1,0 +1,21 @@
+---
+title: "Weighted Quantile Sum (WQS) Regression"
+description: "A review on weighted quantile sum regression and its extensions."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{WQS Regression}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/Review-on-WQS.pdf"
+    title="Weighted Quantile Sum (WQS) Regression"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/Review-on-WQS.pdf){target="_blank"}

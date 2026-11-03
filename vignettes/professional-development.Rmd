@@ -20,4 +20,13 @@ can be viewed and shared independently.
   Surface level introduction to AI tools and how to use them.
 
 - [Power and Sample Size in R](professional-development-power-sample-size.html) —
-  Conducting power and sample size calculations in R..
+  Conducting power and sample size calculations in R.
+
+- [Weighted Quantile Sum Regression](professional-development-wqs.html) —
+  A review on weighted quantile sum regression and its extensions.
+
+- [Proportional Odds Logistic Regression](professional-development-polr.html) —
+  An overview of Proportional Odds Logistic Regression (POLR).
+
+- [Contal and O'Quigley Method](professional-development-contal-oquigley.html) —
+  An overview of the Contal and O'Quigley Method.
