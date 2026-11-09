@@ -15,6 +15,7 @@ articles:
   - title: "Vignettes"
     contents:
       - basic-summaries
+      - citation-management
       - new-quarto
       - styling-figures
       - using-git
