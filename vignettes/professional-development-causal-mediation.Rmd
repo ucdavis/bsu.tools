@@ -1,0 +1,21 @@
+---
+title: "Using Predicted Probabilities as Covariates in Causal Mediation"
+description: "Using predicted probabilities as covariates in causal mediation analysis."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using Predicted Probabilities as Covariates in Causal Mediation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/Using Predicted Probabilities as Covariates in Causal Mediation.pdf"
+    title="Using Predicted Probabilities as Covariates in Causal Mediation"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/Using Predicted Probabilities as Covariates in Causal Mediation.pdf){target="_blank"}

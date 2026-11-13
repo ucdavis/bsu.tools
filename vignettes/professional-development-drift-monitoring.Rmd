@@ -1,0 +1,21 @@
+---
+title: "Drift Monitoring Program Overview"
+description: "An overview of the drift monitoring program."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Drift Monitoring Program Overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/Drift Monitoring Program Overview_20230413.pdf"
+    title="Drift Monitoring Program Overview"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/Drift Monitoring Program Overview_20230413.pdf){target="_blank"}

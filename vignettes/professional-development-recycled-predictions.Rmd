@@ -1,0 +1,21 @@
+---
+title: "The Method of Recycled Predictions"
+description: "An overview of the method of recycled predictions."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{The Method of Recycled Predictions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/The Method of Recycled Predictions.pdf"
+    title="The Method of Recycled Predictions"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/The Method of Recycled Predictions.pdf){target="_blank"}

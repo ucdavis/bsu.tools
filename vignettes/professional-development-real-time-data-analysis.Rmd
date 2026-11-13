@@ -1,0 +1,21 @@
+---
+title: "Continuous Real-time Data Analysis"
+description: "Continuous real-time data analysis, presented at the 2024 Conference on Statistical Practice (CSP)."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Continuous Real-time Data Analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/Continuous Real-time Data Analysi (2024 CSP).pdf"
+    title="Continuous Real-time Data Analysis"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/Continuous Real-time Data Analysi (2024 CSP).pdf){target="_blank"}

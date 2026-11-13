@@ -30,3 +30,29 @@ can be viewed and shared independently.
 
 - [Contal and O'Quigley Method](professional-development-contal-oquigley.html) —
   An overview of the Contal and O'Quigley Method.
+
+- [Using Predicted Probabilities as Covariates in Causal Mediation](professional-development-causal-mediation.html) —
+  Using predicted probabilities as covariates in causal mediation analysis.
+
+- [The Method of Recycled Predictions](professional-development-recycled-predictions.html) —
+  An overview of the method of recycled predictions.
+
+- [Propensity Scores](professional-development-propensity-scores.html) —
+  An overview of propensity score methods.
+
+- [Multi-Institutional EHR Networks](professional-development-ehr-networks.html) —
+  An overview of multi-institutional electronic health record (EHR) networks.
+
+- [Missing Values in Proteomics](professional-development-missing-values-proteomics.html) —
+  Handling missing values in proteomics data.
+
+- [MAIHDA](professional-development-maihda.html) —
+  An overview of Multilevel Analysis of Individual Heterogeneity and
+  Discriminatory Accuracy (MAIHDA).
+
+- [Drift Monitoring Program Overview](professional-development-drift-monitoring.html) —
+  An overview of the drift monitoring program.
+
+- [Continuous Real-time Data Analysis](professional-development-real-time-data-analysis.html) —
+  Continuous real-time data analysis, presented at the 2024 Conference on
+  Statistical Practice (CSP).

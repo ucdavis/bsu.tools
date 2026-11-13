@@ -1,0 +1,21 @@
+---
+title: "Missing Values in Proteomics"
+description: "Handling missing values in proteomics data."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Missing Values in Proteomics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/missing_values_in_proteomics_2026-02-26.pdf"
+    title="Missing Values in Proteomics"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/missing_values_in_proteomics_2026-02-26.pdf){target="_blank"}

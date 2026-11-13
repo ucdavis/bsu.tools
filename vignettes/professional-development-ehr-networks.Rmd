@@ -1,0 +1,21 @@
+---
+title: "Multi-Institutional EHR Networks"
+description: "An overview of multi-institutional electronic health record (EHR) networks."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Multi-Institutional EHR Networks}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<div class="ratio ratio-16x9">
+  <iframe
+    class="w-100 h-100"
+    src="../slides/Multi-Institutional EHR Networks_20260526.pdf"
+    title="Multi-Institutional EHR Networks"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+[Open the slides in a new window](../slides/Multi-Institutional EHR Networks_20260526.pdf){target="_blank"}
