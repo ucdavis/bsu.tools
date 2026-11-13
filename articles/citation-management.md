@@ -1,0 +1,153 @@
+# Managing citations in R Markdown and Quarto
+
+R Markdown (`.Rmd`) and Quarto (`.qmd`) use Pandoc to turn citation keys
+into formatted citations and a reference list. The two formats use the
+same BibTeX bibliography files, citation syntax, and Citation Style
+Language (CSL) files.
+
+## Create a BibTeX bibliography
+
+Store references in a plain-text file with a `.bib` extension. Each
+entry has a type, a unique citation key, and fields describing the
+source. For example, save the following as `references.bib` next to your
+manuscript:
+
+``` bibtex
+@article{wickham2014,
+  author  = {Wickham, Hadley},
+  title   = {Tidy Data},
+  journal = {Journal of Statistical Software},
+  year    = {2014},
+  volume  = {59},
+  number  = {10},
+  pages   = {1--23},
+  doi     = {10.18637/jss.v059.i10}
+}
+
+@book{xie2018,
+  author    = {Xie, Yihui and Allaire, J. J. and Grolemund, Garrett},
+  title     = {R Markdown: The Definitive Guide},
+  publisher = {Chapman and Hall/CRC},
+  year      = {2018},
+  url       = {https://bookdown.org/yihui/rmarkdown/}
+}
+
+@misc{quarto2026,
+  author = {{Posit Software, PBC}},
+  title  = {Quarto Documentation},
+  year   = {2026},
+  url    = {https://quarto.org/docs/}
+}
+```
+
+The citation keys in this example are `wickham2014`, `xie2018`, and
+`quarto2026`. Reference managers such as Zotero can export an entire
+library or a selected collection as BibTeX.
+
+## Connect the bibliography to a document
+
+Add the bibliography path to the document’s YAML header. The path is
+relative to the `.Rmd` or `.qmd` file.
+
+For an R Markdown manuscript:
+
+``` markdown
+---
+title: "My manuscript"
+output: word_document
+bibliography: references.bib
+---
+```
+
+For a Quarto manuscript:
+
+``` markdown
+---
+title: "My manuscript"
+format: docx
+bibliography: references.bib
+---
+```
+
+Both formats also accept multiple bibliography files:
+
+``` yaml
+bibliography:
+  - references.bib
+  - software.bib
+```
+
+## Cite sources in the text
+
+Use the entry’s citation key after an `@`:
+
+``` markdown
+Wickham (@wickham2014) describes a consistent structure for tidy data.
+
+R Markdown supports reproducible manuscripts [@xie2018].
+
+Several tools support this workflow [@xie2018; @quarto2026].
+
+The relevant discussion appears in a specific section [@xie2018, sec. 2.8].
+```
+
+These forms produce narrative, parenthetical, multiple, and located
+citations, respectively. The first two forms render in this vignette as
+follows: Wickham (Wickham (2014)) describes a consistent structure for
+tidy data, and R Markdown supports reproducible manuscripts (Xie et al.
+2018).
+
+Pandoc creates the reference list from cited entries. To include every
+entry from the bibliography, even if it is not cited, add this YAML
+option:
+
+``` yaml
+nocite: |
+  @*
+```
+
+## Choose a citation style
+
+A CSL file controls details such as citation order, punctuation, and
+whether citations use author–date text or numbers. Download a style from
+the [CSL style
+repository](https://github.com/citation-style-language/styles) and save
+it with the manuscript. Then add its path to the same YAML header:
+
+``` yaml
+bibliography: references.bib
+csl: apa.csl
+```
+
+The YAML is identical in `.Rmd` and `.qmd` files. If `csl` is omitted,
+Pandoc uses its default author–date style.
+
+The CSL repository includes thousands of journal and publisher styles.
+Common starting points include:
+
+- [APA](https://github.com/citation-style-language/styles/blob/master/apa.csl)
+  (`apa.csl`) for author–date citations;
+- [Elsevier -
+  Vancouver](https://github.com/citation-style-language/styles/blob/master/elsevier-vancouver.csl)
+  (`elsevier-vancouver.csl`) for numbered biomedical citations;
+- [Chicago
+  author-date](https://github.com/citation-style-language/styles/blob/master/chicago-author-date.csl)
+  (`chicago-author-date.csl`);
+- [Nature](https://github.com/citation-style-language/styles/blob/master/nature.csl)
+  (`nature.csl`) for numbered citations; and
+- [IEEE](https://github.com/citation-style-language/styles/blob/master/ieee.csl)
+  (`ieee.csl`) for bracketed numeric citations.
+
+Use the repository’s file search to find a journal-specific style.
+Download the raw `.csl` file rather than saving the GitHub HTML page.
+Keeping the `.bib` and `.csl` files under version control with the
+manuscript makes the rendered references reproducible for collaborators.
+
+## References
+
+Wickham, Hadley. 2014. “Tidy Data.” *Journal of Statistical Software* 59
+(10): 1–23. <https://doi.org/10.18637/jss.v059.i10>.
+
+Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. *R Markdown: The
+Definitive Guide*. Chapman; Hall/CRC.
+<https://bookdown.org/yihui/rmarkdown/>.
